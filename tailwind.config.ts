@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,15 +53,30 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				church: {
+					'50': '#f0f9ff',
+					'100': '#e0f2fe',
+					'200': '#b9e6fe',
+					'300': '#7cd3fd',
+					'400': '#36bbfa',
+					'500': '#0ca2eb',
+					'600': '#0082cb',
+					'700': '#0068a5',
+					'800': '#005788',
+					'900': '#074973',
+					'950': '#042e4b',
+				},
+				warmGray: {
+					'50': '#f9f7f5',
+					'100': '#f0ebe4',
+					'200': '#ded2c6',
+					'300': '#cbb6a3',
+					'400': '#b4957d',
+					'500': '#a17d63',
+					'600': '#8c6751',
+					'700': '#745344',
+					'800': '#60453b',
+					'900': '#513b34',
 				}
 			},
 			borderRadius: {
@@ -70,25 +86,29 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'fade-in': {
+					from: { opacity: '0' },
+					to: { opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 1.5s ease-out'
+			},
+			fontFamily: {
+				'serif': ['Georgia', 'Cambria', 'serif'],
+				'script': ['Playfair Display', 'Georgia', 'serif'],
+			},
+			backgroundImage: {
+				'church-pattern': "url('https://images.unsplash.com/photo-1488409688217-e6053b1e8f42?q=80&w=2942&auto=format&fit=crop')",
 			}
 		}
 	},
