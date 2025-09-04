@@ -1,10 +1,11 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import churchHero from "@/assets/church-hero.jpg";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-[70vh] min-h-[500px] bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop')" }}>
+    <div className="relative h-[70vh] min-h-[500px] bg-cover bg-center flex items-center" style={{ backgroundImage: `url(${churchHero})` }}>
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <div className="container mx-auto px-4 relative z-10 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 animate-fade-in">

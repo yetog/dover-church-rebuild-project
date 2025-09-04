@@ -3,6 +3,9 @@ import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Video } from 'lucide-react';
+import sermonPeace from "@/assets/sermon-peace.jpg";
+import sermonCommunity from "@/assets/sermon-community.jpg";
+import sermonFaith from "@/assets/sermon-faith.jpg";
 
 const SermonSection = () => {
   const recentSermons = [
@@ -10,21 +13,21 @@ const SermonSection = () => {
       id: 1,
       title: "Finding Peace in Uncertain Times",
       date: "April 28, 2025",
-      thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop",
+      thumbnail: sermonPeace,
       videoUrl: "https://www.youtube.com/watch?v=example1"
     },
     {
       id: 2,
       title: "The Power of Community",
       date: "April 21, 2025",
-      thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop",
+      thumbnail: sermonCommunity,
       videoUrl: "https://www.youtube.com/watch?v=example2"
     },
     {
       id: 3,
       title: "Walking in Faith",
       date: "April 14, 2025",
-      thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+      thumbnail: sermonFaith,
       videoUrl: "https://www.youtube.com/watch?v=example3"
     }
   ];
