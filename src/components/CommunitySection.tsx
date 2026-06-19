@@ -29,7 +29,7 @@ const CommunitySection = () => {
   ];
 
   return (
-    <section id="community" className="section-padding bg-warmGray-100">
+    <section id="community" className="section-padding bg-church-50">
       <div className="container mx-auto">
         <h2 className="section-title">People's Community Center</h2>
         <p className="section-subtitle">
