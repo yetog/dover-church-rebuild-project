@@ -264,4 +264,22 @@ Stub pages: Navbar + banner image from `src/assets/banners/` + "Coming soon" pla
 - Contact form email backend
 - CMS / dynamic news posts
 - Sub-page full content (Staff bios, UCC page copy, etc.)
-- Any design upgrades beyond faithful replication
+
+---
+
+## Meeting Proposal — Dark Mode Variant
+
+After the faithful replication is live, prepare a dark mode variant of the **same layout** to present as an upgrade option. No structural changes — just a theme swap:
+
+| Token | Light (current) | Dark (proposal) |
+|-------|----------------|-----------------|
+| Page background | `#FFFFFF` | `#1a0a17` |
+| Section alt background | `#f7f2f6` | `#2d1429` |
+| Card background | `#FFFFFF` | `#422F3C` |
+| Body text | `#1A0A17` | `#EDE5F0` |
+| Muted text | `#6B4F68` | `#b885aa` |
+| Primary purple | `#5A2653` | `#5A2653` (unchanged) |
+| CTA green | `#4CAF50` | `#4CAF50` (unchanged) |
+| Quote sections | `#422F3C` bg | `#1a0a17` bg |
+
+Implementation: add a `data-theme="dark"` attribute on `<html>` and override CSS custom properties in a `.dark` block. Tailwind's `darkMode: ["class"]` is already configured — no new tooling needed.
