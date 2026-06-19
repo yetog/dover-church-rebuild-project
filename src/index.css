@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,11 +16,13 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 275 60% 45%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand purple #5A2653 */
+    --primary: 308 41% 25%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 36 30% 96%;
-    --secondary-foreground: 36 30% 40%;
+    /* CTA green #4CAF50 */
+    --secondary: 122 39% 49%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -79,11 +81,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
-  }
-
-  .scripture-quote {
-    @apply font-script italic;
+    @apply font-heading;
   }
 }
 
@@ -93,10 +91,10 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-church-800 mb-6 text-center;
+    @apply text-3xl md:text-4xl font-bold text-church-600 mb-6 text-center;
   }
 
   .section-subtitle {
-    @apply text-xl text-church-600 mb-8 max-w-3xl mx-auto text-center;
+    @apply text-xl text-church-800 mb-8 max-w-3xl mx-auto text-center;
   }
 }

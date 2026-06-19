@@ -53,30 +53,25 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				/* Brand palette — exact PCD hex values anchored at 600 and 800 */
 				church: {
-					'50': '#f7f3ff',
-					'100': '#ede4ff',
-					'200': '#ddd0ff',
-					'300': '#c4afff',
-					'400': '#a981ff',
-					'500': '#8f51ff',
-					'600': '#7c2fff',
-					'700': '#6b1eeb',
-					'800': '#5a1ab3',
-					'900': '#4c1a93',
-					'950': '#2e0c63',
+					'50':  '#f7f2f6',
+					'100': '#ecdde9',
+					'200': '#d4b5ce',
+					'300': '#b885aa',
+					'400': '#905383',
+					'500': '#6e3165',
+					'600': '#5A2653', /* Primary brand purple */
+					'700': '#4a1f44',
+					'800': '#422F3C', /* Dark header / footer */
+					'900': '#2d1429',
+					'950': '#1a0a17',
 				},
-				warmGray: {
-					'50': '#f9f7f5',
-					'100': '#f0ebe4',
-					'200': '#ded2c6',
-					'300': '#cbb6a3',
-					'400': '#b4957d',
-					'500': '#a17d63',
-					'600': '#8c6751',
-					'700': '#745344',
-					'800': '#60453b',
-					'900': '#513b34',
+				/* CTA green */
+				cta: {
+					'DEFAULT': '#4CAF50',
+					'hover':   '#43A047',
+					'light':   '#E8F5E9',
 				}
 			},
 			borderRadius: {
@@ -104,12 +99,10 @@ export default {
 				'fade-in': 'fade-in 1.5s ease-out'
 			},
 			fontFamily: {
-				'serif': ['Georgia', 'Cambria', 'serif'],
-				'script': ['Playfair Display', 'Georgia', 'serif'],
+				'heading': ['Lato', 'Helvetica Neue', 'Arial', 'sans-serif'],
+				'body': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
 			},
-			backgroundImage: {
-				'church-pattern': "url('https://images.unsplash.com/photo-1488409688217-e6053b1e8f42?q=80&w=2942&auto=format&fit=crop')",
-			}
+			backgroundImage: {}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
