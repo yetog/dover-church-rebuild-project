@@ -21,7 +21,7 @@ const ServiceInfoBar = () => {
           rel="noopener noreferrer"
           className="flex items-center gap-2 hover:text-cta transition-colors font-medium"
         >
-          <Youtube className="h-5 w-5 flex-shrink-0" />
+          <Youtube className="h-5 w-5 flex-shrink-0 text-cta" />
           <span>Watch on YouTube</span>
         </a>
       </div>
