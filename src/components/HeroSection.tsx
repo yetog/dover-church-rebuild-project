@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import churchHero from "@/assets/church-hero.jpg";
+import churchHero from "@/assets/banners/who-we-are.jpg";
 
 const HeroSection = () => {
   return (

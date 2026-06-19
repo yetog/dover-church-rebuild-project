@@ -2,6 +2,9 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import childrenYouthImg from "@/assets/programs/children-youth-btn.jpg";
+import neighborsImg from "@/assets/programs/neighbors-in-need-1.jpg";
+import communityHealthImg from "@/assets/programs/community-health-btn.jpg";
 
 const CommunitySection = () => {
   const communityPrograms = [
@@ -9,19 +12,19 @@ const CommunitySection = () => {
       id: 1,
       title: "Center for Children and Youth",
       description: "Providing education, mentorship, and support programs for young people in our community.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop"
+      image: childrenYouthImg
     },
     {
       id: 2,
       title: "Center for Neighbors in Need",
       description: "Offering food assistance, clothing, and other essential resources to families facing hardship.",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop"
+      image: neighborsImg
     },
     {
       id: 3,
       title: "Center for Community Health",
       description: "Supporting overall wellness through health education, counseling services, and support groups.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
+      image: communityHealthImg
     }
   ];
 

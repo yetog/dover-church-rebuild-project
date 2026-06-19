@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import churchLogo from "@/assets/logo/church-logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,7 @@ const Navbar = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-white font-serif font-bold text-xl md:text-2xl">People's Church of Dover</span>
+              <img src={churchLogo} alt="People's Church of Dover" className="h-12 w-auto" />
             </Link>
           </div>
           
