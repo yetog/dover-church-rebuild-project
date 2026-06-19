@@ -1,14 +1,15 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
-import AboutSection from '@/components/AboutSection';
-import SermonSection from '@/components/SermonSection';
-import MeditationSection from '@/components/MeditationSection';
+import QuickLinksSection from '@/components/QuickLinksSection';
 import CommunitySection from '@/components/CommunitySection';
-import NewsletterSection from '@/components/NewsletterSection';
-import ContactSection from '@/components/ContactSection';
+import AboutSection from '@/components/AboutSection';
+import ServiceInfoBar from '@/components/ServiceInfoBar';
+import NewsSection from '@/components/NewsSection';
+import SermonSection from '@/components/SermonSection';
+import RomeroQuoteSection from '@/components/RomeroQuoteSection';
+import PrayerInvitationSection from '@/components/PrayerInvitationSection';
 
 const Index = () => {
   return (
@@ -16,12 +17,14 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <AboutSection />
-        <SermonSection />
-        <MeditationSection />
+        <QuickLinksSection />
         <CommunitySection />
-        <NewsletterSection />
-        <ContactSection />
+        <AboutSection />
+        <ServiceInfoBar />
+        <NewsSection />
+        <SermonSection />
+        <RomeroQuoteSection />
+        <PrayerInvitationSection />
       </main>
       <Footer />
     </div>
