@@ -67,7 +67,7 @@ const SermonSection = () => {
                 <p className="text-church-600 text-sm mb-4">{sermon.date}</p>
                 <Button 
                   variant="outline" 
-                  className="w-full border-church-600 text-church-600 hover:bg-church-600 hover:text-white"
+                  className="w-full border-cta text-cta hover:bg-cta hover:text-white"
                   asChild
                 >
                   <a href={sermon.videoUrl} target="_blank" rel="noopener noreferrer">
@@ -82,7 +82,7 @@ const SermonSection = () => {
         <div className="text-center mt-8">
           <Button 
             variant="default"
-            className="bg-church-600 hover:bg-church-700"
+            className="bg-cta hover:bg-cta-hover text-white"
             asChild
           >
             <a href="https://www.youtube.com/channel/UCXXXXXXX" target="_blank" rel="noopener noreferrer">

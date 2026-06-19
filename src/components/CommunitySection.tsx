@@ -46,9 +46,9 @@ const CommunitySection = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-church-800">{program.title}</h3>
                 <p className="text-church-600 mb-4">{program.description}</p>
-                <Button 
-                  variant="outline" 
-                  className="w-full border-church-600 text-church-600 hover:bg-church-600 hover:text-white"
+                <Button
+                  variant="outline"
+                  className="w-full border-cta text-cta hover:bg-cta hover:text-white"
                 >
                   Learn More
                 </Button>
@@ -64,14 +64,14 @@ const CommunitySection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button 
-              className="bg-church-600 hover:bg-church-700"
+            <Button
+              className="bg-cta hover:bg-cta-hover text-white"
             >
               Volunteer
             </Button>
-            <Button 
-              variant="outline" 
-              className="border-church-600 text-church-600 hover:bg-church-600 hover:text-white"
+            <Button
+              variant="outline"
+              className="border-cta text-cta hover:bg-cta hover:text-white"
             >
               Donate
             </Button>

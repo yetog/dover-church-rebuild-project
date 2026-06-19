@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Mail } from 'lucide-react';
+import { Facebook, Mail, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -50,6 +50,15 @@ const Footer = () => {
             >
               <Facebook className="h-6 w-6 mr-2" />
               <span>Follow us on Facebook</span>
+            </a>
+            <a
+              href="https://www.youtube.com/@PeoplesChurchOfDover"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-white hover:text-church-200 mb-4"
+            >
+              <Youtube className="h-6 w-6 mr-2" />
+              <span>Watch on YouTube</span>
             </a>
             <p className="text-sm mt-8">
               The People's Church of Dover is an Open and Affirming Congregation.

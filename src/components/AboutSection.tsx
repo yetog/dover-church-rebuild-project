@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
   return (
-    <section id="who-we-are" className="section-padding bg-secondary">
+    <section id="who-we-are" className="section-padding bg-white">
       <div className="container mx-auto">
         <h2 className="section-title">Who We Are</h2>
         <p className="section-subtitle">
@@ -15,7 +15,7 @@ const AboutSection = () => {
           <Card className="shadow-lg border-0 mb-8 overflow-hidden">
             <CardContent className="p-6 md:p-8">
               <div className="flex flex-col items-center">
-                <blockquote className="scripture-quote text-2xl md:text-3xl text-church-800 mb-6 text-center">
+                <blockquote className="italic text-2xl md:text-3xl text-church-800 mb-6 text-center">
                   "Don't place a period where God has placed a comma."
                 </blockquote>
                 <p className="text-church-600 font-medium">- Gracie Allen -</p>
