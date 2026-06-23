@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X, Sun, Moon } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTheme } from '@/context/ThemeContext';
 import churchLogo from '@/assets/logo/church-logo.png';
 
 type NavChild = { label: string; href: string };
@@ -38,6 +39,7 @@ const navItems: NavItem[] = [
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const { theme, toggleTheme } = useTheme();
 
   const toggleMobileDropdown = (label: string) => {
     setMobileExpanded(prev => (prev === label ? null : label));
@@ -84,6 +86,13 @@ const Navbar = () => {
                 </Link>
               )
             ))}
+            <button
+              onClick={toggleTheme}
+              className="ml-4 p-2 rounded-md text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+              aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+            >
+              {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+            </button>
           </div>
 
           {/* Mobile hamburger */}
