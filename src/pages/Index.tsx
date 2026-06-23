@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
+import StatsBar from '@/components/StatsBar';
 import QuickLinksSection from '@/components/QuickLinksSection';
 import CommunitySection from '@/components/CommunitySection';
 import AboutSection from '@/components/AboutSection';
@@ -17,6 +18,7 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <StatsBar />
         <QuickLinksSection />
         <CommunitySection />
         <AboutSection />
