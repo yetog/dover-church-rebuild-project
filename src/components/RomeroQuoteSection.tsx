@@ -2,7 +2,7 @@ import React from 'react';
 
 const RomeroQuoteSection = () => {
   return (
-    <section className="bg-church-800 py-16 px-4">
+    <section className="bg-church-800 dark:bg-[#1a0a17] py-16 px-4">
       <div className="max-w-3xl mx-auto text-center">
         <blockquote className="italic text-white text-lg md:text-xl leading-relaxed mb-6">
           "A church that doesn't provoke any crises, a gospel that doesn't unsettle,

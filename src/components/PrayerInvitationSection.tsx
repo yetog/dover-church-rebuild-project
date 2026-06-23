@@ -4,12 +4,12 @@ import { Button } from '@/components/ui/button';
 
 const PrayerInvitationSection = () => {
   return (
-    <section className="bg-cta-light py-16 px-4">
+    <section className="bg-cta-light dark:bg-[#2d1429] py-16 px-4">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="font-heading font-bold text-2xl md:text-3xl text-church-800 mb-4">
+        <h2 className="font-heading font-bold text-2xl md:text-3xl text-church-800 dark:text-white mb-4">
           Seeking Prayer or Counsel?
         </h2>
-        <p className="text-church-700 text-lg leading-relaxed mb-8">
+        <p className="text-church-700 dark:text-[#ede5f0] text-lg leading-relaxed mb-8">
           We welcome all who seek prayer, guidance, or simply someone to talk to.
           Reach out to us — our community is here for you.
         </p>

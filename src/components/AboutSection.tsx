@@ -4,21 +4,21 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
   return (
-    <section id="who-we-are" className="section-padding bg-white">
+    <section id="who-we-are" className="section-padding bg-white dark:bg-[#1a0a17]">
       <div className="container mx-auto">
-        <h2 className="display-heading">Who We Are</h2>
-        <p className="section-subtitle">
+        <h2 className="display-heading dark:text-white">Who We Are</h2>
+        <p className="section-subtitle dark:text-[#ede5f0]">
           The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ.
         </p>
-        
+
         <div className="mt-12 max-w-3xl mx-auto">
-          <Card className="shadow-lg border-0 mb-8 overflow-hidden">
+          <Card className="shadow-lg border-0 mb-8 overflow-hidden dark:bg-[#422F3C]">
             <CardContent className="p-6 md:p-8">
               <div className="flex flex-col items-center">
-                <blockquote className="italic text-2xl md:text-3xl text-church-800 mb-6 text-center">
+                <blockquote className="italic text-2xl md:text-3xl text-church-800 dark:text-[#ede5f0] mb-6 text-center">
                   "Don't place a period where God has placed a comma."
                 </blockquote>
-                <p className="text-church-600 font-medium">- Gracie Allen -</p>
+                <p className="text-church-600 dark:text-[#b885aa] font-medium">- Gracie Allen -</p>
               </div>
             </CardContent>
           </Card>
