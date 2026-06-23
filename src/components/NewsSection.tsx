@@ -37,12 +37,12 @@ const posts = [
 
 const NewsSection = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white dark:bg-[#1a0a17]">
       <div className="container mx-auto">
-        <h2 className="display-heading">Latest News</h2>
+        <h2 className="display-heading dark:text-white">Latest News</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
           {posts.map(post => (
-            <article key={post.id} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+            <article key={post.id} className="border border-gray-200 dark:border-[#5A2653] rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-200 dark:bg-[#422F3C]">
               <img
                 src={post.image}
                 alt={post.title}
@@ -50,9 +50,9 @@ const NewsSection = () => {
                 loading="lazy"
               />
               <div className="p-4">
-                <p className="text-church-500 text-xs mb-2">{post.date}</p>
-                <h3 className="font-heading font-bold text-church-800 text-sm mb-2 leading-snug">{post.title}</h3>
-                <p className="text-church-600 text-xs leading-relaxed mb-3 line-clamp-2">{post.excerpt}</p>
+                <p className="text-church-500 dark:text-[#b885aa] text-xs mb-2">{post.date}</p>
+                <h3 className="font-heading font-bold text-church-800 dark:text-white text-sm mb-2 leading-snug">{post.title}</h3>
+                <p className="text-church-600 dark:text-[#b885aa] text-xs leading-relaxed mb-3 line-clamp-2">{post.excerpt}</p>
                 <a href="#" className="text-cta text-xs font-semibold hover:underline">Read More »</a>
               </div>
             </article>

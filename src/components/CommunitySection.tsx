@@ -29,53 +29,32 @@ const CommunitySection = () => {
   ];
 
   return (
-    <section id="community" className="section-padding bg-church-50">
+    <section id="community" className="section-padding bg-church-50 dark:bg-[#1a0a17]">
       <div className="container mx-auto">
-        <h2 className="section-title">People's Community Center</h2>
-        <p className="section-subtitle">
+        <h2 className="section-title dark:text-white">People's Community Center</h2>
+        <p className="section-subtitle dark:text-[#ede5f0]">
           Serving our community through outreach programs and assistance for our neighbors in need.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
           {communityPrograms.map(program => (
-            <Card key={program.id} className="overflow-hidden shadow-lg border-0">
-              <div 
-                className="h-48 bg-cover bg-center" 
+            <Card key={program.id} className="overflow-hidden shadow-lg border-0 dark:bg-[#422F3C]">
+              <div
+                className="h-48 bg-cover bg-center"
                 style={{ backgroundImage: `url(${program.image})` }}
               ></div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-church-800">{program.title}</h3>
-                <p className="text-church-600 mb-4">{program.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-church-800 dark:text-white">{program.title}</h3>
+                <p className="text-church-600 dark:text-[#ede5f0] mb-4">{program.description}</p>
                 <Button
                   variant="outline"
-                  className="w-full border-cta text-cta hover:bg-cta hover:text-white"
+                  className="w-full border-cta text-cta hover:bg-cta hover:text-white transition-colors duration-200"
                 >
                   Learn More
                 </Button>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="bg-white rounded-lg shadow-md p-8 mt-12 max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold text-church-800 mb-4 text-center">Get Involved</h3>
-          <p className="text-church-600 mb-6 text-center">
-            There are many ways to support our community outreach efforts through donations, volunteering, and participation.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              className="bg-cta hover:bg-cta-hover text-white"
-            >
-              Volunteer
-            </Button>
-            <Button
-              variant="outline"
-              className="border-cta text-cta hover:bg-cta hover:text-white"
-            >
-              Donate
-            </Button>
-          </div>
         </div>
       </div>
     </section>

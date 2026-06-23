@@ -33,18 +33,18 @@ const SermonSection = () => {
   ];
 
   return (
-    <section id="videos" className="section-padding">
+    <section id="videos" className="section-padding dark:bg-[#1a0a17]">
       <div className="container mx-auto">
-        <h2 className="display-heading">Sermon Videos</h2>
-        <p className="section-subtitle">
+        <h2 className="display-heading dark:text-white">Sermon Videos</h2>
+        <p className="section-subtitle dark:text-[#ede5f0]">
           Join us for worship online through our recorded sermons and live services.
         </p>
 
         <div className="bg-church-700 text-white p-6 rounded-lg mb-12 max-w-3xl mx-auto text-center">
           <h3 className="text-2xl font-bold mb-2">Join Us Live</h3>
           <p className="mb-4">Every Sunday at 10:00 AM EDT</p>
-          <Button 
-            className="bg-white text-church-700 hover:bg-gray-100"
+          <Button
+            className="bg-white text-church-700 hover:bg-gray-100 transition-colors duration-200"
             size="lg"
             asChild
           >
@@ -54,20 +54,20 @@ const SermonSection = () => {
           </Button>
         </div>
 
-        <h3 className="text-2xl font-bold text-center mb-8 text-church-800">Recent Sermons</h3>
+        <h3 className="text-2xl font-bold text-center mb-8 text-church-800 dark:text-white">Recent Sermons</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {recentSermons.map(sermon => (
-            <Card key={sermon.id} className="overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-              <div 
-                className="h-48 bg-cover bg-center" 
+            <Card key={sermon.id} className="overflow-hidden shadow-md hover:shadow-xl transition-shadow dark:bg-[#422F3C]">
+              <div
+                className="h-48 bg-cover bg-center"
                 style={{ backgroundImage: `url(${sermon.thumbnail})` }}
               ></div>
               <CardContent className="p-4">
-                <h4 className="font-bold text-lg mb-1 text-church-800">{sermon.title}</h4>
-                <p className="text-church-600 text-sm mb-4">{sermon.date}</p>
-                <Button 
-                  variant="outline" 
-                  className="w-full border-cta text-cta hover:bg-cta hover:text-white"
+                <h4 className="font-bold text-lg mb-1 text-church-800 dark:text-white">{sermon.title}</h4>
+                <p className="text-church-600 dark:text-[#ede5f0] text-sm mb-4">{sermon.date}</p>
+                <Button
+                  variant="outline"
+                  className="w-full border-cta text-cta hover:bg-cta hover:text-white transition-colors duration-200"
                   asChild
                 >
                   <a href={sermon.videoUrl} target="_blank" rel="noopener noreferrer">
@@ -80,9 +80,9 @@ const SermonSection = () => {
         </div>
 
         <div className="text-center mt-8">
-          <Button 
+          <Button
             variant="default"
-            className="bg-cta hover:bg-cta-hover text-white"
+            className="bg-cta hover:bg-cta-hover text-white transition-colors duration-200"
             asChild
           >
             <a href="https://www.youtube.com/channel/UCXXXXXXX" target="_blank" rel="noopener noreferrer">
