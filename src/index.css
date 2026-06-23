@@ -89,12 +89,23 @@
   .section-padding {
     @apply py-16 px-4 md:px-8 lg:px-16;
   }
-  
+
   .section-title {
     @apply text-3xl md:text-4xl font-bold text-church-600 mb-6 text-center;
   }
 
   .section-subtitle {
     @apply text-xl text-church-800 mb-8 max-w-3xl mx-auto text-center;
+  }
+
+  .display-heading {
+    @apply font-heading font-black uppercase tracking-tight leading-none text-center;
+    letter-spacing: -0.05em;
+  }
+
+  .section-label {
+    @apply font-heading font-bold uppercase text-xs tracking-widest text-church-500 text-center block;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
   }
 }
