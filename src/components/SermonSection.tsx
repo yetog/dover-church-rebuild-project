@@ -35,7 +35,7 @@ const SermonSection = () => {
   return (
     <section id="videos" className="section-padding">
       <div className="container mx-auto">
-        <h2 className="section-title">Sermon Videos</h2>
+        <h2 className="display-heading">Sermon Videos</h2>
         <p className="section-subtitle">
           Join us for worship online through our recorded sermons and live services.
         </p>

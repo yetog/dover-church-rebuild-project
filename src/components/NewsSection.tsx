@@ -39,7 +39,7 @@ const NewsSection = () => {
   return (
     <section className="section-padding bg-white">
       <div className="container mx-auto">
-        <h2 className="section-title">Latest News</h2>
+        <h2 className="display-heading">Latest News</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
           {posts.map(post => (
             <article key={post.id} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">

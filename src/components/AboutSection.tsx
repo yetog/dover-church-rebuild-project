@@ -6,7 +6,7 @@ const AboutSection = () => {
   return (
     <section id="who-we-are" className="section-padding bg-white">
       <div className="container mx-auto">
-        <h2 className="section-title">Who We Are</h2>
+        <h2 className="display-heading">Who We Are</h2>
         <p className="section-subtitle">
           The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ.
         </p>
