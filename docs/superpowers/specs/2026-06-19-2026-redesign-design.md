@@ -1,21 +1,25 @@
 # 2026 Redesign Design Spec
-**Date:** 2026-06-19  
-**Goal:** Modernize the People's Church of Dover homepage to a 2026 standard while keeping the stakeholder-approved structure intact. Add a dark mode toggle for the meeting proposal.  
+**Date:** 2026-06-19 (updated 2026-06-23 post-stakeholder meeting)  
+**Goal:** Modernize the People's Church of Dover homepage to a 2026 standard while keeping the stakeholder-approved structure intact. Add a dark mode toggle for the meeting proposal. Design reference: The Riverside Church (trcnyc.org) — credible, institutional, restrained.  
 **Repo:** git@github.com:yetog/dover-church-rebuild-project.git
 
 ---
 
 ## Background
 
-The current build faithfully replicates pcd-dover.org — a mid-2010s WordPress layout. The stakeholder approved that structure, but the visual execution needs to move forward a decade. This redesign applies Option C (Modern Nonprofit) aesthetics on top of the existing section order, adds a stats bar, fixes the double-button issue in CommunitySection, and introduces a dark mode toggle that turns the site into Option A (Bold Purple Identity) at the flip of a switch.
+The current build faithfully replicates pcd-dover.org — a mid-2010s WordPress layout. The stakeholder (Jamesetta Ferguson) reviewed the build on 2026-06-19 and approved a modernization direction: keep purple and green branding, align with 2026 design standards, remove redundant navigation buttons, fix contrast issues, and center all section titles. The Riverside Church (trcnyc.org) was discussed as a design reference — its credibility and structure are the target, but visual animations should be minimal (Jamesetta found TRC's motion effects too fast/overwhelming).
 
-The goal at the stakeholder meeting: show the light version as "exactly what you asked for, modernized" and flip to dark mode live as the upgrade pitch.
+This redesign applies Option C (Modern Nonprofit) aesthetics with TRC-inspired restraint, adds a stats bar, fixes the double-button issue in CommunitySection, centers all headings, and introduces a dark mode toggle that turns the site into Option A (Bold Purple Identity) at the flip of a switch.
+
+The goal at the next meeting: show the light version as "exactly what you approved, modernized" and flip to dark mode live as the upgrade pitch.
 
 ---
 
 ## Typography System
 
-All headings switch from regular-weight centered Lato to **900-weight uppercase tight-tracked** display treatment. No new fonts — Lato at full weight used aggressively.
+All headings switch from regular-weight Lato to **900-weight uppercase tight-tracked** display treatment. No new fonts — Lato at full weight used aggressively. Per stakeholder request, **all section titles are centered** (`text-center`).
+
+**No scroll animations or entrance transitions** — Jamesetta found TRC's motion effects too overwhelming. All interactions are instant or use simple CSS `transition-colors` only (hover states on buttons/links). No `framer-motion`, no intersection observer animations, no scroll-triggered effects.
 
 **Display headings** (section titles, hero subtext, card labels):
 ```css
@@ -23,6 +27,7 @@ font-weight: 900;
 text-transform: uppercase;
 letter-spacing: -0.05em;
 line-height: 1;
+text-align: center;
 ```
 
 **Section labels** (eyebrow text above headings):
@@ -37,10 +42,10 @@ color: church-500;
 Apply via new Tailwind utility classes added to `index.css`:
 ```css
 .display-heading {
-  @apply font-heading font-black uppercase tracking-tight leading-none;
+  @apply font-heading font-black uppercase tracking-tight leading-none text-center;
 }
 .section-label {
-  @apply font-heading font-bold uppercase text-xs tracking-widest text-church-500;
+  @apply font-heading font-bold uppercase text-xs tracking-widest text-church-500 text-center block;
 }
 ```
 
@@ -166,9 +171,12 @@ Insert between `<HeroSection />` and `<QuickLinksSection />` in `Index.tsx`.
 
 ### 4. `src/components/HeroSection.tsx`
 - Upgrade dark overlay to `bg-black/60`
+- Keep logo centered (stakeholder-approved treatment)
 - Replace plain OA tagline `<p>` with a styled treatment:
-  - Church name: `section-label` class, white
-  - OA badge: green pill `bg-cta text-white` rounded, uppercase, small
+  - Church name: `section-label` class, white, centered
+  - OA badge: green pill `bg-cta text-white` rounded, uppercase, small, centered
+- **"God Is Still Speaking" graphic**: if a dedicated image asset exists in `src/assets/`, display it above the logo. If not, skip — text treatment is sufficient. (Jamesetta requested this graphic be positioned high on the page — the hero is the correct location.)
+- No entrance animations on hero content
 
 ### 5. `src/components/QuickLinksSection.tsx`
 - Card labels: apply `font-black uppercase tracking-tight` (display heading treatment)
@@ -244,13 +252,30 @@ Footer
 
 ---
 
+## Pending From Stakeholder Meeting (2026-06-19)
+
+These items are confirmed decisions but blocked on external input:
+
+| Item | Owner | Status |
+|------|-------|--------|
+| Primary email + phone number | Isayah to send after meeting | Pending |
+| UCC daily news feed embed code | Jamesetta to send to Isayah | Pending |
+| Real founding year for StatsBar | Confirm with church | Pending |
+| Real YouTube channel ID | Confirm with church | Pending |
+| Real Facebook page URL | Confirm with church | Pending |
+| "God Is Still Speaking" graphic asset | Check `src/assets/` at build time | Pending |
+| July calendar unavailability (pink) | Out of scope for redesign sprint | Deferred |
+| Jamesetta Lovable editing access | Isayah to grant | Action item |
+
+---
+
 ## Out of Scope
 
 - Sub-page dark mode (stub pages inherit Navbar/Footer which already get dark mode; main content "coming soon" text will adapt via CSS variable)
 - CMS / dynamic content
 - Contact form backend
-- Real founding year (placeholder 1886 — must confirm with church before launch)
-- Real YouTube channel ID / Facebook URL
+- July calendar feature (deferred — communicate blocked dates via email to Isayah for manual implementation)
+- Chatbot (explicitly shelved by stakeholder)
 
 ---
 
