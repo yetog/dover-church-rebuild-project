@@ -30,9 +30,9 @@ const CommunitySection = () => {
 
   return (
     <section id="community" className="section-padding bg-church-50 dark:bg-[#1a0a17]">
-      <div className="container mx-auto">
+      <div className="container-max">
         <h2 className="section-title dark:text-white">People's Community Center</h2>
-        <p className="section-subtitle dark:text-[#ede5f0]">
+        <p className="section-subtitle dark:text-[#ede5f0] !text-left !mx-0 !max-w-none">
           Serving our community through outreach programs and assistance for our neighbors in need.
         </p>
 
@@ -47,8 +47,7 @@ const CommunitySection = () => {
                 <h3 className="text-xl font-bold mb-3 text-church-800 dark:text-white">{program.title}</h3>
                 <p className="text-church-600 dark:text-[#ede5f0] mb-4">{program.description}</p>
                 <Button
-                  variant="outline"
-                  className="w-full border-cta text-cta hover:bg-cta hover:text-white transition-colors duration-200"
+                  className="button-solid w-full bg-cta text-white hover:bg-cta-hover transition-colors duration-200"
                 >
                   Learn More
                 </Button>
