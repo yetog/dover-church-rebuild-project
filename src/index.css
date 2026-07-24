@@ -73,7 +73,7 @@
   }
 
   .container-max {
-    @apply max-w-6xl mx-auto;
+    @apply max-w-[1344px] mx-auto;
     /* 1344px max-width for main content */
   }
 
