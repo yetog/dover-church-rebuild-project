@@ -1,6 +1,5 @@
 import React from 'react';
 import churchHero from "@/assets/banners/who-we-are.jpg";
-import churchLogo from "@/assets/logo/church-logo.png";
 
 const HeroSection = () => {
   return (
