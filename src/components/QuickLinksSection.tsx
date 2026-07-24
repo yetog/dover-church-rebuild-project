@@ -18,7 +18,7 @@ const QuickLinksSection = () => {
             <Link
               key={href}
               to={href}
-              className="button-solid normal-case bg-white dark:bg-[#422F3C] text-church-600 dark:text-[#b885aa] hover:bg-church-50 dark:hover:bg-[#5a3d52] flex flex-col items-center justify-center gap-2 shadow hover:shadow-md hover:-translate-y-0.5"
+              className="button-solid transition-all normal-case bg-white dark:bg-[#422F3C] text-church-600 dark:text-[#b885aa] hover:bg-church-50 dark:hover:bg-[#5a3d52] flex flex-col items-center justify-center gap-2 shadow hover:shadow-md hover:-translate-y-0.5"
             >
               <Icon className="h-7 w-7 text-church-600 dark:text-[#b885aa]" />
               <span className="text-sm leading-tight font-heading font-bold">
