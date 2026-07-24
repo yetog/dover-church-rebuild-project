@@ -11,20 +11,22 @@ const links = [
 
 const QuickLinksSection = () => {
   return (
-    <section className="bg-church-600 dark:bg-[#2d1429] py-6 px-4">
-      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-        {links.map(({ label, href, icon: Icon }) => (
-          <Link
-            key={href}
-            to={href}
-            className="bg-white dark:bg-[#422F3C] rounded-lg p-4 flex flex-col items-center gap-2 text-center shadow hover:shadow-md hover:-translate-y-0.5 transition-all group"
-          >
-            <Icon className="h-7 w-7 text-church-600 group-hover:text-cta transition-colors" />
-            <span className="text-church-800 dark:text-[#b885aa] font-heading font-bold text-sm leading-tight">
-              {label}
-            </span>
-          </Link>
-        ))}
+    <section className="section-padding bg-church-600 dark:bg-[#2d1429]">
+      <div className="container-max">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {links.map(({ label, href, icon: Icon }) => (
+            <Link
+              key={href}
+              to={href}
+              className="button-solid normal-case bg-white dark:bg-[#422F3C] text-church-600 dark:text-[#b885aa] hover:bg-church-50 dark:hover:bg-[#5a3d52] transition-all flex flex-col items-center justify-center gap-2 py-6 rounded-md shadow hover:shadow-md hover:-translate-y-0.5"
+            >
+              <Icon className="h-7 w-7" />
+              <span className="text-sm leading-tight font-heading font-bold">
+                {label}
+              </span>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
