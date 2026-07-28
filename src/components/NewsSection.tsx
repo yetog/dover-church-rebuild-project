@@ -55,7 +55,7 @@ const NewsSection = () => {
                 <h3 className="text-xl font-bold uppercase text-[#5A2653] dark:text-white mb-1">
                   {event.title}
                 </h3>
-                <p className="text-base text-[#183640] dark:text-[#b885aa]">
+                <p className="text-[1.125rem] text-[#183640] dark:text-[#b885aa]">
                   {event.datetime}
                 </p>
               </div>
