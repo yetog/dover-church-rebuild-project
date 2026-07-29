@@ -72,8 +72,18 @@
     @apply py-16 px-4 md:px-8 lg:px-16;
   }
 
+  .container-max {
+    @apply max-w-[1344px] mx-auto;
+    /* 1344px max-width for main content */
+  }
+
+  .button-solid {
+    @apply px-6 py-3 rounded-md font-bold uppercase tracking-wide transition-colors;
+    /* Base solid button styling — bg/text colors applied per component */
+  }
+
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-church-600 mb-6 text-center;
+    @apply text-3xl md:text-4xl font-bold text-church-600 mb-6 text-left;
   }
 
   .section-subtitle {
