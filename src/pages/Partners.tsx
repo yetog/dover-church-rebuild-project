@@ -1,6 +1,15 @@
 import React from 'react';
 import StubPage from '@/components/StubPage';
-import banner from '@/assets/banners/partners-mission.jpg';
 
-const Partners = () => <StubPage title="Partners in Mission" banner={banner} />;
+const Partners = () => (
+  <StubPage
+    title="Partners"
+    subtitle="Organizations and ministries we partner with in our mission."
+    breadcrumb={[
+      { label: 'About', href: '/about' },
+      { label: 'Partners', href: '/partners' },
+    ]}
+  />
+);
+
 export default Partners;

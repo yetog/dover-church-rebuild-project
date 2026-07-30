@@ -1,6 +1,15 @@
 import React from 'react';
 import StubPage from '@/components/StubPage';
-import banner from '@/assets/banners/who-we-are.jpg';
 
-const CommunityHealth = () => <StubPage title="Center for Community Health" banner={banner} />;
+const CommunityHealth = () => (
+  <StubPage
+    title="Community Health"
+    subtitle="Health education, counseling services, and wellness support groups."
+    breadcrumb={[
+      { label: 'Community', href: '/community' },
+      { label: 'Community Health', href: '/community/health' },
+    ]}
+  />
+);
+
 export default CommunityHealth;

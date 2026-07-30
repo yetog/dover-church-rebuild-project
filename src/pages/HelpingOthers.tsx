@@ -1,6 +1,12 @@
 import React from 'react';
 import StubPage from '@/components/StubPage';
-import banner from '@/assets/banners/helping-others-inside.jpg';
 
-const HelpingOthers = () => <StubPage title="Helping Others & Getting Help" banner={banner} />;
+const HelpingOthers = () => (
+  <StubPage
+    title="Outreach"
+    subtitle="Reaching out to our neighbors with love and compassion through service and support."
+    breadcrumb={[{ label: 'Outreach', href: '/helping-others' }]}
+  />
+);
+
 export default HelpingOthers;

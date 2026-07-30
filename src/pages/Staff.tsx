@@ -1,6 +1,15 @@
 import React from 'react';
 import StubPage from '@/components/StubPage';
-import banner from '@/assets/banners/pastor-staff.jpg';
 
-const Staff = () => <StubPage title="Pastor, Staff and Lay Leaders" banner={banner} />;
+const Staff = () => (
+  <StubPage
+    title="Staff & Leaders"
+    subtitle="Meet our pastor, staff, and lay leaders who guide our congregation."
+    breadcrumb={[
+      { label: 'About', href: '/about' },
+      { label: 'Staff', href: '/staff' },
+    ]}
+  />
+);
+
 export default Staff;

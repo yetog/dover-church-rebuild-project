@@ -1,6 +1,15 @@
 import React from 'react';
 import StubPage from '@/components/StubPage';
-import banner from '@/assets/banners/children-youth.jpg';
 
-const ChildrenYouth = () => <StubPage title="Center for Children and Youth" banner={banner} />;
+const ChildrenYouth = () => (
+  <StubPage
+    title="Children & Youth"
+    subtitle="Education, mentorship, and support programs for young people in our community."
+    breadcrumb={[
+      { label: 'Community', href: '/community' },
+      { label: 'Children & Youth', href: '/community/children-youth' },
+    ]}
+  />
+);
+
 export default ChildrenYouth;

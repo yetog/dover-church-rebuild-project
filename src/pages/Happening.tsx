@@ -1,6 +1,12 @@
 import React from 'react';
 import StubPage from '@/components/StubPage';
-import banner from '@/assets/banners/happening.jpg';
 
-const Happening = () => <StubPage title="Happening at People's" banner={banner} />;
+const Happening = () => (
+  <StubPage
+    title="Events"
+    subtitle="Upcoming events, services, and activities at People's Church."
+    breadcrumb={[{ label: 'Events', href: '/happening' }]}
+  />
+);
+
 export default Happening;
