@@ -3,6 +3,10 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import AboutSection from '@/components/AboutSection';
+import WhatToExpectSection from '@/components/WhatToExpectSection';
+import PastorSection from '@/components/PastorSection';
+import ChurchHistorySection from '@/components/ChurchHistorySection';
+import PhotoGallerySection from '@/components/PhotoGallerySection';
 
 const About = () => {
   return (
@@ -15,6 +19,10 @@ const About = () => {
       />
       <main className="flex-1">
         <AboutSection />
+        <WhatToExpectSection />
+        <PastorSection />
+        <ChurchHistorySection />
+        <PhotoGallerySection />
       </main>
       <Footer />
     </div>

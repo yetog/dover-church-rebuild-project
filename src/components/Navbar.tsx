@@ -24,7 +24,7 @@ const navItems: NavItem[] = [
       { label: 'Partners', href: '/partners' },
     ],
   },
-  { label: 'Give', href: '/contact' },
+  { label: 'Give', href: '/give' },
 ];
 
 const Navbar = () => {

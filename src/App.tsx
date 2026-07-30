@@ -19,6 +19,7 @@ import ChildrenYouth from "./pages/ChildrenYouth";
 import Neighbors from "./pages/Neighbors";
 import CommunityHealth from "./pages/CommunityHealth";
 import HelpingOthers from "./pages/HelpingOthers";
+import Give from "./pages/Give";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
             <Route path="/community/neighbors" element={<Neighbors />} />
             <Route path="/community/health" element={<CommunityHealth />} />
             <Route path="/helping-others" element={<HelpingOthers />} />
+            <Route path="/give" element={<Give />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
