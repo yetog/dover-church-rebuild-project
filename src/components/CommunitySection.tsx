@@ -1,58 +1,71 @@
-
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import childrenYouthImg from "@/assets/programs/children-youth-btn.jpg";
-import neighborsImg from "@/assets/programs/neighbors-in-need-1.jpg";
-import communityHealthImg from "@/assets/programs/community-health-btn.jpg";
+import { Link } from 'react-router-dom';
+import { Users, Heart, Activity, ArrowRight } from 'lucide-react';
+
+const communityPrograms = [
+  {
+    id: 1,
+    title: "Children & Youth",
+    description: "Education, mentorship, and support programs for young people in our community.",
+    href: "/community/children-youth",
+    icon: Users,
+  },
+  {
+    id: 2,
+    title: "Neighbors in Need",
+    description: "Food assistance, clothing, and essential resources for families facing hardship.",
+    href: "/community/neighbors",
+    icon: Heart,
+  },
+  {
+    id: 3,
+    title: "Community Health",
+    description: "Health education, counseling services, and wellness support groups.",
+    href: "/community/health",
+    icon: Activity,
+  },
+];
 
 const CommunitySection = () => {
-  const communityPrograms = [
-    {
-      id: 1,
-      title: "Center for Children and Youth",
-      description: "Providing education, mentorship, and support programs for young people in our community.",
-      image: childrenYouthImg
-    },
-    {
-      id: 2,
-      title: "Center for Neighbors in Need",
-      description: "Offering food assistance, clothing, and other essential resources to families facing hardship.",
-      image: neighborsImg
-    },
-    {
-      id: 3,
-      title: "Center for Community Health",
-      description: "Supporting overall wellness through health education, counseling services, and support groups.",
-      image: communityHealthImg
-    }
-  ];
-
   return (
-    <section id="community" className="section-padding bg-church-50 dark:bg-[#1a0a17]">
+    <section id="community" className="section-padding bg-white dark:bg-[#1a0a17]">
       <div className="container-max">
-        <h2 className="section-title dark:text-white">People's Community Center</h2>
-        <p className="section-subtitle dark:text-[#ede5f0] !text-left !mx-0 !max-w-none">
-          Serving our community through outreach programs and assistance for our neighbors in need.
-        </p>
+        <div className="max-w-3xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
+            Our Programs
+          </p>
+          <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-4">
+            People's Community Center
+          </h2>
+          <p className="text-lg text-church-600 dark:text-white/70 mb-12">
+            Serving our neighbors through outreach, education, and support.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-          {communityPrograms.map(program => (
-            <Card key={program.id} className="overflow-hidden shadow-lg border-0 dark:bg-[#422F3C]">
-              <div
-                className="h-48 bg-cover bg-center"
-                style={{ backgroundImage: `url(${program.image})` }}
-              ></div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-church-800 dark:text-white">{program.title}</h3>
-                <p className="text-church-600 dark:text-[#ede5f0] mb-4">{program.description}</p>
-                <Button
-                  className="button-solid w-full bg-cta text-white hover:bg-cta-hover transition-colors duration-200"
-                >
-                  Learn More
-                </Button>
-              </CardContent>
-            </Card>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          {communityPrograms.map(({ id, title, description, href, icon: Icon }) => (
+            <Link
+              key={id}
+              to={href}
+              className="group block"
+            >
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-church-100 dark:bg-church-800 flex items-center justify-center group-hover:bg-church-600 group-hover:text-white transition-colors">
+                  <Icon className="w-5 h-5 text-church-600 dark:text-white group-hover:text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-church-800 dark:text-white mb-2 group-hover:text-church-600 dark:group-hover:text-church-300 transition-colors">
+                    {title}
+                  </h3>
+                  <p className="text-church-600 dark:text-white/60 text-sm leading-relaxed mb-3">
+                    {description}
+                  </p>
+                  <span className="inline-flex items-center text-sm font-semibold text-church-600 dark:text-church-300 group-hover:text-cta transition-colors">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

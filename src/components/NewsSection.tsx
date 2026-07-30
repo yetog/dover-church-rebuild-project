@@ -1,64 +1,81 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Calendar, ArrowRight } from 'lucide-react';
 
 const events = [
   {
     id: 1,
-    time: '10:00\nAM',
+    category: 'Worship',
     title: 'Sunday Worship Service',
-    datetime: 'Every Sunday, 10:00 AM',
+    datetime: 'Every Sunday',
+    time: '10:00 AM',
   },
   {
     id: 2,
-    time: '6:00\nPM',
+    category: 'Youth',
     title: 'Youth Group Meeting',
-    datetime: 'Wednesdays, 6:00 PM',
+    datetime: 'Wednesdays',
+    time: '6:00 PM',
   },
   {
     id: 3,
-    time: '9:00\nAM',
+    category: 'Fellowship',
     title: 'Prayer Breakfast',
-    datetime: 'Second Saturday, 9:00 AM',
+    datetime: 'Second Saturday',
+    time: '9:00 AM',
   },
   {
     id: 4,
-    time: '7:30\nPM',
+    category: 'Education',
     title: 'Evening Bible Study',
-    datetime: 'Thursday, 7:30 PM',
+    datetime: 'Thursdays',
+    time: '7:30 PM',
   },
 ];
 
 const NewsSection = () => {
   return (
-    <section className="section-padding bg-white dark:bg-[#1a0a17]">
+    <section className="section-padding bg-church-50 dark:bg-[#0f0a10]">
       <div className="container-max">
-        {/* Centered heading - "What's Happening" */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-church-600 dark:text-white mb-12 uppercase tracking-tight">
-          What's Happening
-        </h2>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
+              Upcoming
+            </p>
+            <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white">
+              Events & Services
+            </h2>
+          </div>
+          <Link
+            to="/happening"
+            className="mt-4 md:mt-0 inline-flex items-center text-sm font-semibold text-church-600 dark:text-church-300 hover:text-cta transition-colors"
+          >
+            View all events <ArrowRight className="w-4 h-4 ml-1" />
+          </Link>
+        </div>
 
-        {/* Event cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="space-y-0 divide-y divide-church-200 dark:divide-church-700">
           {events.map(event => (
             <article
               key={event.id}
-              className="flex items-start gap-6 pb-6 border-b border-gray-200 dark:border-[#5A2653] last:border-b-0"
+              className="py-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 group cursor-pointer hover:bg-church-100 dark:hover:bg-church-800/30 -mx-4 px-4 transition-colors"
             >
-              {/* Circular time badge */}
-              <div className="flex-shrink-0 w-20 h-20 rounded-full border-[2.67px] border-[#E29032] flex items-center justify-center bg-transparent dark:bg-[#422F3C] dark:border-[#E29032]">
-                <div className="text-center text-sm font-bold text-church-600 dark:text-white leading-tight whitespace-pre-line">
-                  {event.time}
+              <div className="flex items-center gap-4 md:w-48">
+                <Calendar className="w-5 h-5 text-church-400 dark:text-church-500" />
+                <div>
+                  <p className="text-sm font-medium text-church-800 dark:text-white">{event.datetime}</p>
+                  <p className="text-sm text-church-500 dark:text-church-400">{event.time}</p>
                 </div>
               </div>
-
-              {/* Event text content */}
-              <div className="flex-1 pt-1">
-                <h3 className="text-xl font-bold uppercase text-[#5A2653] dark:text-white mb-1">
+              <div className="flex-1">
+                <span className="text-[10px] font-semibold uppercase tracking-widest text-church-500 dark:text-church-400">
+                  {event.category}
+                </span>
+                <h3 className="text-lg font-bold text-church-800 dark:text-white group-hover:text-church-600 dark:group-hover:text-church-300 transition-colors">
                   {event.title}
                 </h3>
-                <p className="text-[1.125rem] text-[#183640] dark:text-[#b885aa]">
-                  {event.datetime}
-                </p>
               </div>
+              <ArrowRight className="w-5 h-5 text-church-300 dark:text-church-600 group-hover:text-church-600 dark:group-hover:text-white group-hover:translate-x-1 transition-all hidden md:block" />
             </article>
           ))}
         </div>
