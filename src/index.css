@@ -83,7 +83,8 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-church-600 mb-6 text-left;
+    @apply text-3xl md:text-4xl font-black uppercase tracking-tight text-church-600 mb-6 text-center;
+    letter-spacing: -0.05em;
   }
 
   .section-subtitle {
