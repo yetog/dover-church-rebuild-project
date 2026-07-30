@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import churchHero from "@/assets/banners/who-we-are.jpg";
+import churchHero from "@/assets/stock/worship-hands.jpg";
 
 const HeroSection = () => {
   return (

@@ -2,7 +2,11 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
-import { Calendar, Clock, MapPin, Users, ChevronRight, ImageIcon } from 'lucide-react';
+import { Calendar, Clock, MapPin, Users, ChevronRight } from 'lucide-react';
+
+// Import event images
+import worshipImg from '@/assets/stock/event-worship.jpg';
+import fellowshipImg from '@/assets/stock/fellowship.jpg';
 
 const upcomingEvents = [
   {
@@ -15,17 +19,19 @@ const upcomingEvents = [
     description: "Join us for our weekly worship service with music, prayer, and message.",
     recurring: true,
     featured: true,
+    image: worshipImg,
   },
   {
     id: 2,
-    title: "[Event Name]",
+    title: "Community Fellowship Dinner",
     category: "Fellowship",
-    date: "[Date]",
-    time: "[Time]",
-    location: "[Location]",
-    description: "[Brief description of the event and what attendees can expect]",
-    recurring: false,
+    date: "First Friday",
+    time: "6:00 PM",
+    location: "Fellowship Hall",
+    description: "Monthly potluck dinner bringing our church family together for food and connection.",
+    recurring: true,
     featured: true,
+    image: fellowshipImg,
   },
   {
     id: 3,
@@ -108,14 +114,19 @@ const Happening = () => {
                   key={event.id}
                   className="bg-church-50 dark:bg-church-800/30 rounded-lg overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow"
                 >
-                  {/* Image Placeholder */}
-                  <div className="aspect-[2/1] bg-church-200 dark:bg-church-800 flex items-center justify-center">
-                    <div className="text-center">
-                      <ImageIcon className="w-12 h-12 mx-auto mb-2 text-church-400 dark:text-church-600" />
-                      <p className="text-sm text-church-400 dark:text-church-500">
-                        Event image
-                      </p>
-                    </div>
+                  {/* Event Image */}
+                  <div className="aspect-[2/1] bg-church-200 dark:bg-church-800 overflow-hidden">
+                    {event.image ? (
+                      <img
+                        src={event.image}
+                        alt={event.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <Calendar className="w-12 h-12 text-church-400 dark:text-church-600" />
+                      </div>
+                    )}
                   </div>
 
                   <div className="p-6">
@@ -157,9 +168,6 @@ const Happening = () => {
               ))}
             </div>
 
-            <p className="text-xs text-church-400 dark:text-church-500 mt-6 italic">
-              2 featured event images needed - replace placeholders (recommended: 800x400px)
-            </p>
           </div>
         </section>
 
