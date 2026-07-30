@@ -11,29 +11,28 @@ type NavItem =
   | { label: string; href?: undefined; children: NavChild[] };
 
 const navItems: NavItem[] = [
+  { label: 'Watch', href: '/sermons' },
+  { label: 'Visit', href: '/about' },
+  { label: 'Events', href: '/happening' },
   {
-    label: 'Who We Are',
+    label: 'Community',
     children: [
-      { label: 'Church for the People', href: '/about' },
+      { label: 'Children & Youth', href: '/community/children-youth' },
+      { label: 'Neighbors in Need', href: '/community/neighbors' },
+      { label: 'Community Health', href: '/community/health' },
+      { label: 'Outreach', href: '/helping-others' },
+    ],
+  },
+  {
+    label: 'About',
+    children: [
+      { label: 'Our Church', href: '/about' },
       { label: 'United Church of Christ', href: '/ucc' },
-      { label: 'Pastor, Staff and Lay Leaders', href: '/staff' },
-      { label: 'Partners in Mission', href: '/partners' },
+      { label: 'Staff & Leaders', href: '/staff' },
+      { label: 'Partners', href: '/partners' },
     ],
   },
-  { label: 'Videos of Service', href: '/sermons' },
-  { label: 'Daily Scripture, Meditation & Prayer', href: '/meditation' },
-  { label: "Happening at People's", href: '/happening' },
-  {
-    label: "People's Community Center",
-    children: [
-      { label: 'Center for Children and Youth', href: '/community/children-youth' },
-      { label: 'Center for Neighbors in Need', href: '/community/neighbors' },
-      { label: 'Center for Community Health', href: '/community/health' },
-    ],
-  },
-  { label: 'Helping Others & Getting Help', href: '/helping-others' },
-  { label: 'Current Issues of our Newsletter', href: '/newsletter' },
-  { label: 'Contact Us', href: '/contact' },
+  { label: 'Give', href: '/contact' },
 ];
 
 const Navbar = () => {

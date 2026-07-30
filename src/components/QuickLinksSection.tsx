@@ -1,29 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Mail, Building2, Heart } from 'lucide-react';
 
 const links = [
-  { label: 'About Us', href: '/about', icon: Users },
-  { label: 'Contact Us', href: '/contact', icon: Mail },
-  { label: "People's Community Center", href: '/community', icon: Building2 },
-  { label: 'Prayer List', href: '/meditation', icon: Heart },
+  { label: 'About', href: '/about' },
+  { label: 'Community', href: '/community/children-youth' },
+  { label: 'Events', href: '/happening' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const QuickLinksSection = () => {
   return (
-    <section className="section-padding bg-church-600 dark:bg-[#2d1429]">
+    <section className="py-6 bg-church-800 dark:bg-[#1a0a17] border-b border-church-700">
       <div className="container-max">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {links.map(({ label, href, icon: Icon }) => (
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+          {links.map(({ label, href }) => (
             <Link
               key={href}
               to={href}
-              className="button-solid transition-all normal-case bg-white dark:bg-[#422F3C] text-church-600 dark:text-[#b885aa] hover:bg-church-50 dark:hover:bg-[#5a3d52] flex flex-col items-center justify-center gap-2 shadow hover:shadow-md hover:-translate-y-0.5"
+              className="text-white/80 hover:text-white text-sm uppercase tracking-widest font-medium transition-colors"
             >
-              <Icon className="h-7 w-7 text-church-600 dark:text-[#b885aa]" />
-              <span className="text-sm leading-tight font-heading font-bold">
-                {label}
-              </span>
+              {label}
             </Link>
           ))}
         </div>

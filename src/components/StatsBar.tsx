@@ -2,25 +2,25 @@ import React from 'react';
 
 const StatsBar = () => {
   return (
-    <section className="bg-church-600 dark:bg-[#2d1429] py-6 px-4">
-      <div className="max-w-5xl mx-auto flex items-center justify-around text-white">
+    <section className="bg-white dark:bg-[#1a0a17] border-y border-gray-100 dark:border-white/10 py-10 px-4">
+      <div className="max-w-4xl mx-auto flex items-center justify-center gap-12 md:gap-20">
         <div className="text-center">
-          <div className="text-3xl font-black text-white">1886</div>
-          <div className="text-xs font-bold uppercase tracking-widest text-church-200 dark:text-[#d4b5ce] mt-1">
+          <div className="text-4xl font-black text-church-600 dark:text-white">1886</div>
+          <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-church-400 dark:text-white/50 mt-2">
             Founded
           </div>
         </div>
-        <div className="hidden sm:block w-px h-8 bg-white/20" />
+        <div className="w-px h-12 bg-church-200 dark:bg-white/20" />
         <div className="text-center">
-          <div className="text-3xl font-black text-white">3</div>
-          <div className="text-xs font-bold uppercase tracking-widest text-church-200 dark:text-[#d4b5ce] mt-1">
+          <div className="text-4xl font-black text-church-600 dark:text-white">3</div>
+          <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-church-400 dark:text-white/50 mt-2">
             Programs
           </div>
         </div>
-        <div className="hidden sm:block w-px h-8 bg-white/20" />
+        <div className="w-px h-12 bg-church-200 dark:bg-white/20" />
         <div className="text-center">
-          <div className="text-3xl font-black text-cta">UCC</div>
-          <div className="text-xs font-bold uppercase tracking-widest text-church-200 dark:text-[#d4b5ce] mt-1">
+          <div className="text-4xl font-black text-cta">UCC</div>
+          <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-church-400 dark:text-white/50 mt-2">
             Member
           </div>
         </div>

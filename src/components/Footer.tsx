@@ -1,110 +1,99 @@
 
 import React from 'react';
-import { Facebook, Mail, Youtube } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Facebook, Youtube, MapPin, Phone, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-church-900 dark:bg-[#183640] text-white pt-9 pb-15">
-      <div className="container-max mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer className="bg-church-900 dark:bg-[#0f0f0f] text-white">
+      {/* Main Footer */}
+      <div className="container-max mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-          {/* Address/Contact Column */}
+          {/* Location Column */}
           <div>
-            <h3 className="text-lg font-bold mb-6">Contact</h3>
-            <address className="not-italic space-y-2 text-sm font-normal leading-relaxed">
-              <p>46 South Bradford</p>
-              <p>Dover, Delaware 19904</p>
-              <div className="pt-2">
-                <p className="text-white"><span className="font-semibold">Office:</span></p>
-                <p><a href="tel:(302) 674-4177" className="text-white hover:text-church-200 transition">
-                  (302) 674-4177
-                </a></p>
-              </div>
-              <div className="pt-2">
-                <p className="text-white"><span className="font-semibold">Fax:</span></p>
-                <p className="text-white">(302) 674-3423</p>
-              </div>
-              <div className="pt-2">
-                <p className="text-white"><span className="font-semibold">Email:</span></p>
-                <p>
-                  <a href="mailto:office@pcd-dover.org" className="text-white hover:text-church-200 transition flex items-center">
-                    <Mail className="h-4 w-4 mr-2" />
-                    office@pcd-dover.org
-                  </a>
-                </p>
-              </div>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-white/60 mb-6">Visit Us</h3>
+            <address className="not-italic space-y-3 text-sm leading-relaxed">
+              <p className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 mt-0.5 text-white/60" />
+                <span>46 South Bradford<br />Dover, Delaware 19904</span>
+              </p>
+              <p className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-white/60" />
+                <a href="tel:(302) 674-4177" className="hover:text-cta transition">(302) 674-4177</a>
+              </p>
+              <p className="flex items-center gap-3">
+                <Mail className="h-4 w-4 text-white/60" />
+                <a href="mailto:office@pcd-dover.org" className="hover:text-cta transition">office@pcd-dover.org</a>
+              </p>
             </address>
           </div>
 
-          {/* Learn/Links Column */}
+          {/* Worship Column */}
           <div>
-            <h3 className="text-lg font-bold mb-6">Learn</h3>
-            <nav className="space-y-3">
-              <a
-                href="/about"
-                className="text-sm font-normal text-white hover:text-church-200 transition block"
-              >
-                About Us
-              </a>
-              <a
-                href="#worship"
-                className="text-sm font-normal text-white hover:text-church-200 transition block"
-              >
-                Worship Schedule
-              </a>
-              <a
-                href="#sermons"
-                className="text-sm font-normal text-white hover:text-church-200 transition block"
-              >
-                Sermons
-              </a>
-              <a
-                href="/contact"
-                className="text-sm font-normal text-white hover:text-church-200 transition block"
-              >
-                Get Involved
-              </a>
-              <a
-                href="#resources"
-                className="text-sm font-normal text-white hover:text-church-200 transition block"
-              >
-                Resources
-              </a>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-white/60 mb-6">Worship</h3>
+            <nav className="space-y-3 text-sm">
+              <Link to="/sermons" className="block hover:text-cta transition">Watch Services</Link>
+              <Link to="/meditation" className="block hover:text-cta transition">Daily Devotional</Link>
+              <Link to="/happening" className="block hover:text-cta transition">Upcoming Events</Link>
+              <Link to="/newsletter" className="block hover:text-cta transition">Newsletter</Link>
             </nav>
           </div>
 
-          {/* Social/Follow Column */}
+          {/* Community Column */}
           <div>
-            <h3 className="text-lg font-bold mb-6">Follow</h3>
-            <div className="space-y-4">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-white/60 mb-6">Community</h3>
+            <nav className="space-y-3 text-sm">
+              <Link to="/community/children-youth" className="block hover:text-cta transition">Children & Youth</Link>
+              <Link to="/community/neighbors" className="block hover:text-cta transition">Neighbors in Need</Link>
+              <Link to="/community/health" className="block hover:text-cta transition">Community Health</Link>
+              <Link to="/helping-others" className="block hover:text-cta transition">Outreach</Link>
+            </nav>
+          </div>
+
+          {/* About Column */}
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-white/60 mb-6">About</h3>
+            <nav className="space-y-3 text-sm">
+              <Link to="/about" className="block hover:text-cta transition">Our Church</Link>
+              <Link to="/staff" className="block hover:text-cta transition">Staff & Leaders</Link>
+              <Link to="/ucc" className="block hover:text-cta transition">United Church of Christ</Link>
+              <Link to="/partners" className="block hover:text-cta transition">Partners</Link>
+              <Link to="/contact" className="block hover:text-cta transition">Contact</Link>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="border-t border-white/10">
+        <div className="container-max mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-white/60">
+            &copy; {new Date().getFullYear()} The People's Church of Dover UCC. All rights reserved.
+          </p>
+          <div className="flex items-center gap-6">
+            <span className="text-xs text-white/60">Open and Affirming Congregation</span>
+            <div className="flex items-center gap-4">
               <a
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-white hover:text-church-200 transition text-sm font-normal"
+                className="text-white/60 hover:text-white transition"
+                aria-label="Facebook"
               >
-                <Facebook className="h-5 w-5 mr-3" />
-                <span>Facebook</span>
+                <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="https://www.youtube.com/@PeoplesChurchOfDover"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-white hover:text-church-200 transition text-sm font-normal"
+                className="text-white/60 hover:text-white transition"
+                aria-label="YouTube"
               >
-                <Youtube className="h-5 w-5 mr-3" />
-                <span>YouTube</span>
+                <Youtube className="h-5 w-5" />
               </a>
             </div>
-            <p className="text-xs mt-8 leading-relaxed">
-              The People's Church of Dover is an Open and Affirming Congregation.
-            </p>
           </div>
-        </div>
-
-        {/* Footer Bottom */}
-        <div className="border-t border-church-700 dark:border-church-600 mt-12 pt-6 text-center text-xs">
-          <p>&copy; {new Date().getFullYear()} The People's Church of Dover UCC. All rights reserved.</p>
         </div>
       </div>
     </footer>
