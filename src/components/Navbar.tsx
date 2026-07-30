@@ -7,22 +7,14 @@ import churchLogo from '@/assets/logo/church-logo.png';
 
 type NavChild = { label: string; href: string };
 type NavItem =
-  | { label: string; href: string; children?: undefined }
-  | { label: string; href?: undefined; children: NavChild[] };
+  | { label: string; href: string; children?: undefined; external?: boolean }
+  | { label: string; href?: undefined; children: NavChild[]; external?: undefined };
 
 const navItems: NavItem[] = [
   { label: 'Watch', href: '/sermons' },
   { label: 'Visit', href: '/about' },
   { label: 'Events', href: '/happening' },
-  {
-    label: 'Community',
-    children: [
-      { label: 'Children & Youth', href: '/community/children-youth' },
-      { label: 'Neighbors in Need', href: '/community/neighbors' },
-      { label: 'Community Health', href: '/community/health' },
-      { label: 'Outreach', href: '/helping-others' },
-    ],
-  },
+  { label: 'Community', href: 'https://pcc-dover.org', external: true },
   {
     label: 'About',
     children: [
@@ -75,6 +67,16 @@ const Navbar = () => {
                     ))}
                   </div>
                 </div>
+              ) : item.external ? (
+                <a
+                  key={item.href}
+                  href={item.href!}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-2 text-white/80 hover:text-white text-sm font-medium rounded-md hover:bg-white/10 transition-colors"
+                >
+                  {item.label}
+                </a>
               ) : (
                 <Link
                   key={item.href}
@@ -131,6 +133,17 @@ const Navbar = () => {
                   ))}
                 </div>
               </div>
+            ) : item.external ? (
+              <a
+                key={item.href}
+                href={item.href!}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="block px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-md text-base font-medium"
+              >
+                {item.label}
+              </a>
             ) : (
               <Link
                 key={item.href}

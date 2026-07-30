@@ -5,7 +5,7 @@ import { Facebook, Youtube, MapPin, Phone, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-church-900 dark:bg-[#0f0f0f] text-white">
+    <footer className="bg-church-900 dark:bg-[#0a0608] text-white">
       {/* Main Footer */}
       <div className="container-max mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -44,10 +44,10 @@ const Footer = () => {
           <div>
             <h3 className="text-xs font-bold uppercase tracking-widest text-white/60 mb-6">Community</h3>
             <nav className="space-y-3 text-sm">
-              <Link to="/community/children-youth" className="block hover:text-cta transition">Children & Youth</Link>
-              <Link to="/community/neighbors" className="block hover:text-cta transition">Neighbors in Need</Link>
-              <Link to="/community/health" className="block hover:text-cta transition">Community Health</Link>
-              <Link to="/helping-others" className="block hover:text-cta transition">Outreach</Link>
+              <a href="https://pcc-dover.org" target="_blank" rel="noopener noreferrer" className="block hover:text-cta transition">People's Community Center</a>
+              <a href="https://pcc-dover.org/programs" target="_blank" rel="noopener noreferrer" className="block hover:text-cta transition">Programs & Services</a>
+              <a href="https://pcc-dover.org/get-involved" target="_blank" rel="noopener noreferrer" className="block hover:text-cta transition">Get Involved</a>
+              <a href="https://pcc-dover.org/contact" target="_blank" rel="noopener noreferrer" className="block hover:text-cta transition">Contact PCC</a>
             </nav>
           </div>
 

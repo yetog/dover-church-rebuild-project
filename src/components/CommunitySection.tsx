@@ -1,27 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Users, Heart, Activity, ArrowRight } from 'lucide-react';
+import { Users, Heart, Activity, ArrowRight, ExternalLink } from 'lucide-react';
 
 const communityPrograms = [
   {
     id: 1,
     title: "Children & Youth",
     description: "Education, mentorship, and support programs for young people in our community.",
-    href: "/community/children-youth",
+    href: "https://pcc-dover.org/youth",
     icon: Users,
   },
   {
     id: 2,
-    title: "Neighbors in Need",
+    title: "Food Pantry",
     description: "Food assistance, clothing, and essential resources for families facing hardship.",
-    href: "/community/neighbors",
+    href: "https://pcc-dover.org/food-pantry",
     icon: Heart,
   },
   {
     id: 3,
-    title: "Community Health",
+    title: "Community Programs",
     description: "Health education, counseling services, and wellness support groups.",
-    href: "/community/health",
+    href: "https://pcc-dover.org/programs",
     icon: Activity,
   },
 ];
@@ -44,9 +43,11 @@ const CommunitySection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {communityPrograms.map(({ id, title, description, href, icon: Icon }) => (
-            <Link
+            <a
               key={id}
-              to={href}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group block"
             >
               <div className="flex items-start gap-4">
@@ -54,18 +55,19 @@ const CommunitySection = () => {
                   <Icon className="w-5 h-5 text-church-600 dark:text-white group-hover:text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-church-800 dark:text-white mb-2 group-hover:text-church-600 dark:group-hover:text-church-300 transition-colors">
+                  <h3 className="text-lg font-bold text-church-800 dark:text-white mb-2 group-hover:text-church-600 dark:group-hover:text-church-300 transition-colors flex items-center gap-2">
                     {title}
+                    <ExternalLink className="w-3 h-3 opacity-50" />
                   </h3>
                   <p className="text-church-600 dark:text-white/60 text-sm leading-relaxed mb-3">
                     {description}
                   </p>
                   <span className="inline-flex items-center text-sm font-semibold text-church-600 dark:text-church-300 group-hover:text-cta transition-colors">
-                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    Visit PCC <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>
