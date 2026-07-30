@@ -2,11 +2,9 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
-import StatsBar from '@/components/StatsBar';
-import QuickLinksSection from '@/components/QuickLinksSection';
-import CommunitySection from '@/components/CommunitySection';
-import AboutSection from '@/components/AboutSection';
 import ServiceInfoBar from '@/components/ServiceInfoBar';
+import AboutSection from '@/components/AboutSection';
+import CommunitySection from '@/components/CommunitySection';
 import NewsSection from '@/components/NewsSection';
 import SermonSection from '@/components/SermonSection';
 import RomeroQuoteSection from '@/components/RomeroQuoteSection';
@@ -18,13 +16,11 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <StatsBar />
-        <QuickLinksSection />
-        <CommunitySection />
-        <AboutSection />
         <ServiceInfoBar />
-        <NewsSection />
+        <AboutSection />
+        <CommunitySection />
         <SermonSection />
+        <NewsSection />
         <RomeroQuoteSection />
         <PrayerInvitationSection />
       </main>

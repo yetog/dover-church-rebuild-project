@@ -1,65 +1,77 @@
-
 import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
+import { Link } from 'react-router-dom';
+import { Users, Heart, Globe, ArrowRight } from 'lucide-react';
+
+const values = [
+  {
+    icon: Users,
+    title: "Community",
+    description: "Building meaningful connections through worship and service",
+  },
+  {
+    icon: Heart,
+    title: "Faith",
+    description: "Growing spiritually through worship, prayer, and study",
+  },
+  {
+    icon: Globe,
+    title: "Service",
+    description: "Reaching out to our neighbors with love and compassion",
+  },
+];
 
 const AboutSection = () => {
   return (
-    <section id="who-we-are" className="section-padding bg-white dark:bg-[#1a0a17]">
+    <section id="who-we-are" className="section-padding bg-church-50 dark:bg-[#0f0a10]">
       <div className="container-max">
-        <h2 className="section-title">Who We Are</h2>
-        <p className="section-subtitle dark:text-[#ede5f0]">
-          The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ.
-        </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left: Content */}
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
+              About Us
+            </p>
+            <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-6">
+              Who We Are
+            </h2>
 
-        <div className="mt-12">
-          <Card className="shadow-lg border-0 mb-8 overflow-hidden dark:bg-[#422F3C]">
-            <CardContent className="p-6 md:p-8">
-              <div className="flex flex-col">
-                <blockquote className="italic text-2xl md:text-3xl text-church-800 dark:text-[#ede5f0] mb-6">
-                  "Don't place a period where God has placed a comma."
-                </blockquote>
-                <p className="text-church-600 dark:text-[#b885aa] font-medium">- Gracie Allen -</p>
-              </div>
-            </CardContent>
-          </Card>
+            <blockquote className="border-l-4 border-church-600 pl-6 my-8">
+              <p className="text-xl md:text-2xl italic text-church-700 dark:text-white/90 mb-3">
+                "Don't place a period where God has placed a comma."
+              </p>
+              <cite className="text-sm text-church-500 dark:text-church-400 not-italic">
+                — Gracie Allen
+              </cite>
+            </blockquote>
 
-          <div className="prose max-w-none">
-            <p className="text-lg mb-6">
-              We believe in extravagant welcome. We believe that God calls us to love one another with no exceptions.
-              All are welcome in our church community, regardless of who they are or where they are on their journey of faith.
+            <p className="text-lg text-church-600 dark:text-white/70 mb-6 leading-relaxed">
+              The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ. We believe in extravagant welcome and that God calls us to love one another with no exceptions.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-              <div>
-                <div className="bg-church-600 text-white rounded-full h-16 w-16 flex items-center justify-center mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-church-800">Community</h3>
-                <p className="text-church-600">Building meaningful connections through worship and service</p>
-              </div>
+            <Link
+              to="/about"
+              className="inline-flex items-center text-sm font-semibold text-church-600 dark:text-church-300 hover:text-cta transition-colors"
+            >
+              Learn more about us <ArrowRight className="w-4 h-4 ml-1" />
+            </Link>
+          </div>
 
-              <div>
-                <div className="bg-church-600 text-white rounded-full h-16 w-16 flex items-center justify-center mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
+          {/* Right: Values */}
+          <div className="space-y-8">
+            {values.map(({ icon: Icon, title, description }) => (
+              <div key={title} className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-church-100 dark:bg-church-800 flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-church-600 dark:text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-church-800">Faith</h3>
-                <p className="text-church-600">Growing spiritually through worship, prayer, and study</p>
-              </div>
-
-              <div>
-                <div className="bg-church-600 text-white rounded-full h-16 w-16 flex items-center justify-center mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
+                <div>
+                  <h3 className="text-lg font-bold text-church-800 dark:text-white mb-1">
+                    {title}
+                  </h3>
+                  <p className="text-church-600 dark:text-white/60 text-sm leading-relaxed">
+                    {description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-church-800">Service</h3>
-                <p className="text-church-600">Reaching out to our neighbors with love and compassion</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
