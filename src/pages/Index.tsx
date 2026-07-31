@@ -6,6 +6,7 @@ import HeroSection from '@/components/HeroSection';
 import CommunitySection from '@/components/CommunitySection';
 import NewsSection from '@/components/NewsSection';
 import SermonSection from '@/components/SermonSection';
+import DailyDevotionalSection from '@/components/DailyDevotionalSection';
 import { Mail } from 'lucide-react';
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
         <NewsSection />
         <CommunitySection />
         <SermonSection />
+        <DailyDevotionalSection />
 
         {/* Simple Contact CTA - TRC style */}
         <section className="py-16 px-4 bg-church-50 dark:bg-[#0f0a10]">
