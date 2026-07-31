@@ -6,7 +6,6 @@ import AboutSection from '@/components/AboutSection';
 import WhatToExpectSection from '@/components/WhatToExpectSection';
 import PastorSection from '@/components/PastorSection';
 import ChurchHistorySection from '@/components/ChurchHistorySection';
-import PhotoGallerySection from '@/components/PhotoGallerySection';
 
 const About = () => {
   return (
@@ -22,7 +21,6 @@ const About = () => {
         <WhatToExpectSection />
         <PastorSection />
         <ChurchHistorySection />
-        <PhotoGallerySection />
       </main>
       <Footer />
     </div>

@@ -6,26 +6,26 @@ const recentSermons = [
   {
     id: 1,
     title: "Finding Peace in Uncertain Times",
-    speaker: "Rev. Pastor",
-    date: "April 28, 2025",
-    duration: "32 min",
-    videoUrl: "https://www.youtube.com/watch?v=example1"
+    speaker: "Rev. Dr. G. Derrick Hodge",
+    date: "Recent",
+    duration: "30 min",
+    videoUrl: "https://www.youtube.com/@PeoplesChurchDover"
   },
   {
     id: 2,
     title: "The Power of Community",
-    speaker: "Rev. Pastor",
-    date: "April 21, 2025",
+    speaker: "Rev. Dr. G. Derrick Hodge",
+    date: "Recent",
     duration: "28 min",
-    videoUrl: "https://www.youtube.com/watch?v=example2"
+    videoUrl: "https://www.youtube.com/@PeoplesChurchDover"
   },
   {
     id: 3,
     title: "Walking in Faith",
-    speaker: "Rev. Pastor",
-    date: "April 14, 2025",
+    speaker: "Rev. Dr. G. Derrick Hodge",
+    date: "Recent",
     duration: "35 min",
-    videoUrl: "https://www.youtube.com/watch?v=example3"
+    videoUrl: "https://www.youtube.com/@PeoplesChurchDover"
   },
 ];
 
@@ -47,16 +47,13 @@ const SermonSection = () => {
             </p>
 
             <a
-              href="https://www.youtube.com/@PeoplesChurchOfDover"
+              href="https://www.youtube.com/@PeoplesChurchDover"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-4 bg-church-800 dark:bg-church-700 text-white rounded hover:bg-church-700 dark:hover:bg-church-600 transition-colors group"
+              className="inline-flex items-center gap-2 text-church-800 dark:text-white font-semibold hover:text-cta transition-colors border-b-2 border-church-800 dark:border-white hover:border-cta pb-1"
             >
-              <Radio className="w-5 h-5" />
-              <div className="text-left">
-                <p className="font-semibold">Watch Live</p>
-                <p className="text-sm text-white/70">Sundays at 10:00 AM</p>
-              </div>
+              <Radio className="w-4 h-4" />
+              Watch Live on YouTube
             </a>
           </div>
 

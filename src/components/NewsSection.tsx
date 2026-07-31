@@ -40,10 +40,10 @@ const NewsSection = () => {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
-              Upcoming
+              What's Happening
             </p>
             <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white">
-              Events & Services
+              At People's Church
             </h2>
           </div>
           <Link
