@@ -6,26 +6,26 @@ import { Mail, Phone } from 'lucide-react';
 
 const staffMembers = [
   {
-    name: "[Pastor Name]",
-    role: "Senior Pastor",
-    email: "pastor@pcd-dover.org",
-    phone: "(302) 674-4177",
-    bio: "[Pastor bio - 2-3 sentences about background, education, and ministry focus]",
-    placeholder: true,
-  },
-  {
-    name: "[Name]",
-    role: "Music Director",
-    email: "music@pcd-dover.org",
-    bio: "[Music director bio - background and role in worship]",
-    placeholder: true,
-  },
-  {
-    name: "[Name]",
-    role: "Church Secretary",
+    name: "Rev. Dr. G. Derrick Hodge",
+    role: "Senior Pastor & Executive Director, PCC",
     email: "office@pcd-dover.org",
     phone: "(302) 674-4177",
-    bio: "[Secretary bio - role and office hours]",
+    bio: "Cultural anthropologist with a Ph.D., author of books on cross-racial ministry and community engagement. Leading People's Church and the People's Community Center.",
+    placeholder: false,
+  },
+  {
+    name: "Sue Harris",
+    role: "Community Outreach Coordinator",
+    email: "office@pcd-dover.org",
+    bio: "Working alongside Pastor Hodge to serve the homeless and those in need in downtown Dover.",
+    placeholder: false,
+  },
+  {
+    name: "Contact Office",
+    role: "Church Office",
+    email: "office@pcd-dover.org",
+    phone: "(302) 674-4177",
+    bio: "For general inquiries, please contact our church office during regular hours.",
     placeholder: true,
   },
 ];

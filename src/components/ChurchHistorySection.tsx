@@ -2,24 +2,24 @@ import React from 'react';
 
 const milestones = [
   {
-    year: "[Year]",
+    year: "1909",
     title: "Church Founded",
-    description: "[Description of founding, original location, founding members]",
+    description: "On April 4, 1909, Dr. Lightbourne and approximately 250 members withdrew from Wesley Church and began holding Sunday meetings at the Opera House. The name 'People's' was selected on May 28, 1909.",
   },
   {
-    year: "[Year]",
-    title: "Current Building",
-    description: "[Description of moving to or building the current church location]",
+    year: "1909",
+    title: "First Building",
+    description: "The congregation established their home at 46 S. Bradford Street in downtown Dover, with a cornerstone reading '1909'.",
   },
   {
-    year: "[Year]",
-    title: "Joined UCC",
-    description: "[Description of joining the United Church of Christ denomination]",
+    year: "1923",
+    title: "Church Rebuilt",
+    description: "The historic building was rebuilt and expanded, as marked by a second cornerstone inscribed 'Rebuilt 1923'.",
   },
   {
-    year: "[Year]",
-    title: "Open and Affirming",
-    description: "[Description of becoming an Open and Affirming congregation]",
+    year: "Present",
+    title: "People's Community Center",
+    description: "Under Rev. Dr. G. Derrick Hodge's leadership, the church expanded its mission with the People's Community Center, serving homeless persons, children, youth, and those reintegrating into society.",
   },
 ];
 
@@ -34,17 +34,23 @@ const ChurchHistorySection = () => {
               Our Story
             </p>
             <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-6">
-              Our History
+              115+ Years of Faith & Service
             </h2>
-            <div className="prose prose-church dark:prose-invert max-w-none">
-              <p className="text-lg text-church-600 dark:text-white/70 leading-relaxed mb-6">
-                {/* PLACEHOLDER: Replace with actual church history */}
-                [Opening paragraph about the church's history and significance to the Dover community.
-                When was it founded? By whom? What was the original vision?]
+            <div className="prose prose-church dark:prose-invert max-w-none space-y-4">
+              <p className="text-lg text-church-600 dark:text-white/70 leading-relaxed">
+                People's Church of Dover has a history of bold actions and expansive building programs.
+                Founded in 1909, our congregation has been a cornerstone of the downtown Dover community
+                for over 115 years.
               </p>
               <p className="text-church-600 dark:text-white/70 leading-relaxed">
-                [Second paragraph about growth, challenges overcome, and key moments in the church's journey.
-                Mention important pastors, building projects, or community initiatives.]
+                Today, People's Church is a congregationalist church committed to the wellbeing of
+                struggling people in Dover. We work with homeless persons, children and youth,
+                and formerly incarcerated people who need help reintegrating into society.
+              </p>
+              <p className="text-church-600 dark:text-white/70 leading-relaxed">
+                As an Open and Affirming congregation of the United Church of Christ, we celebrate
+                all who seek the experience of God's unconditional love and invite all to participate
+                fully in the life of the church.
               </p>
             </div>
           </div>
@@ -69,9 +75,6 @@ const ChurchHistorySection = () => {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-church-400 dark:text-church-500 mt-6 pl-8 italic">
-              Timeline placeholder - replace with actual dates and events
-            </p>
           </div>
         </div>
       </div>
