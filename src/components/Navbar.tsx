@@ -75,7 +75,7 @@ const Navbar = () => {
                   rel="noopener noreferrer"
                   className="px-3 py-2 text-white/80 hover:text-white text-sm font-medium rounded-md hover:bg-white/10 transition-colors flex items-center"
                 >
-                  <span className="whitespace-pre-line text-center">{item.label.replace(" Community", "\nCommunity")}</span>
+                  <span className="whitespace-pre-line text-center">{"People's Community\nCenter"}</span>
                 </a>
               ) : (
                 <Link
