@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Play } from 'lucide-react';
+import heroImage from '@/assets/hero-sanctuary.jpg';
 
 const HeroSection = () => {
   return (
@@ -62,7 +63,7 @@ const HeroSection = () => {
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1438032005730-c779502df39b?w=800&q=80')`,
+                backgroundImage: `url('${heroImage}')`,
               }}
             />
             <div className="absolute inset-0 bg-church-900/30 dark:bg-[#0a0608]/30" />
