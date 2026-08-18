@@ -99,8 +99,8 @@ export default {
 				'fade-in': 'fade-in 1.5s ease-out'
 			},
 			fontFamily: {
-				'heading': ['Lato', 'Helvetica Neue', 'Arial', 'sans-serif'],
-				'body': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+				'heading': ['"Century Gothic"', '"CenturyGothic"', '"Avant Garde"', 'Futura', '"Didact Gothic"', 'Muli', 'sans-serif'],
+				'body': ['"Century Gothic"', '"CenturyGothic"', '"Avant Garde"', 'Futura', '"Didact Gothic"', 'Muli', 'sans-serif'],
 			},
 			backgroundImage: {}
 		}
