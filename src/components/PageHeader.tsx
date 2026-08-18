@@ -33,7 +33,7 @@ const PageHeader = ({ title, subtitle, breadcrumb }: PageHeaderProps) => {
           {title}
         </h1>
         {subtitle && (
-          <p className="text-lg text-white/70 max-w-2xl">
+          <p className="text-lg text-white/70 max-w-2xl whitespace-pre-line">
             {subtitle}
           </p>
         )}
