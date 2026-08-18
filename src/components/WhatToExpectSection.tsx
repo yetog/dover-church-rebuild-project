@@ -20,7 +20,7 @@ const expectations = [
   {
     icon: Heart,
     title: "Communion",
-    description: "We celebrate open communion on the first Sunday of each month. All are invited to participate.",
+    description: "We celebrate open communion on the first Sunday of each month. Everyone is invited to participate, regardless of what Communion means to you.",
   },
   {
     icon: Coffee,
