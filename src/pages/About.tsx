@@ -13,7 +13,7 @@ const About = () => {
       <Navbar />
       <PageHeader
         title="About Us"
-        subtitle="The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ."
+        subtitle={`The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ.\n\nWhoever you are, whatever you have done, whatever you believe, \nand wherever you are on life's journey, you are welcome here.`}
         breadcrumb={[{ label: 'About', href: '/about' }]}
       />
       <main className="flex-1">
