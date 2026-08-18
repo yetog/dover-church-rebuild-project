@@ -6,7 +6,6 @@
   :root {
     --font-heading: "Century Gothic", "CenturyGothic", "Avant Garde", "Futura", "Didact Gothic", "Muli", sans-serif;
     --font-body: "Century Gothic", "CenturyGothic", "Avant Garde", "Futura", "Didact Gothic", "Muli", sans-serif;
-  }
 
     --background: 210 40% 98%;
     --foreground: 222.2 84% 4.9%;
@@ -61,10 +60,12 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+    font-family: var(--font-heading);
   }
 }
 
