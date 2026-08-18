@@ -14,7 +14,7 @@ const navItems: NavItem[] = [
   { label: 'Watch', href: '/sermons' },
   { label: 'Visit', href: '/about' },
   { label: 'Events', href: '/happening' },
-  { label: 'Community', href: 'https://pcc-dover.org', external: true },
+  { label: "People's Community Center", href: 'https://pcc-dover.org', external: true },
   {
     label: 'About',
     children: [
@@ -73,9 +73,9 @@ const Navbar = () => {
                   href={item.href!}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-2 text-white/80 hover:text-white text-sm font-medium rounded-md hover:bg-white/10 transition-colors"
+                  className="px-3 py-2 text-white/80 hover:text-white text-sm font-medium rounded-md hover:bg-white/10 transition-colors flex items-center"
                 >
-                  {item.label}
+                  <span className="whitespace-pre-line text-center">{"People's Community\nCenter"}</span>
                 </a>
               ) : (
                 <Link
