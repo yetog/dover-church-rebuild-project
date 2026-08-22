@@ -21,7 +21,7 @@ const StubPage = ({ title, subtitle, breadcrumb }: StubPageProps) => {
         subtitle={subtitle || "This page is coming soon."}
         breadcrumb={breadcrumb}
       />
-      <main className="flex-1 bg-white dark:bg-[#1a0a17]">
+      <main className="flex-1 bg-gray-300 dark:bg-[#1a0a17]">
         <div className="container-max py-16 md:py-24 px-4">
           <div className="max-w-2xl">
             <p className="text-lg text-church-600 dark:text-white/70 mb-8">
