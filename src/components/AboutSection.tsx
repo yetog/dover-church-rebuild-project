@@ -22,7 +22,7 @@ const values = [
 
 const AboutSection = () => {
   return (
-    <section id="who-we-are" className="section-padding bg-church-50 dark:bg-[#0f0a10]">
+    <section id="who-we-are" className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
       <div className="container-max">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Content */}
