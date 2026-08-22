@@ -18,7 +18,7 @@ const ministryCenters = [
   },
   {
     id: 3,
-    title: "Center for Community Health",
+    title: "Center for Workfroce Development",
     description: "Health education, counseling services, and support for those reintegrating into the community.",
     href: "https://pcc-dover.org",
     icon: Activity,
