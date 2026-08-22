@@ -5,7 +5,7 @@ import heroImage from '@/assets/hero-sanctuary.jpg';
 
 const HeroSection = () => {
   return (
-    <section className="bg-church-900 dark:bg-[#0a0608]">
+    <section className="bg-church-700 dark:bg-[#0a0608]">
       <div className="container-max">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh]">
           {/* Left: Service Announcement */}
@@ -59,14 +59,14 @@ const HeroSection = () => {
 
           {/* Right: Featured Image/Video Area */}
           <div className="relative hidden lg:block">
-            <div className="absolute inset-0 bg-gradient-to-r from-church-900 dark:from-[#0a0608] to-transparent z-10 w-24" />
+            <div className="absolute inset-0 bg-gradient-to-r from-church-700 dark:from-[#0a0608] to-transparent z-10 w-24" />
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
                 backgroundImage: `url('${heroImage}')`,
               }}
             />
-            <div className="absolute inset-0 bg-church-900/30 dark:bg-[#0a0608]/30" />
+            <div className="absolute inset-0 bg-church-700/30 dark:bg-[#0a0608]/30" />
           </div>
         </div>
       </div>
