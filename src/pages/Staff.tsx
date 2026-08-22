@@ -33,22 +33,22 @@ const staffMembers = [
 const layLeaders = [
   {
     name: "John Aliison",
-    role: "John Aliison, Moderator",
+    role: "Moderator",
     description: "Leads church council and congregational meetings",
   },
   {
     name: "Robin Hinderer",
-    role: "Robin Hinderer, Treasurer",
+    role: "Treasurer",
     description: "Oversees worship and pastoral care ministries",
   },
   {
     name: "Cheryl Goldsmith",
-    role: "Cheryl Goldsmith, Secretary",
+    role: "Secretary",
     description: "Manages church property and finances",
   },
   {
     name: "Sue Ellen haris",
-    role: "Sue Ellen haris, External Ministries",
+    role: "External Ministries",
     description: "Coordinates Sunday School and youth programs",
   },
 ];
