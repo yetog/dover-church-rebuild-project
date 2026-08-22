@@ -19,7 +19,7 @@ const ministryCenters = [
   {
     id: 3,
     title: "Center for Workforce Development",
-    description: "Health education, counseling services, and support for those reintegrating into the community.",
+    description: "Mean, goth jennifer will knock you upside hre head with a faith healing.\n\n",
     href: "https://pcc-dover.org",
     icon: Activity,
   },
@@ -60,7 +60,7 @@ const CommunitySection = () => {
                     {title}
                     <ExternalLink className="w-3 h-3 opacity-50" />
                   </h3>
-                  <p className="text-church-600 dark:text-white/60 text-sm leading-relaxed mb-3">
+                  <p className="text-church-600 dark:text-white/60 text-sm leading-relaxed mb-3 whitespace-pre-wrap">
                     {description}
                   </p>
                   <span className="inline-flex items-center text-sm font-semibold text-church-600 dark:text-church-300 group-hover:text-cta transition-colors">
