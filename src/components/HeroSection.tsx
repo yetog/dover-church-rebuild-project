@@ -5,7 +5,7 @@ import heroImage from '@/assets/hero-sanctuary.jpg';
 
 const HeroSection = () => {
   return (
-    <section className="bg-church-900 dark:bg-[#0a0608]">
+    <section className="bg-church-700 dark:bg-[#0a0608]">
       <div className="container-max">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh]">
           {/* Left: Service Announcement */}
