@@ -119,7 +119,7 @@ const Sermons = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Video Embed Placeholder */}
               <div className="lg:col-span-2">
-                <div className="aspect-video bg-church-200 dark:bg-church-800 rounded-lg overflow-hidden flex items-center justify-center">
+                <div className="aspect-video bg-green-500 dark:bg-green-900 rounded-lg overflow-hidden flex items-center justify-center">
                   {/* PLACEHOLDER: Replace with actual YouTube embed */}
                   <div className="text-center p-8">
                     <Video className="w-16 h-16 mx-auto mb-4 text-church-400 dark:text-church-600" />
