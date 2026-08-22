@@ -35,8 +35,8 @@ const AboutSection = () => {
             </h2>
 
             <blockquote className="border-l-4 border-church-600 pl-6 my-8">
-              <p className="text-xl md:text-2xl italic text-church-700 dark:text-white/90 mb-3">
-                "Don't place a period where God has placed a comma."
+              <p className="text-xl md:text-2xl italic text-church-700 dark:text-white/90 mb-3 whitespace-pre-line">
+                "Don't place a period{"\n"}where God has placed a comma."
               </p>
               <cite className="text-sm text-church-500 dark:text-church-400 not-italic">
                 — Gracie Allen
