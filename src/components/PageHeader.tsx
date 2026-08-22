@@ -10,7 +10,7 @@ interface PageHeaderProps {
 
 const PageHeader = ({ title, subtitle, breadcrumb }: PageHeaderProps) => {
   return (
-    <section className="bg-church-900 dark:bg-[#0a0608] py-16 md:py-24 px-4">
+    <section className="bg-church-800 dark:bg-[#0a0608] py-16 md:py-24 px-4">
       <div className="container-max">
         {breadcrumb && breadcrumb.length > 0 && (
           <nav className="flex items-center gap-2 text-sm text-white/50 mb-6">
