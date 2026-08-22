@@ -27,7 +27,7 @@ const ministryCenters = [
 
 const CommunitySection = () => {
   return (
-    <section id="community" className="section-padding bg-white dark:bg-[#1a0a17]">
+    <section id="community" className="section-padding bg-gray-300 dark:bg-[#1a0a17]">
       <div className="container-max">
         <div className="max-w-3xl mb-12">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
