@@ -44,7 +44,7 @@ const AboutSection = () => {
             </blockquote>
 
             <p className="text-lg text-church-600 dark:text-white/70 mb-6 leading-relaxed">
-              The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ. We believe in extravagant welcome and that God calls us to love one another with no exceptions.
+              The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ. We believe in extravagant welcome and that God calls us to love one another, with no exceptions.
             </p>
 
             <Link
