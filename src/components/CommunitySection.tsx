@@ -60,7 +60,7 @@ const CommunitySection = () => {
                     {title}
                     <ExternalLink className="w-3 h-3 opacity-50" />
                   </h3>
-                  <p className="text-church-600 dark:text-white/60 text-sm leading-relaxed mb-3">
+                  <p className="text-church-600 dark:text-white/60 text-sm leading-relaxed mb-3 whitespace-pre-wrap">
                     {description}
                   </p>
                   <span className="inline-flex items-center text-sm font-semibold text-church-600 dark:text-church-300 group-hover:text-cta transition-colors">
