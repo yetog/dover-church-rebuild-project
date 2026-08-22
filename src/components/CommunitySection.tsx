@@ -19,7 +19,7 @@ const ministryCenters = [
   {
     id: 3,
     title: "Center for Workforce Development",
-    description: "Health education, counseling services, and support for those reintegrating into the community.",
+    description: "Mean, goth jennifer will knock you upside hre head with a faith healing.\n\n",
     href: "https://pcc-dover.org",
     icon: Activity,
   },
