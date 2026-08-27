@@ -30,7 +30,7 @@ const expectations = [
   {
     icon: Accessibility,
     title: "Accessibility",
-    description: "Anyone in a wheelchair is just out of luck.",
+    description: "There is handicapped parking available and the main floor is wheelchair accessible.",
   },
 ];
 
