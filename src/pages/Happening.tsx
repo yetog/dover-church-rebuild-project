@@ -108,14 +108,14 @@ const Happening = () => {
               </h2>
             </div>
 
-            {loaded && events.length === 0 && (
+            {events.length === 0 && (
               <p className="text-church-500 dark:text-white/60 italic">
                 No special events are scheduled right now — please check back soon, or join us for any of our weekly gatherings below.
               </p>
             )}
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {[...featuredEvents, ...regularDbEvents].map((event) => (
+              {events.map((event) => (
                 <article
                   key={event.id}
                   className="bg-white dark:bg-church-800/30 rounded-lg overflow-hidden group hover:shadow-lg transition-shadow"
