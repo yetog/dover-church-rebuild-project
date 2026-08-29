@@ -6,12 +6,25 @@ interface PageHeaderProps {
   title: string;
   subtitle?: string;
   breadcrumb?: { label: string; href: string }[];
+  image?: string;
+  imageAlt?: string;
 }
 
-const PageHeader = ({ title, subtitle, breadcrumb }: PageHeaderProps) => {
+const PageHeader = ({ title, subtitle, breadcrumb, image, imageAlt }: PageHeaderProps) => {
   return (
-    <section className="bg-church-800 dark:bg-[#0a0608] py-16 md:py-24 px-4">
-      <div className="container-max">
+    <section className="relative bg-church-800 dark:bg-[#0a0608] py-16 md:py-24 px-4 overflow-hidden">
+      {image && (
+        <>
+          <img
+            src={image}
+            alt={imageAlt ?? ''}
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-church-900/75 dark:bg-[#0a0608]/85" />
+        </>
+      )}
+      <div className="relative container-max">
         {breadcrumb && breadcrumb.length > 0 && (
           <nav className="flex items-center gap-2 text-sm text-white/50 mb-6">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
