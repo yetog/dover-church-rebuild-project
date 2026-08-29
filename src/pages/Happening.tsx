@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import { Calendar, Clock, MapPin, Users, ChevronRight } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
 
 // Import event images
 import worshipImg from '@/assets/stock/event-worship.jpg';
@@ -13,12 +12,16 @@ type ChurchEvent = {
   id: string;
   title: string;
   event_date: string;
-  event_time: string | null;
-  location: string | null;
+  event_time?: string;
+  location?: string;
   category: string;
-  description: string | null;
-  featured: boolean;
+  description?: string;
 };
+
+// Upcoming special events — edit this list to add or remove events.
+// Dates use YYYY-MM-DD format.
+const upcomingEvents: ChurchEvent[] = [];
+
 
 const recurringEvents = [
   {
@@ -78,26 +81,11 @@ const formatDate = (dateStr: string) => {
 };
 
 const Happening = () => {
-  const [events, setEvents] = useState<ChurchEvent[]>([]);
-  const [loaded, setLoaded] = useState(false);
+  const today = new Date().toISOString().split('T')[0];
+  const events = upcomingEvents
+    .filter((e) => e.event_date >= today)
+    .sort((a, b) => a.event_date.localeCompare(b.event_date));
 
-  useEffect(() => {
-    const load = async () => {
-      const today = new Date().toISOString().split('T')[0];
-      const { data, error } = await supabase
-        .from('events')
-        .select('id, title, event_date, event_time, location, category, description, featured')
-        .eq('published', true)
-        .gte('event_date', today)
-        .order('event_date', { ascending: true });
-      if (!error && data) setEvents(data as ChurchEvent[]);
-      setLoaded(true);
-    };
-    load();
-  }, []);
-
-  const featuredEvents = events.filter(e => e.featured);
-  const regularDbEvents = events.filter(e => !e.featured);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -120,14 +108,14 @@ const Happening = () => {
               </h2>
             </div>
 
-            {loaded && events.length === 0 && (
+            {events.length === 0 && (
               <p className="text-church-500 dark:text-white/60 italic">
                 No special events are scheduled right now — please check back soon, or join us for any of our weekly gatherings below.
               </p>
             )}
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {[...featuredEvents, ...regularDbEvents].map((event) => (
+              {events.map((event) => (
                 <article
                   key={event.id}
                   className="bg-white dark:bg-church-800/30 rounded-lg overflow-hidden group hover:shadow-lg transition-shadow"
