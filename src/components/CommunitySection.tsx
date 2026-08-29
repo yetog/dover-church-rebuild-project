@@ -20,7 +20,7 @@ const ministryCenters = [
   {
     id: 3,
     title: "Center for Workforce Development",
-    description: "Text to be updated\n\n",
+    description: "Job readiness training, skills workshops, and employment support for neighbors seeking meaningful work.",
     href: "https://pcc-dover.org",
     icon: Activity,
   },
