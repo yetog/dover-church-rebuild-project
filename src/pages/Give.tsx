@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
+import giveBanner from '@/assets/photos/Give.jpg';
 import { Heart, CreditCard, Building2, HandHeart, Mail, ExternalLink } from 'lucide-react';
 
 const givingOptions = [
@@ -62,6 +63,8 @@ const Give = () => {
         title="Give"
         subtitle="Your generosity supports our ministry and mission in Dover and beyond."
         breadcrumb={[{ label: 'Give', href: '/give' }]}
+        image={giveBanner}
+        imageAlt="Donor tree wall at People's Church of Dover"
       />
       <main className="flex-1">
         {/* Giving Options */}
