@@ -1,5 +1,6 @@
 import React from 'react';
 import { Users, Heart, Activity, ArrowRight, ExternalLink } from 'lucide-react';
+import servingImg from '@/assets/photos/Serving_our_Neighbors.jpg';
 
 const ministryCenters = [
   {
