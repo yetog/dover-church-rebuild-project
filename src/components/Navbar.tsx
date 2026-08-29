@@ -15,15 +15,7 @@ const navItems: NavItem[] = [
   { label: 'Visit', href: '/about' },
   { label: 'Events', href: '/happening' },
   { label: "People's Community Center", href: 'https://pcc-dover.org', external: true },
-  {
-    label: 'About',
-    children: [
-      { label: 'Our Church', href: '/about' },
-      { label: 'United Church of Christ', href: '/ucc' },
-      { label: 'Staff & Leaders', href: '/staff' },
-      { label: 'Partners', href: '/partners' },
-    ],
-  },
+  { label: 'About', href: '/about' },
   { label: 'Give', href: '/give' },
 ];
 
