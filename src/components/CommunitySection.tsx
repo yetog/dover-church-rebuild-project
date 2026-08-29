@@ -30,17 +30,25 @@ const CommunitySection = () => {
   return (
     <section id="community" className="section-padding bg-church-50 dark:bg-[#1a0a17]">
       <div className="container-max">
-        <div className="max-w-3xl mb-12">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
-            People's Community Center
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-4">
-            Serving Our Neighbors
-          </h2>
-          <p className="text-lg text-church-600 dark:text-white/70">
-            Through the People's Community Center, we extend God's love beyond our walls with
-            three ministry centers dedicated to those in need in downtown Dover.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-12">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
+              People's Community Center
+            </p>
+            <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-4">
+              Serving Our Neighbors
+            </h2>
+            <p className="text-lg text-church-600 dark:text-white/70">
+              Through the People's Community Center, we extend God's love beyond our walls with
+              three ministry centers dedicated to those in need in downtown Dover.
+            </p>
+          </div>
+          <img
+            src={servingImg}
+            alt="Volunteers preparing meals in the People's Community Center kitchen"
+            loading="lazy"
+            className="w-full rounded-lg shadow-lg object-cover aspect-[3/2]"
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
