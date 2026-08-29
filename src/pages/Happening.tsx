@@ -81,26 +81,11 @@ const formatDate = (dateStr: string) => {
 };
 
 const Happening = () => {
-  const [events, setEvents] = useState<ChurchEvent[]>([]);
-  const [loaded, setLoaded] = useState(false);
+  const today = new Date().toISOString().split('T')[0];
+  const events = upcomingEvents
+    .filter((e) => e.event_date >= today)
+    .sort((a, b) => a.event_date.localeCompare(b.event_date));
 
-  useEffect(() => {
-    const load = async () => {
-      const today = new Date().toISOString().split('T')[0];
-      const { data, error } = await supabase
-        .from('events')
-        .select('id, title, event_date, event_time, location, category, description, featured')
-        .eq('published', true)
-        .gte('event_date', today)
-        .order('event_date', { ascending: true });
-      if (!error && data) setEvents(data as ChurchEvent[]);
-      setLoaded(true);
-    };
-    load();
-  }, []);
-
-  const featuredEvents = events.filter(e => e.featured);
-  const regularDbEvents = events.filter(e => !e.featured);
 
   return (
     <div className="min-h-screen flex flex-col">
