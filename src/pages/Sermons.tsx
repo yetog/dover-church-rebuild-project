@@ -4,6 +4,15 @@ import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import { Play, Radio, Calendar, Clock, Search, Youtube, Video } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import watchBanner from '@/assets/photos/Watch.jpg';
+
+const YOUTUBE_CHANNEL = 'https://www.youtube.com/@PeoplesChurchOfDover';
+
+const watchLinks = [
+  { label: 'Watch Live', href: `${YOUTUBE_CHANNEL}/streams`, icon: Radio, primary: true },
+  { label: 'Previous Sermons', href: `${YOUTUBE_CHANNEL}/playlists`, icon: Play, primary: false },
+  { label: 'Full Worship Services', href: `${YOUTUBE_CHANNEL}/videos`, icon: Youtube, primary: false },
+];
 
 const sermonArchive = [
   {
@@ -76,6 +85,8 @@ const Sermons = () => {
         title="Watch"
         subtitle="Join us for worship online through our live stream or watch past sermons."
         breadcrumb={[{ label: 'Watch', href: '/sermons' }]}
+        image={watchBanner}
+        imageAlt="Sunday worship at People's Church of Dover"
       />
       <main className="flex-1">
         {/* Live Stream Banner */}
@@ -91,21 +102,30 @@ const Sermons = () => {
                   <p className="text-white/60">Join us at 10:00 AM EST</p>
                 </div>
               </div>
-              <a
-                href="https://www.youtube.com/@PeoplesChurchOfDover"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-cta text-white font-semibold rounded hover:bg-cta/90 transition-colors"
-              >
-                <Youtube className="w-5 h-5" />
-                Watch on YouTube
-              </a>
+              <div className="flex flex-wrap items-center justify-center gap-3">
+                {watchLinks.map(({ label, href, icon: Icon, primary }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-2 px-6 py-3 font-semibold rounded transition-colors ${
+                      primary
+                        ? 'bg-cta text-white hover:bg-cta/90'
+                        : 'bg-white/10 text-white hover:bg-white/20'
+                    }`}
+                  >
+                    <Icon className="w-5 h-5" />
+                    {label}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* Featured Sermon */}
-        <section className="section-padding bg-white dark:bg-[#1a0a17]">
+        <section className="section-padding bg-church-50 dark:bg-[#1a0a17]">
           <div className="container-max">
             <div className="mb-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
@@ -119,7 +139,7 @@ const Sermons = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Video Embed Placeholder */}
               <div className="lg:col-span-2">
-                <div className="aspect-video bg-green-500 dark:bg-green-900 rounded-lg overflow-hidden flex items-center justify-center">
+                <div className="aspect-video bg-gray-300 dark:bg-church-900 rounded-lg overflow-hidden flex items-center justify-center">
                   {/* PLACEHOLDER: Replace with actual YouTube embed */}
                   <div className="text-center p-8">
                     <Video className="w-16 h-16 mx-auto mb-4 text-church-400 dark:text-church-600" />
@@ -182,7 +202,7 @@ const Sermons = () => {
         </section>
 
         {/* Sermon Archive */}
-        <section className="section-padding bg-church-50 dark:bg-[#0f0a10]">
+        <section className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
           <div className="container-max">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
               <div>

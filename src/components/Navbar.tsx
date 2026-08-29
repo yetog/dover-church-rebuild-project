@@ -15,15 +15,7 @@ const navItems: NavItem[] = [
   { label: 'Visit', href: '/about' },
   { label: 'Events', href: '/happening' },
   { label: "People's Community Center", href: 'https://pcc-dover.org', external: true },
-  {
-    label: 'About',
-    children: [
-      { label: 'Our Church', href: '/about' },
-      { label: 'United Church of Christ', href: '/ucc' },
-      { label: 'Staff & Leaders', href: '/staff' },
-      { label: 'Partners', href: '/partners' },
-    ],
-  },
+  { label: 'About', href: '/about' },
   { label: 'Give', href: '/give' },
 ];
 
@@ -69,7 +61,7 @@ const Navbar = () => {
                 </div>
               ) : item.external ? (
                 <a
-                  key={item.href}
+                  key={item.label}
                   href={item.href!}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -79,7 +71,7 @@ const Navbar = () => {
                 </a>
               ) : (
                 <Link
-                  key={item.href}
+                  key={item.label}
                   to={item.href!}
                   className="px-3 py-2 text-church-800/80 hover:text-church-800 text-sm font-medium rounded-md hover:bg-church-100 transition-colors"
                 >
@@ -135,7 +127,7 @@ const Navbar = () => {
               </div>
             ) : item.external ? (
               <a
-                key={item.href}
+                key={item.label}
                 href={item.href!}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -146,7 +138,7 @@ const Navbar = () => {
               </a>
             ) : (
               <Link
-                key={item.href}
+                key={item.label}
                 to={item.href!}
                 onClick={() => setMobileOpen(false)}
                 className="block px-3 py-2 text-church-800/80 hover:text-church-800 hover:bg-church-100 rounded-md text-base font-medium"

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Heart, Globe, ArrowRight } from 'lucide-react';
+import stainedGlassImg from '@/assets/photos/Who_we_are.jpg';
 
 const values = [
   {
@@ -22,7 +23,7 @@ const values = [
 
 const AboutSection = () => {
   return (
-    <section id="who-we-are" className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
+    <section id="who-we-are" className="section-padding bg-church-50 dark:bg-[#0f0a10]">
       <div className="container-max">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Content */}
@@ -55,8 +56,14 @@ const AboutSection = () => {
             </Link>
           </div>
 
-          {/* Right: Values */}
+          {/* Right: Photo + Values */}
           <div className="space-y-8">
+            <img
+              src={stainedGlassImg}
+              alt="Good Shepherd stained glass window at People's Church of Dover"
+              loading="lazy"
+              className="w-full rounded-lg shadow-lg object-cover aspect-[4/3]"
+            />
             {values.map(({ icon: Icon, title, description }) => (
               <div key={title} className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-church-100 dark:bg-church-800 flex items-center justify-center">

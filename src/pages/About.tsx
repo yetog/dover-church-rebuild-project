@@ -6,6 +6,8 @@ import AboutSection from '@/components/AboutSection';
 import WhatToExpectSection from '@/components/WhatToExpectSection';
 import PastorSection from '@/components/PastorSection';
 import ChurchHistorySection from '@/components/ChurchHistorySection';
+import AboutLinksSection from '@/components/AboutLinksSection';
+import aboutBanner from '@/assets/photos/Visit.jpg';
 
 const About = () => {
   return (
@@ -15,8 +17,11 @@ const About = () => {
         title="About Us"
         subtitle={`The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ.\n\nWhoever you are, whatever you have done, whatever you believe, \nand wherever you are on life's journey, you are welcome here.`}
         breadcrumb={[{ label: 'About', href: '/about' }]}
+        image={aboutBanner}
+        imageAlt="The sanctuary of People's Church of Dover"
       />
       <main className="flex-1">
+        <AboutLinksSection />
         <AboutSection />
         <WhatToExpectSection />
         <PastorSection />

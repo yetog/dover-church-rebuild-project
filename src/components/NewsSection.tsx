@@ -35,7 +35,7 @@ const events = [
 
 const NewsSection = () => {
   return (
-    <section className="section-padding bg-church-50 dark:bg-[#0f0a10]">
+    <section className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
       <div className="container-max">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <div>

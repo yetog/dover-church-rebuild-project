@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
+import giveBanner from '@/assets/photos/Give.jpg';
 import { Heart, CreditCard, Building2, HandHeart, Mail, ExternalLink } from 'lucide-react';
 
 const givingOptions = [
@@ -62,10 +63,12 @@ const Give = () => {
         title="Give"
         subtitle="Your generosity supports our ministry and mission in Dover and beyond."
         breadcrumb={[{ label: 'Give', href: '/give' }]}
+        image={giveBanner}
+        imageAlt="Donor tree wall at People's Church of Dover"
       />
       <main className="flex-1">
         {/* Giving Options */}
-        <section className="section-padding bg-white dark:bg-[#1a0a17]">
+        <section className="section-padding bg-church-50 dark:bg-[#1a0a17]">
           <div className="container-max">
             <div className="max-w-3xl mb-12">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
@@ -130,7 +133,7 @@ const Give = () => {
         </section>
 
         {/* Impact Section */}
-        <section className="section-padding bg-church-50 dark:bg-[#0f0a10]">
+        <section className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
           <div className="container-max">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div>

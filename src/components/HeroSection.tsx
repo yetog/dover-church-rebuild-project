@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Play } from 'lucide-react';
-import heroImage from '@/assets/hero-sanctuary.jpg';
+import heroImage from '@/assets/photos/Watch.jpg';
 
 const HeroSection = () => {
   return (
