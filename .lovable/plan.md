@@ -1,77 +1,57 @@
-## Goal
+# Meeting Follow-Up: Photos, Colors, Navigation & Watch Page
 
-Set up a clean, conflict-resistant workflow for a team using Lovable + GitHub + local IDEs (Cursor/Claude/VS Code), and recover any project that has drifted out of sync between Lovable and GitHub.
+Work items taken from the meeting notes, plus placing the six uploaded photos.
 
-This is a process/workflow plan — no code changes will be made to your project. Approving switches me to build mode so I can produce any companion files you want (a `CONTRIBUTING.md`, PR template, branch-protection cheatsheet, etc.).
+## 1. Add the new photos
 
----
+| Photo | Placement |
+| --- | --- |
+| `Watch.jpg` (congregation + pastor preaching) | Homepage hero image, replacing the current sanctuary shot — this is the "fuller, inviting" photo discussed |
+| `Who_we_are.jpg` (Good Shepherd stained glass) | "Who We Are" section on the About page |
+| `Visit.jpg` (sanctuary interior down the aisle) | About / Visit page header banner |
+| `Our_Church.jpg` (exterior with sign) | Our Church / About page banner |
+| `Serving_our_Neighbors.jpg` (food pantry kitchen) | "Serving Our Neighbors" community section on the homepage |
+| `Give.jpg` (donor tree wall) | Give page banner |
 
-## Part 1 — Recover the out-of-sync project
+Note: no "Welcome" photo was in this upload. The `Watch.jpg` image is used for the homepage welcome/hero unless a dedicated welcome photo is sent.
 
-Do these steps **before** anyone else commits, in this order:
+## 2. Color scheme — plum and gray, no pink
 
-1. **Pick the source of truth.** Decide which side is "correct" right now:
-   - Lovable preview looks right → Lovable is truth.
-   - GitHub `main` has the latest local dev work → GitHub is truth.
-2. **Freeze the other side.** Tell the team: no Lovable edits and no pushes to `main` until recovery is done.
-3. **If Lovable is truth:**
-   - In Lovable, make any tiny edit (e.g. add a space in a README) and save. This forces a fresh auto-commit to GitHub, re-syncing the repo head.
-   - Locally: `git fetch origin && git reset --hard origin/main` (warning: discards local `main` changes — stash or branch first if needed).
-4. **If GitHub is truth:**
-   - In Lovable, open History (clock icon, top nav) and roll back to the version that matches GitHub, OR
-   - Disconnect GitHub in Lovable (Plus + → GitHub → Disconnect), then reconnect and choose to overwrite from GitHub. Lovable will re-pull `main`.
-5. **Verify** the preview matches the repo: open the Code Editor in Lovable and spot-check 2–3 recently changed files against GitHub.
-6. **Tag the recovery point** locally so you have an anchor: `git tag sync-recovered && git push --tags`.
+- Sweep the site and replace the pinkish/dark-purple section backgrounds so sections alternate between **plum** and **medium gray**.
+- Drop green as a section background color (green stays only for small accents/buttons).
+- Keep the lighter purple already applied to the header bar so the logo stays readable.
 
----
+## 3. Navigation — About
 
-## Part 2 — Ongoing team workflow
+- Remove the About dropdown entirely.
+- "About" becomes a direct link to the About page.
+- The About page gets four clearly separated sections — Our Church, United Church of Christ, Staff & Leaders, Partners — each linking through to its own page.
 
-```text
-            ┌──────────────────────────┐
-            │        main (prod)       │  ← Lovable is wired to this branch
-            └─────────────┬────────────┘
-                          │  PR merges only
-        ┌─────────────────┼──────────────────┐
-        │                 │                  │
-   feat/ai-prompts   feat/auth-ui      fix/sermon-images
-   (local dev)       (Lovable editor)  (local dev)
-```
+## 4. Watch page — three links
 
-**Rules**
+Replace the single YouTube link with three clearly labeled options:
+- **Watch Live** — live stream
+- **Previous Sermons** — sermon playlist
+- **Full Worship Services** — the main YouTube channel
 
-1. **`main` = Lovable's branch.** Everything Lovable auto-commits goes here. Treat `main` as semi-protected: no direct local pushes except by the person currently "driving" Lovable.
-2. **One Lovable driver at a time.** Whoever is editing in Lovable announces it (Slack/Discord). They own `main` for that session. Everyone else works on branches.
-3. **Local devs always branch.**
-   - `git checkout -b feat/<short-name>` from latest `main`.
-   - Commit, push, open PR on GitHub.
-   - Get review, merge via "Squash and merge."
-   - Lovable auto-pulls the merge within seconds.
-4. **Before merging a PR**, confirm nobody is mid-edit in Lovable (otherwise Lovable's next auto-save can race the merge). 30-second pause is enough.
-5. **Heavy work belongs local.** Use Lovable for UI tweaks, prototyping, content. Use local IDE + Claude/Cursor for refactors, package changes, tests, type fixes.
-6. **Never force-push `main`.** It will desync Lovable and may corrupt its working tree. If `main` is broken, fix forward with a new commit.
-7. **Branch protection on GitHub** (recommended):
-   - Require PR + 1 review for `main`.
-   - Block force-pushes and deletions.
-   - Allow the Lovable GitHub App to bypass (it commits directly as part of normal sync).
-8. **Enable Labs → GitHub Branch Switching** (Account Settings → Labs) if you want Lovable to preview a feature branch instead of `main`. Useful for review, but switch back to `main` when done.
+Links need the actual YouTube channel and playlist URLs; if they aren't provided, the current channel URL is used as a placeholder for all three and swapped in later.
 
----
+## 5. Community Center section
 
-## Part 3 — Daily checklist for each dev
+- Confirm the third center reads "Center for Workforce Development" with real description copy (currently "Text to be updated" — needs wording).
+- Add a **large button** linking to pcc-dover.org, replacing the small text link at the bottom of the section.
 
-- Start of day: `git pull --rebase origin main`.
-- Working in Lovable? Announce it. Pull locally afterwards.
-- Working locally? Branch. PR. Merge. Don't push to `main`.
-- Adding a dependency or editing config? Do it locally — package installs in Lovable can conflict with concurrent edits.
-- End of session: confirm Lovable preview still loads (catches sync issues early).
+## 6. Already done / no change
 
----
+- Century Gothic font is applied site-wide.
+- Accessibility text on the About page is corrected.
+- The Events / "What's Happening" page stays, per Rev. Hodge.
 
-## What I'll produce in build mode (optional, on approval)
+## Technical notes
 
-- `CONTRIBUTING.md` at repo root with the rules above.
-- `.github/pull_request_template.md` with a "Lovable driver idle? ✅" checkbox.
-- A short `docs/lovable-workflow.md` for onboarding.
+Photos are added as CDN assets via the asset pipeline and imported into the relevant components; the current stock placeholders they replace stay in the repo for now. Color work is done by updating section background classes to the existing `church-*` plum tokens and `gray-300`, keeping dark-mode variants intact. The About nav change edits `navItems` in `Navbar.tsx` and expands `src/pages/About.tsx` into the four-section layout.
 
-Tell me which of those (if any) you want generated, or just approve and I'll create all three.
+## Open questions
+
+- Description copy for the Center for Workforce Development.
+- Exact YouTube live / playlist / channel URLs for the three Watch links.
