@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import { Calendar, Clock, MapPin, Users, ChevronRight } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
 
 // Import event images
 import worshipImg from '@/assets/stock/event-worship.jpg';
@@ -13,12 +12,16 @@ type ChurchEvent = {
   id: string;
   title: string;
   event_date: string;
-  event_time: string | null;
-  location: string | null;
+  event_time?: string;
+  location?: string;
   category: string;
-  description: string | null;
-  featured: boolean;
+  description?: string;
 };
+
+// Upcoming special events — edit this list to add or remove events.
+// Dates use YYYY-MM-DD format.
+const upcomingEvents: ChurchEvent[] = [];
+
 
 const recurringEvents = [
   {
