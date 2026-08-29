@@ -76,6 +76,8 @@ const Sermons = () => {
         title="Watch"
         subtitle="Join us for worship online through our live stream or watch past sermons."
         breadcrumb={[{ label: 'Watch', href: '/sermons' }]}
+        image={watchBanner}
+        imageAlt="Sunday worship at People's Church of Dover"
       />
       <main className="flex-1">
         {/* Live Stream Banner */}
