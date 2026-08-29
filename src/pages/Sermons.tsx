@@ -6,7 +6,7 @@ import { Play, Radio, Calendar, Clock, Search, Youtube, Video } from 'lucide-rea
 import { Input } from '@/components/ui/input';
 import watchBanner from '@/assets/photos/Watch.jpg';
 
-const YOUTUBE_CHANNEL = 'https://www.youtube.com/@PeoplesChurchOfDover';
+const YOUTUBE_CHANNEL = 'https://www.youtube.com/@PeoplesChurchDover';
 
 const watchLinks = [
   { label: 'Watch Live', href: `${YOUTUBE_CHANNEL}/streams`, icon: Radio, primary: true },
