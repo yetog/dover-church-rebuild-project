@@ -61,7 +61,7 @@ const Navbar = () => {
                 </div>
               ) : item.external ? (
                 <a
-                  key={item.href}
+                  key={item.label}
                   href={item.href!}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -71,7 +71,7 @@ const Navbar = () => {
                 </a>
               ) : (
                 <Link
-                  key={item.href}
+                  key={item.label}
                   to={item.href!}
                   className="px-3 py-2 text-church-800/80 hover:text-church-800 text-sm font-medium rounded-md hover:bg-church-100 transition-colors"
                 >
@@ -127,7 +127,7 @@ const Navbar = () => {
               </div>
             ) : item.external ? (
               <a
-                key={item.href}
+                key={item.label}
                 href={item.href!}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -138,7 +138,7 @@ const Navbar = () => {
               </a>
             ) : (
               <Link
-                key={item.href}
+                key={item.label}
                 to={item.href!}
                 onClick={() => setMobileOpen(false)}
                 className="block px-3 py-2 text-church-800/80 hover:text-church-800 hover:bg-church-100 rounded-md text-base font-medium"

@@ -14,7 +14,7 @@ const PageHeader = ({ title, subtitle, breadcrumb, image, imageAlt }: PageHeader
   return (
     <section className="relative bg-church-800 dark:bg-[#0a0608] py-16 md:py-24 px-4 overflow-hidden">
       {image && (
-        <>
+        <div className="absolute inset-0">
           <img
             src={image}
             alt={imageAlt ?? ''}
@@ -22,7 +22,7 @@ const PageHeader = ({ title, subtitle, breadcrumb, image, imageAlt }: PageHeader
             loading="lazy"
           />
           <div className="absolute inset-0 bg-church-900/75 dark:bg-[#0a0608]/85" />
-        </>
+        </div>
       )}
       <div className="relative container-max">
         {breadcrumb && breadcrumb.length > 0 && (
