@@ -93,15 +93,24 @@ const Sermons = () => {
                   <p className="text-white/60">Join us at 10:00 AM EST</p>
                 </div>
               </div>
-              <a
-                href="https://www.youtube.com/@PeoplesChurchOfDover"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-cta text-white font-semibold rounded hover:bg-cta/90 transition-colors"
-              >
-                <Youtube className="w-5 h-5" />
-                Watch on YouTube
-              </a>
+              <div className="flex flex-wrap items-center justify-center gap-3">
+                {watchLinks.map(({ label, href, icon: Icon, primary }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-2 px-6 py-3 font-semibold rounded transition-colors ${
+                      primary
+                        ? 'bg-cta text-white hover:bg-cta/90'
+                        : 'bg-white/10 text-white hover:bg-white/20'
+                    }`}
+                  >
+                    <Icon className="w-5 h-5" />
+                    {label}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </section>
