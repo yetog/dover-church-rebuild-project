@@ -81,19 +81,20 @@ const CommunitySection = () => {
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-church-100 dark:border-church-800">
-          <p className="text-center text-church-600 dark:text-white/60">
+        <div className="mt-12 pt-8 border-t border-church-100 dark:border-church-800 text-center">
+          <p className="text-church-600 dark:text-white/60 mb-6 max-w-2xl mx-auto">
             The People's Community Center is transforming our 115-year-old building into a hub
-            for those less fortunate in the downtown Dover area.{' '}
-            <a
-              href="https://pcc-dover.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-cta hover:underline"
-            >
-              Visit pcc-dover.org
-            </a>
+            for those less fortunate in the downtown Dover area.
           </p>
+          <a
+            href="https://pcc-dover.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-church-600 text-white text-base md:text-lg font-bold rounded-md shadow-md hover:bg-church-700 transition-colors"
+          >
+            Visit the People's Community Center
+            <ExternalLink className="w-5 h-5" />
+          </a>
         </div>
       </div>
     </section>
