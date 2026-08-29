@@ -3,7 +3,7 @@ import { Mail, Phone } from 'lucide-react';
 
 const PastorSection = () => {
   return (
-    <section className="section-padding bg-church-50 dark:bg-[#0f0a10]">
+    <section className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
       <div className="container-max">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image Placeholder */}

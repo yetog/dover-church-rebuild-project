@@ -67,7 +67,7 @@ const Staff = () => {
       />
       <main className="flex-1">
         {/* Staff Section */}
-        <section className="section-padding bg-white dark:bg-[#1a0a17]">
+        <section className="section-padding bg-church-50 dark:bg-[#1a0a17]">
           <div className="container-max">
             <div className="mb-12">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
@@ -136,7 +136,7 @@ const Staff = () => {
         </section>
 
         {/* Lay Leaders Section */}
-        <section className="section-padding bg-church-50 dark:bg-[#0f0a10]">
+        <section className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
           <div className="container-max">
             <div className="mb-12">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">

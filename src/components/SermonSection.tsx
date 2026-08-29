@@ -31,7 +31,7 @@ const recentSermons = [
 
 const SermonSection = () => {
   return (
-    <section id="videos" className="section-padding bg-white dark:bg-[#1a0a17]">
+    <section id="videos" className="section-padding bg-gray-300 dark:bg-[#1a0a17]">
       <div className="container-max">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
           {/* Left: Live Stream CTA */}

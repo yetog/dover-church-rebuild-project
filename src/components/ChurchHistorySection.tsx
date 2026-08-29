@@ -25,7 +25,7 @@ const milestones = [
 
 const ChurchHistorySection = () => {
   return (
-    <section className="section-padding bg-white dark:bg-[#1a0a17]">
+    <section className="section-padding bg-church-50 dark:bg-[#1a0a17]">
       <div className="container-max">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Content */}

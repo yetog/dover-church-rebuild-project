@@ -21,7 +21,7 @@ const Index = () => {
         <DailyDevotionalSection />
 
         {/* Simple Contact CTA - TRC style */}
-        <section className="py-16 px-4 bg-church-50 dark:bg-[#0f0a10]">
+        <section className="py-16 px-4 bg-gray-300 dark:bg-[#0f0a10]">
           <div className="container-max text-center">
             <h2 className="text-2xl md:text-3xl font-black text-church-800 dark:text-white mb-4">
               Questions? We'd love to hear from you.

@@ -19,7 +19,7 @@ const MeditationSection = () => {
   ];
 
   return (
-    <section id="meditation" className="section-padding bg-gradient-to-br from-church-50 to-warmGray-50">
+    <section id="meditation" className="section-padding bg-church-50">
       <div className="container mx-auto">
         <h2 className="section-title">Daily Scripture Meditation</h2>
         <p className="section-subtitle">
