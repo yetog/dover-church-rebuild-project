@@ -20,6 +20,8 @@ import Neighbors from "./pages/Neighbors";
 import CommunityHealth from "./pages/CommunityHealth";
 import HelpingOthers from "./pages/HelpingOthers";
 import Give from "./pages/Give";
+import Admin from "./pages/Admin";
+import AdminEvents from "./pages/AdminEvents";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +50,8 @@ const App = () => (
             <Route path="/community/health" element={<CommunityHealth />} />
             <Route path="/helping-others" element={<HelpingOthers />} />
             <Route path="/give" element={<Give />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/admin/events" element={<AdminEvents />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
