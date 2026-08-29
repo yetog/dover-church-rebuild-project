@@ -4,6 +4,15 @@ import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import { Play, Radio, Calendar, Clock, Search, Youtube, Video } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import watchBanner from '@/assets/photos/Watch.jpg';
+
+const YOUTUBE_CHANNEL = 'https://www.youtube.com/@PeoplesChurchOfDover';
+
+const watchLinks = [
+  { label: 'Watch Live', href: `${YOUTUBE_CHANNEL}/streams`, icon: Radio, primary: true },
+  { label: 'Previous Sermons', href: `${YOUTUBE_CHANNEL}/playlists`, icon: Play, primary: false },
+  { label: 'Full Worship Services', href: `${YOUTUBE_CHANNEL}/videos`, icon: Youtube, primary: false },
+];
 
 const sermonArchive = [
   {
