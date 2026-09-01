@@ -1,23 +1,21 @@
 import React from 'react';
 import { Mail, Phone } from 'lucide-react';
+import pastorImg from '@/assets/staff/rev-hodge.jpg';
 
 const PastorSection = () => {
   return (
     <section className="section-padding bg-church-50 dark:bg-[#0f0a10]">
       <div className="container-max">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image Placeholder */}
+          {/* Photo */}
           <div className="relative">
-            <div className="aspect-[4/5] bg-church-200 dark:bg-church-800 rounded-lg overflow-hidden flex items-center justify-center">
-              {/* PLACEHOLDER: Replace with actual pastor photo */}
-              <div className="text-center p-8">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-church-300 dark:bg-church-700 flex items-center justify-center">
-                  <span className="text-4xl text-church-500 dark:text-church-400">GDH</span>
-                </div>
-                <p className="text-sm text-church-500 dark:text-church-400 font-medium">
-                  Photo Coming Soon
-                </p>
-              </div>
+            <div className="aspect-[4/5] rounded-lg overflow-hidden">
+              <img
+                src={pastorImg}
+                alt="Rev. Dr. G. Derrick Hodge"
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
