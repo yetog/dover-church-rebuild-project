@@ -3,6 +3,15 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import { Mail, Phone } from 'lucide-react';
+import revHodgeImg from '@/assets/staff/rev-hodge.jpg';
+import sueHarrisImg from '@/assets/staff/sue-harris.jpg';
+import johnImg from '@/assets/staff/John.jpg';
+import robinImg from '@/assets/staff/robin.jpg';
+import cherylImg from '@/assets/staff/Cheryl.jpg';
+import jamesImg from '@/assets/staff/james.jpg';
+import paulImg from '@/assets/staff/paul.jpg';
+import randalImg from '@/assets/staff/Randal.jpg';
+import kathyImg from '@/assets/staff/kathy-h.jpg';
 
 const staffMembers = [
   {
@@ -11,14 +20,14 @@ const staffMembers = [
     email: "gdhodge@pcd-dover.org",
     phone: "(302) 674-4177",
     bio: "Cultural anthropologist with a Ph.D., author of books on cross-racial ministry and community engagement. Leading People's Church and the People's Community Center.",
-    placeholder: false,
+    image: revHodgeImg,
   },
   {
     name: "Sue Harris",
     role: "Community Outreach Coordinator",
     email: "office@pcd-dover.org",
     bio: "Working alongside Pastor Hodge to serve the homeless and those in need in downtown Dover.",
-    placeholder: false,
+    image: sueHarrisImg,
   },
   {
     name: "Contact Office",
@@ -26,7 +35,7 @@ const staffMembers = [
     email: "office@pcd-dover.org",
     phone: "(302) 674-4177",
     bio: "For general inquiries, please contact our church office during regular hours.",
-    placeholder: true,
+    image: null,
   },
 ];
 
@@ -35,21 +44,43 @@ const layLeaders = [
     name: "John Aliison",
     role: "Moderator",
     description: "Leads church council and congregational meetings",
+    image: johnImg,
   },
   {
     name: "Robin Hinderer",
     role: "Treasurer",
     description: "Oversees worship and pastoral care ministries",
+    image: robinImg,
   },
   {
     name: "Cheryl Goldsmith",
     role: "Secretary",
     description: "Manages church property and finances",
+    image: cherylImg,
   },
   {
-    name: "Sue Ellen haris",
-    role: "External Ministries",
-    description: "Coordinates Sunday School and youth programs",
+    name: "James",
+    role: "Lay Leader",
+    description: "Serving the congregation through volunteer leadership",
+    image: jamesImg,
+  },
+  {
+    name: "Paul",
+    role: "Lay Leader",
+    description: "Serving the congregation through volunteer leadership",
+    image: paulImg,
+  },
+  {
+    name: "Randal",
+    role: "Lay Leader",
+    description: "Serving the congregation through volunteer leadership",
+    image: randalImg,
+  },
+  {
+    name: "Kathy H.",
+    role: "Lay Leader",
+    description: "Serving the congregation through volunteer leadership",
+    image: kathyImg,
   },
 ];
 
@@ -81,17 +112,28 @@ const Staff = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {staffMembers.map((member, index) => (
                 <div key={index} className="bg-church-50 dark:bg-church-800/30 rounded-lg overflow-hidden">
-                  {/* Photo Placeholder */}
-                  <div className="aspect-square bg-church-200 dark:bg-church-800 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-20 h-20 mx-auto mb-2 rounded-full bg-church-300 dark:bg-church-700 flex items-center justify-center">
-                        <span className="text-2xl text-church-500 dark:text-church-400">?</span>
-                      </div>
-                      <p className="text-xs text-church-400 dark:text-church-500">
-                        Photo needed
-                      </p>
+                  {/* Photo */}
+                  {member.image ? (
+                    <div className="aspect-square overflow-hidden">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                  </div>
+                  ) : (
+                    <div className="aspect-square bg-church-200 dark:bg-church-800 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-20 h-20 mx-auto mb-2 rounded-full bg-church-300 dark:bg-church-700 flex items-center justify-center">
+                          <Mail className="w-8 h-8 text-church-500 dark:text-church-400" />
+                        </div>
+                        <p className="text-xs text-church-400 dark:text-church-500">
+                          Contact us
+                        </p>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Info */}
                   <div className="p-6">
@@ -129,9 +171,6 @@ const Staff = () => {
               ))}
             </div>
 
-            <p className="text-center text-xs text-church-400 dark:text-church-500 mt-8 italic">
-              3 staff photos needed - replace placeholders with actual headshots (recommended: 400x400px square)
-            </p>
           </div>
         </section>
 
@@ -149,26 +188,29 @@ const Staff = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {layLeaders.map((leader, index) => (
-                <div key={index} className="bg-white dark:bg-church-800/30 rounded-lg p-6">
-                  <div className="w-16 h-16 mb-4 rounded-full bg-church-100 dark:bg-church-800 flex items-center justify-center">
-                    <span className="text-lg text-church-400 dark:text-church-500">?</span>
+                <div key={index} className="bg-white dark:bg-church-800/30 rounded-lg overflow-hidden">
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src={leader.image}
+                      alt={leader.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-lg font-bold text-church-800 dark:text-white mb-1">
-                    {leader.name}
-                  </h3>
-                  <p className="text-sm text-cta font-medium mb-2">
-                    {leader.role}
-                  </p>
-                  <p className="text-sm text-church-600 dark:text-white/60">
-                    {leader.description}
-                  </p>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-church-800 dark:text-white mb-1">
+                      {leader.name}
+                    </h3>
+                    <p className="text-sm text-cta font-medium mb-2">
+                      {leader.role}
+                    </p>
+                    <p className="text-sm text-church-600 dark:text-white/60">
+                      {leader.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
-
-            <p className="text-center text-xs text-church-400 dark:text-church-500 mt-8 italic">
-              Replace placeholder names with actual lay leaders
-            </p>
           </div>
         </section>
       </main>

@@ -10,7 +10,7 @@ const sections = [
   {
     title: 'Our Church',
     description: 'Our story, our worship, and what to expect when you visit us in downtown Dover.',
-    href: '/about#who-we-are',
+    href: '/about#our-church',
     image: ourChurchImg,
   },
   {

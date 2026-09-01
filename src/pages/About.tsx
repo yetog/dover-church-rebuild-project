@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import AboutSection from '@/components/AboutSection';
+import OurChurchSection from '@/components/OurChurchSection';
 import WhatToExpectSection from '@/components/WhatToExpectSection';
 import PastorSection from '@/components/PastorSection';
 import ChurchHistorySection from '@/components/ChurchHistorySection';
@@ -34,6 +35,7 @@ const About = () => {
       <main className="flex-1">
         <AboutLinksSection />
         <AboutSection />
+        <OurChurchSection />
         <WhatToExpectSection />
         <PastorSection />
         <ChurchHistorySection />
