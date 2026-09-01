@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
@@ -10,6 +11,16 @@ import AboutLinksSection from '@/components/AboutLinksSection';
 import aboutBanner from '@/assets/photos/Visit.jpg';
 
 const About = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const el = document.getElementById(hash.slice(1));
+    if (el) {
+      requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth' }));
+    }
+  }, [hash]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

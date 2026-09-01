@@ -51,6 +51,13 @@ const AboutLinksSection = () => {
             <Link
               key={title}
               to={href}
+              onClick={(e) => {
+                const [path, hash] = href.split('#');
+                if (hash && window.location.pathname.endsWith(path)) {
+                  e.preventDefault();
+                  document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className="group block bg-church-50 dark:bg-church-800/40 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
             >
               <div className="aspect-[4/3] overflow-hidden">
