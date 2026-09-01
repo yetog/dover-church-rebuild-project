@@ -11,7 +11,7 @@ import cherylImg from '@/assets/staff/Cheryl.jpg';
 import jamesImg from '@/assets/staff/james.jpg';
 import paulImg from '@/assets/staff/paul.jpg';
 import randalImg from '@/assets/staff/Randal.jpg';
-import kathyAsset from '@/assets/staff/kathy-h.asset.json';
+import kathyImg from '@/assets/staff/kathy-h.jpg';
 
 const staffMembers = [
   {
@@ -80,7 +80,7 @@ const layLeaders = [
     name: "Kathy H.",
     role: "Lay Leader",
     description: "Serving the congregation through volunteer leadership",
-    image: kathyAsset.url,
+    image: kathyImg,
   },
 ];
 
