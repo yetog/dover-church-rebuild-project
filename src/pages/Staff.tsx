@@ -86,6 +86,30 @@ const layLeaders = [
     description: "Serving the congregation through volunteer leadership",
     image: kathyImg,
   },
+  {
+    name: "CJ",
+    role: "Lay Leader",
+    description: "Serving the congregation through volunteer leadership",
+    image: cjImg,
+  },
+  {
+    name: "Clarence",
+    role: "Lay Leader",
+    description: "Serving the congregation through volunteer leadership",
+    image: clarenceImg,
+  },
+  {
+    name: "Ed",
+    role: "Lay Leader",
+    description: "Serving the congregation through volunteer leadership",
+    image: edImg,
+  },
+  {
+    name: "Ileana",
+    role: "Lay Leader",
+    description: "Serving the congregation through volunteer leadership",
+    image: ileanaImg,
+  },
 ];
 
 const Staff = () => {
