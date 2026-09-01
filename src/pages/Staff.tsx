@@ -112,17 +112,28 @@ const Staff = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {staffMembers.map((member, index) => (
                 <div key={index} className="bg-church-50 dark:bg-church-800/30 rounded-lg overflow-hidden">
-                  {/* Photo Placeholder */}
-                  <div className="aspect-square bg-church-200 dark:bg-church-800 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-20 h-20 mx-auto mb-2 rounded-full bg-church-300 dark:bg-church-700 flex items-center justify-center">
-                        <span className="text-2xl text-church-500 dark:text-church-400">?</span>
-                      </div>
-                      <p className="text-xs text-church-400 dark:text-church-500">
-                        Photo needed
-                      </p>
+                  {/* Photo */}
+                  {member.image ? (
+                    <div className="aspect-square overflow-hidden">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                  </div>
+                  ) : (
+                    <div className="aspect-square bg-church-200 dark:bg-church-800 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-20 h-20 mx-auto mb-2 rounded-full bg-church-300 dark:bg-church-700 flex items-center justify-center">
+                          <Mail className="w-8 h-8 text-church-500 dark:text-church-400" />
+                        </div>
+                        <p className="text-xs text-church-400 dark:text-church-500">
+                          Contact us
+                        </p>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Info */}
                   <div className="p-6">
