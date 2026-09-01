@@ -188,26 +188,29 @@ const Staff = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {layLeaders.map((leader, index) => (
-                <div key={index} className="bg-white dark:bg-church-800/30 rounded-lg p-6">
-                  <div className="w-16 h-16 mb-4 rounded-full bg-church-100 dark:bg-church-800 flex items-center justify-center">
-                    <span className="text-lg text-church-400 dark:text-church-500">?</span>
+                <div key={index} className="bg-white dark:bg-church-800/30 rounded-lg overflow-hidden">
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src={leader.image}
+                      alt={leader.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-lg font-bold text-church-800 dark:text-white mb-1">
-                    {leader.name}
-                  </h3>
-                  <p className="text-sm text-cta font-medium mb-2">
-                    {leader.role}
-                  </p>
-                  <p className="text-sm text-church-600 dark:text-white/60">
-                    {leader.description}
-                  </p>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-church-800 dark:text-white mb-1">
+                      {leader.name}
+                    </h3>
+                    <p className="text-sm text-cta font-medium mb-2">
+                      {leader.role}
+                    </p>
+                    <p className="text-sm text-church-600 dark:text-white/60">
+                      {leader.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
-
-            <p className="text-center text-xs text-church-400 dark:text-church-500 mt-8 italic">
-              Replace placeholder names with actual lay leaders
-            </p>
           </div>
         </section>
       </main>
