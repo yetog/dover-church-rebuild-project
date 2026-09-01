@@ -3,6 +3,15 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import { Mail, Phone } from 'lucide-react';
+import revHodgeImg from '@/assets/staff/rev-hodge.jpg';
+import sueHarrisImg from '@/assets/staff/sue-harris.jpg';
+import johnImg from '@/assets/staff/John.jpg';
+import robinImg from '@/assets/staff/robin.jpg';
+import cherylImg from '@/assets/staff/Cheryl.jpg';
+import jamesImg from '@/assets/staff/james.jpg';
+import paulImg from '@/assets/staff/paul.jpg';
+import randalImg from '@/assets/staff/Randal.jpg';
+import kathyAsset from '@/assets/staff/kathy-h.asset.json';
 
 const staffMembers = [
   {
@@ -11,14 +20,14 @@ const staffMembers = [
     email: "gdhodge@pcd-dover.org",
     phone: "(302) 674-4177",
     bio: "Cultural anthropologist with a Ph.D., author of books on cross-racial ministry and community engagement. Leading People's Church and the People's Community Center.",
-    placeholder: false,
+    image: revHodgeImg,
   },
   {
     name: "Sue Harris",
     role: "Community Outreach Coordinator",
     email: "office@pcd-dover.org",
     bio: "Working alongside Pastor Hodge to serve the homeless and those in need in downtown Dover.",
-    placeholder: false,
+    image: sueHarrisImg,
   },
   {
     name: "Contact Office",
@@ -26,7 +35,7 @@ const staffMembers = [
     email: "office@pcd-dover.org",
     phone: "(302) 674-4177",
     bio: "For general inquiries, please contact our church office during regular hours.",
-    placeholder: true,
+    image: null,
   },
 ];
 
@@ -35,21 +44,43 @@ const layLeaders = [
     name: "John Aliison",
     role: "Moderator",
     description: "Leads church council and congregational meetings",
+    image: johnImg,
   },
   {
     name: "Robin Hinderer",
     role: "Treasurer",
     description: "Oversees worship and pastoral care ministries",
+    image: robinImg,
   },
   {
     name: "Cheryl Goldsmith",
     role: "Secretary",
     description: "Manages church property and finances",
+    image: cherylImg,
   },
   {
-    name: "Sue Ellen haris",
-    role: "External Ministries",
-    description: "Coordinates Sunday School and youth programs",
+    name: "James",
+    role: "Lay Leader",
+    description: "Serving the congregation through volunteer leadership",
+    image: jamesImg,
+  },
+  {
+    name: "Paul",
+    role: "Lay Leader",
+    description: "Serving the congregation through volunteer leadership",
+    image: paulImg,
+  },
+  {
+    name: "Randal",
+    role: "Lay Leader",
+    description: "Serving the congregation through volunteer leadership",
+    image: randalImg,
+  },
+  {
+    name: "Kathy H.",
+    role: "Lay Leader",
+    description: "Serving the congregation through volunteer leadership",
+    image: kathyAsset.url,
   },
 ];
 
