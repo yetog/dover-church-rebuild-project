@@ -171,9 +171,6 @@ const Staff = () => {
               ))}
             </div>
 
-            <p className="text-center text-xs text-church-400 dark:text-church-500 mt-8 italic">
-              3 staff photos needed - replace placeholders with actual headshots (recommended: 400x400px square)
-            </p>
           </div>
         </section>
 
