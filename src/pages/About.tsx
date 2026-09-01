@@ -35,6 +35,7 @@ const About = () => {
       <main className="flex-1">
         <AboutLinksSection />
         <AboutSection />
+        <OurChurchSection />
         <WhatToExpectSection />
         <PastorSection />
         <ChurchHistorySection />
