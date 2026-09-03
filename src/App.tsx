@@ -11,7 +11,7 @@ import Meditation from "./pages/Meditation";
 import Newsletter from "./pages/Newsletter";
 import Contact from "./pages/Contact";
 import UCC from "./pages/UCC";
-import Staff from "./pages/Staff";
+
 import Partners from "./pages/Partners";
 import Happening from "./pages/Happening";
 import Community from "./pages/Community";
@@ -39,7 +39,7 @@ const App = () => (
             <Route path="/newsletter" element={<Newsletter />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/ucc" element={<UCC />} />
-            <Route path="/staff" element={<Staff />} />
+            
             <Route path="/partners" element={<Partners />} />
             <Route path="/happening" element={<Happening />} />
             <Route path="/community" element={<Community />} />

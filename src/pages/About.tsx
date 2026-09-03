@@ -39,6 +39,7 @@ const About = () => {
         <OurChurchSection />
         <WhatToExpectSection />
         <PastorSection />
+        <StaffSection />
         <ChurchHistorySection />
       </main>
       <Footer />
