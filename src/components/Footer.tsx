@@ -56,7 +56,7 @@ const Footer = () => {
             <h3 className="text-xs font-bold uppercase tracking-widest text-white/60 mb-6">About</h3>
             <nav className="space-y-3 text-sm">
               <Link to="/about" className="block hover:text-cta transition">Our Church</Link>
-              <Link to="/staff" className="block hover:text-cta transition">Staff & Leaders</Link>
+              <Link to="/about#staff" className="block hover:text-cta transition">Staff & Leaders</Link>
               <Link to="/ucc" className="block hover:text-cta transition">United Church of Christ</Link>
               <Link to="/partners" className="block hover:text-cta transition">Partners</Link>
               <Link to="/contact" className="block hover:text-cta transition">Contact</Link>
