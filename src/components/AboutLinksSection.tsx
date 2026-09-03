@@ -22,7 +22,7 @@ const sections = [
   {
     title: 'Staff & Leaders',
     description: 'Meet our pastor, staff, and the lay leaders who guide our congregation.',
-    href: '/staff',
+    href: '/about#staff',
     image: sanctuaryImg,
   },
   {
