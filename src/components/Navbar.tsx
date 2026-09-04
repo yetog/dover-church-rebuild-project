@@ -69,17 +69,17 @@ const Navbar = () => {
                   href={item.href!}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-2 text-church-800/80 hover:text-church-800 text-sm font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
+                  className="px-2 py-2 text-church-800/80 hover:text-church-800 text-xs font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
                 >
-                  <span className="whitespace-pre-line text-center">{"People's Community\nCenter"}</span>
+                  <span className="whitespace-pre-line text-center leading-tight">{item.label}</span>
                 </a>
               ) : (
                 <Link
                   key={item.label}
                   to={item.href!}
-                  className="px-3 py-2 text-church-800/80 hover:text-church-800 text-sm font-medium rounded-md hover:bg-church-100 transition-colors"
+                  className="px-2 py-2 text-church-800/80 hover:text-church-800 text-xs font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
                 >
-                  {item.label}
+                  <span className="whitespace-pre-line text-center leading-tight">{item.label}</span>
                 </Link>
               )
             ))}
