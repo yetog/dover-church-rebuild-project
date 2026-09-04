@@ -47,7 +47,7 @@ const SermonSection = () => {
             </p>
 
             <a
-              href="https://www.youtube.com/@PeoplesChurchDover"
+              href="https://www.youtube.com/@PeoplesChurchDover/streams"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-church-800 dark:text-white font-semibold hover:text-cta transition-colors border-b-2 border-church-800 dark:border-white hover:border-cta pb-1"
