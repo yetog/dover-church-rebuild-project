@@ -127,7 +127,7 @@ const StaffSection = () => {
                       src={member.image}
                       alt={member.name}
                       loading="lazy"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-[50%_18%]"
                     />
                   </div>
                 ) : (
@@ -201,7 +201,7 @@ const StaffSection = () => {
                     src={leader.image}
                     alt={leader.name}
                     loading="lazy"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[50%_18%]"
                   />
                 </div>
                 <div className="p-6">
