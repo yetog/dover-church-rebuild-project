@@ -5,23 +5,55 @@ import { cn } from '@/lib/utils';
 import { useTheme } from '@/context/ThemeContext';
 import churchLogo from '@/assets/logo/church-logo.png';
 
-type NavChild = { label: string; href: string };
+type NavChild = { label: string; href: string; external?: boolean };
 type NavItem =
   | { label: string; href: string; children?: undefined; external?: boolean }
   | { label: string; href?: undefined; children: NavChild[]; external?: undefined };
 
 const navItems: NavItem[] = [
-  { label: 'Who We Are', href: '/about' },
-  { label: 'Videos of\nService', href: '/sermons' },
-  { label: 'Daily Scripture Meditation\nand Prayer Requests', href: '/meditation' },
-  { label: "Happening\nat People's", href: '/happening' },
-  { label: "People's Community\nCenter", href: 'https://pcc-dover.org', external: true },
-  { label: 'Helping Others\n& Getting Help', href: '/helping-others' },
-  { label: 'Current Issues\nof our Newsletter', href: '/newsletter' },
+  {
+    label: 'Who We Are',
+    children: [
+      { label: 'About Us', href: '/about' },
+      { label: 'Visit', href: '/about' },
+    ],
+  },
+  {
+    label: 'Worship',
+    children: [
+      { label: 'Videos of Service', href: '/sermons' },
+      { label: 'Daily Scripture Meditation and Prayer Requests', href: '/meditation' },
+    ],
+  },
+  {
+    label: 'Happening',
+    children: [
+      { label: 'Events', href: '/happening' },
+      { label: 'Current Issues of our Newsletter', href: '/newsletter' },
+    ],
+  },
+  {
+    label: 'Community',
+    children: [
+      { label: "People's Community Center", href: 'https://pcc-dover.org', external: true },
+      { label: 'Helping Others & Getting Help', href: '/helping-others' },
+    ],
+  },
   { label: 'Contact Us', href: '/contact' },
   { label: 'Give', href: '/give' },
 ];
 
+const DropdownLink = ({ child, onClick, className }: { child: NavChild; onClick?: () => void; className: string }) => (
+  child.external ? (
+    <a href={child.href} target="_blank" rel="noopener noreferrer" onClick={onClick} className={className}>
+      {child.label}
+    </a>
+  ) : (
+    <Link to={child.href} onClick={onClick} className={className}>
+      {child.label}
+    </Link>
+  )
+);
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -51,15 +83,13 @@ const Navbar = () => {
                     {item.label}
                     <ChevronDown className="h-3 w-3" />
                   </button>
-                  <div className="absolute left-0 top-full mt-1 w-56 bg-white shadow-lg rounded-md py-1 hidden group-hover:block border-t-2 border-cta z-50">
+                  <div className="absolute left-0 top-full mt-1 w-64 bg-white shadow-lg rounded-md py-1 hidden group-hover:block border-t-2 border-cta z-50">
                     {item.children.map(child => (
-                      <Link
-                        key={child.href}
-                        to={child.href}
+                      <DropdownLink
+                        key={child.label}
+                        child={child}
                         className="block px-4 py-2 text-sm text-church-800 hover:bg-church-50 hover:text-church-600 transition-colors"
-                      >
-                        {child.label}
-                      </Link>
+                      />
                     ))}
                   </div>
                 </div>
@@ -69,17 +99,17 @@ const Navbar = () => {
                   href={item.href!}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-2 py-2 text-church-800/80 hover:text-church-800 text-xs font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
+                  className="px-3 py-2 text-church-800/80 hover:text-church-800 text-sm font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
                 >
-                  <span className="whitespace-pre-line text-center leading-tight">{item.label}</span>
+                  {item.label}
                 </a>
               ) : (
                 <Link
                   key={item.label}
                   to={item.href!}
-                  className="px-2 py-2 text-church-800/80 hover:text-church-800 text-xs font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
+                  className="px-3 py-2 text-church-800/80 hover:text-church-800 text-sm font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
                 >
-                  <span className="whitespace-pre-line text-center leading-tight">{item.label}</span>
+                  {item.label}
                 </Link>
               )
             ))}
@@ -118,14 +148,12 @@ const Navbar = () => {
                 </button>
                 <div className={cn('pl-4 space-y-1 mt-1', mobileExpanded === item.label ? 'block' : 'hidden')}>
                   {item.children.map(child => (
-                    <Link
-                      key={child.href}
-                      to={child.href}
+                    <DropdownLink
+                      key={child.label}
+                      child={child}
                       onClick={() => setMobileOpen(false)}
                       className="block px-3 py-2 text-church-700 hover:text-church-900 hover:bg-church-100 rounded-md text-sm"
-                    >
-                      {child.label}
-                    </Link>
+                    />
                   ))}
                 </div>
               </div>
@@ -138,7 +166,7 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
                 className="block px-3 py-2 text-church-800/80 hover:text-church-800 hover:bg-church-100 rounded-md text-base font-medium"
               >
-                {item.label.replace('\n', ' ')}
+                {item.label}
               </a>
             ) : (
               <Link
@@ -147,7 +175,7 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
                 className="block px-3 py-2 text-church-800/80 hover:text-church-800 hover:bg-church-100 rounded-md text-base font-medium"
               >
-                {item.label.replace('\n', ' ')}
+                {item.label}
               </Link>
             )
           ))}
