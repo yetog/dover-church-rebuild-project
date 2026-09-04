@@ -11,13 +11,17 @@ type NavItem =
   | { label: string; href?: undefined; children: NavChild[]; external?: undefined };
 
 const navItems: NavItem[] = [
-  { label: 'Watch', href: '/sermons' },
-  { label: 'Visit', href: '/about' },
-  { label: 'Events', href: '/happening' },
-  { label: "People's Community Center", href: 'https://pcc-dover.org', external: true },
-  { label: 'About', href: '/about' },
+  { label: 'Who We Are', href: '/about' },
+  { label: 'Videos of\nService', href: '/sermons' },
+  { label: 'Daily Scripture Meditation\nand Prayer Requests', href: '/meditation' },
+  { label: "Happening\nat People's", href: '/happening' },
+  { label: "People's Community\nCenter", href: 'https://pcc-dover.org', external: true },
+  { label: 'Helping Others\n& Getting Help', href: '/helping-others' },
+  { label: 'Current Issues\nof our Newsletter', href: '/newsletter' },
+  { label: 'Contact Us', href: '/contact' },
   { label: 'Give', href: '/give' },
 ];
+
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -65,17 +69,17 @@ const Navbar = () => {
                   href={item.href!}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-2 text-church-800/80 hover:text-church-800 text-sm font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
+                  className="px-2 py-2 text-church-800/80 hover:text-church-800 text-xs font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
                 >
-                  <span className="whitespace-pre-line text-center">{"People's Community\nCenter"}</span>
+                  <span className="whitespace-pre-line text-center leading-tight">{item.label}</span>
                 </a>
               ) : (
                 <Link
                   key={item.label}
                   to={item.href!}
-                  className="px-3 py-2 text-church-800/80 hover:text-church-800 text-sm font-medium rounded-md hover:bg-church-100 transition-colors"
+                  className="px-2 py-2 text-church-800/80 hover:text-church-800 text-xs font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
                 >
-                  {item.label}
+                  <span className="whitespace-pre-line text-center leading-tight">{item.label}</span>
                 </Link>
               )
             ))}
@@ -134,7 +138,7 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
                 className="block px-3 py-2 text-church-800/80 hover:text-church-800 hover:bg-church-100 rounded-md text-base font-medium"
               >
-                {item.label}
+                {item.label.replace('\n', ' ')}
               </a>
             ) : (
               <Link
@@ -143,7 +147,7 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
                 className="block px-3 py-2 text-church-800/80 hover:text-church-800 hover:bg-church-100 rounded-md text-base font-medium"
               >
-                {item.label}
+                {item.label.replace('\n', ' ')}
               </Link>
             )
           ))}
