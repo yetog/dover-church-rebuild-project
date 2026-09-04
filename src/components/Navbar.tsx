@@ -138,7 +138,7 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
                 className="block px-3 py-2 text-church-800/80 hover:text-church-800 hover:bg-church-100 rounded-md text-base font-medium"
               >
-                {item.label}
+                {item.label.replace('\n', ' ')}
               </a>
             ) : (
               <Link
@@ -147,7 +147,7 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
                 className="block px-3 py-2 text-church-800/80 hover:text-church-800 hover:bg-church-100 rounded-md text-base font-medium"
               >
-                {item.label}
+                {item.label.replace('\n', ' ')}
               </Link>
             )
           ))}
