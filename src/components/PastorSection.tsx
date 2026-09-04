@@ -14,7 +14,7 @@ const PastorSection = () => {
                 src={pastorImg}
                 alt="Rev. Dr. G. Derrick Hodge"
                 loading="lazy"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-[50%_20%]"
               />
             </div>
           </div>
