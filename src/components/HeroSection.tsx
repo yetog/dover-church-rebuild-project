@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section className="bg-church-700 dark:bg-[#0a0608]">
       <div className="container-max">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.25fr_1fr] min-h-[70vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] min-h-[70vh]">
           {/* Left: Service Announcement */}
           <div className="flex flex-col justify-center py-16 lg:py-24 px-4 lg:pr-8">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/50 mb-6">
