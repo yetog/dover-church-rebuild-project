@@ -16,11 +16,12 @@ const HeroSection = () => {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
               Welcome to<br />
-              People's Church of Dover
+              People's Church 
+              of Dover
             </h1>
 
             <p className="text-lg text-white/70 mb-8 max-w-md">
-              A welcoming, Open and Affirming congregation of the United Church of Christ located downtown.
+              A welcoming, Open and Affirming congregation of the United Church of Christ, located downtown.
             </p>
 
             {/* Service Time Card */}
