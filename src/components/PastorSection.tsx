@@ -6,10 +6,10 @@ const PastorSection = () => {
   return (
     <section className="section-padding bg-church-50 dark:bg-[#0f0a10]">
       <div className="container-max">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] gap-12 lg:gap-16 items-center">
           {/* Photo */}
           <div className="relative">
-            <div className="aspect-[4/5] rounded-lg overflow-hidden">
+            <div className="aspect-[4/5] w-36 sm:w-44 lg:w-48 mx-auto lg:mx-0 rounded-lg overflow-hidden shadow-lg">
               <img
                 src={pastorImg}
                 alt="Rev. Dr. G. Derrick Hodge"
