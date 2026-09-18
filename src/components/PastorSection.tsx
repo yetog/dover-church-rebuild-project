@@ -28,7 +28,7 @@ const PastorSection = () => {
               Rev. G. Derrick Hodge, Ph.D.
             </h2>
             <p className="text-church-500 dark:text-church-400 mb-6">
-              Senior Pastor & Executive Director, People's Community Center
+              Pastor and President of the Board of Directors of People's Community Center
             </p>
 
             <div className="prose prose-church dark:prose-invert max-w-none mb-8 space-y-4">
