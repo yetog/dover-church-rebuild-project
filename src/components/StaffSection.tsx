@@ -34,6 +34,12 @@ const staffMembers = [
     bio: 'Manages all aspect of building restoration and maintenance.',
     image: paulImg,
   },
+  {
+    name: 'Dr. Randal Revay',
+    role: 'Sexton',
+    bio: 'Ensures that the building is in clean and workable order.',
+    image: randalImg,
+  },
 ];
 
 const layLeaders = [
@@ -66,12 +72,6 @@ const layLeaders = [
     role: 'Building Maintenance \nand Management',
     description: 'Manages all aspect of building restoration and maintenance.',
     image: paulImg,
-  },
-  {
-    name: 'Dr. Randal Revay',
-    role: 'Sexton',
-    description: 'Ensures that the building is in clean and workable order.',
-    image: randalImg,
   },
   {
     name: 'C.J. Santiago',
