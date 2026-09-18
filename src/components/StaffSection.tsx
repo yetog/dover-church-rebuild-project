@@ -42,7 +42,6 @@ const staffMembers = [
   },
 ];
 
-
 const layLeaders = [
   {
     name: 'John Aliison',
