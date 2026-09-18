@@ -48,11 +48,11 @@ const PastorSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="mailto:office@pcd-dover.org"
+                 href="mailto:gdhodge@pcd-dover.org"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-church-600 dark:text-church-300 hover:text-cta transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                office@pcd-dover.org
+                 gdhodge@pcd-dover.org
               </a>
               <a
                 href="tel:3026744177"
