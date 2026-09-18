@@ -59,13 +59,13 @@ const layLeaders = [
     image: jamesImg,
   },
   {
-    name: 'Paul',
+    name: 'Dr. Paul Hanebutt',
     role: 'Building Maintenane and Management',
-    description: 'Serving the congregation through volunteer leadership',
+    description: 'Manages all aspect of building restoration and maintanance.',
     image: paulImg,
   },
   {
-    name: 'Randal',
+    name: 'Randal ',
     role: 'Lay Leader',
     description: 'Serving the congregation through volunteer leadership',
     image: randalImg,
