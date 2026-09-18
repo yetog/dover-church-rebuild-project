@@ -49,7 +49,7 @@ const layLeaders = [
   {
     name: 'Cheryl Goldsmith',
     role: 'Secretary',
-    description: 'Manages church property and finances',
+    description: 'Records the minutes of Trustee meetings and congregational meetings. ',
     image: cherylImg,
   },
   {
