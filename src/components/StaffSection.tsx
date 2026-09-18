@@ -20,7 +20,7 @@ const staffMembers = [
     email: 'office@pcd-dover.org',
     phone: '(302) 674-4177',
     bio: 'For general inquiries, please contact our church office during regular hours.',
-    image: null,
+    image: contactOfficeImg,
   },
 ];
 
