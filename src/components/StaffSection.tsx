@@ -101,7 +101,7 @@ const StaffSection = () => {
               <div key={index} className="bg-church-50 dark:bg-church-800/30 rounded-lg overflow-hidden">
                 {/* Photo */}
                 {member.image ? (
-                  <div className="aspect-square overflow-hidden">
+                  <div className="aspect-square overflow-hidden border-2 border-church-500">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -175,7 +175,7 @@ const StaffSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {layLeaders.map((leader, index) => (
               <div key={index} className="bg-white dark:bg-church-800/30 rounded-lg overflow-hidden">
-                <div className="aspect-square overflow-hidden">
+                <div className="aspect-square overflow-hidden border-2 border-church-500">
                   <img
                     src={leader.image}
                     alt={leader.name}

@@ -9,7 +9,7 @@ const PastorSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] gap-12 lg:gap-16 items-center">
           {/* Photo */}
           <div className="relative">
-            <div className="aspect-[4/5] w-56 sm:w-64 lg:w-80 mx-auto lg:mx-0 rounded-lg overflow-hidden shadow-lg">
+            <div className="aspect-[4/5] w-56 sm:w-64 lg:w-80 mx-auto lg:mx-0 rounded-lg overflow-hidden shadow-lg border-2 border-church-500">
               <img
                 src={pastorImg}
                 alt="Rev. Dr. G. Derrick Hodge"
