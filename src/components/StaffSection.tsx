@@ -186,7 +186,7 @@ const StaffSection = () => {
         <div className="container-max">
           <div className="mb-12">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
-              Volunteer Leadership
+              LAY LEADERSHIP
             </p>
             <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white">
               Board of Trustees
