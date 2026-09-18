@@ -75,7 +75,7 @@ const layLeaders = [
   },
   {
     name: 'Sue Harris',
-    role: 'Community Outreach Coordinator',
+    role: 'Trustee for Ministries in the Commun',
     description: 'Working alongside Pastor Hodge to serve the homeless and those in need in downtown Dover.',
     image: sueHarrisImg,
   },
