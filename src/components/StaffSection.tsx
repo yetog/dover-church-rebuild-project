@@ -61,19 +61,19 @@ const layLeaders = [
   {
     name: 'Dr. Paul Hanebutt',
     role: 'Building Maintenane and Management',
-    description: 'Manages all aspect of building restoration and maintanance.',
+    description: 'Manages all aspect of building restoration and maintenance.',
     image: paulImg,
   },
   {
-    name: 'Randal ',
-    role: 'Lay Leader',
-    description: 'Serving the congregation through volunteer leadership',
+    name: 'Dr. Randal Revay',
+    role: 'Sexton',
+    description: 'Ensures that the building is in clean and workable order.',
     image: randalImg,
   },
   {
-    name: 'Kathy H.',
-    role: 'Lay Leader',
-    description: 'Serving the congregation through volunteer leadership',
+    name: 'Kathy Hanebutt',
+    role: 'Organist and Pianist',
+    description: 'Plans and Performs music for weekly worship.',
     image: kathyImg,
   },
   {
