@@ -8,6 +8,7 @@ import cityOfDover from '@/assets/partners/city-of-dover.png.asset.json';
 import imaDover from '@/assets/partners/ima-dover.png.asset.json';
 import boysGirlsClubs from '@/assets/partners/boys-girls-clubs.avif.asset.json';
 import neighborGood from '@/assets/partners/neighborgood-partners.avif.asset.json';
+import capitalSchoolDistrict from '@/assets/partners/capital-school-district.svg';
 
 const partners = [
   {
@@ -34,6 +35,11 @@ const partners = [
     name: 'NeighborGood Partners',
     image: neighborGood.url,
     description: 'Building stronger neighborhoods through housing, lending, and community development.',
+  },
+  {
+    name: 'Capital School District',
+    image: capitalSchoolDistrict,
+    description: 'Supporting students and families in Dover through our neighborhood schools.',
   },
 ];
 
