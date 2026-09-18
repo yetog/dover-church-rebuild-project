@@ -54,8 +54,8 @@ const layLeaders = [
   },
   {
     name: 'James Caldwell',
-    role: 'Lay Leader',
-    description: 'Serving the congregation through volunteer leadership',
+    role: 'Ministries to our Church Family',
+    description: 'Overseas worship, faith formation, and pastoral care.',
     image: jamesImg,
   },
   {
