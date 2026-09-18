@@ -189,7 +189,7 @@ const StaffSection = () => {
               Volunteer Leadership
             </p>
             <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white">
-              Lay Leaders
+              Board of Trustees
             </h2>
           </div>
 
