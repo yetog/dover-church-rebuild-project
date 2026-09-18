@@ -22,6 +22,12 @@ const staffMembers = [
     bio: 'Organizes the office, orders supplies, prepares weekly worship materials, and keeps the Pastor in line with an iron fist.',
     image: contactOfficeImg,
   },
+  {
+    name: 'Kathy Hanebutt',
+    role: 'Organist and Pianist',
+    bio: 'Plans and Performs music for weekly worship.',
+    image: kathyImg,
+  },
 ];
 
 const layLeaders = [
@@ -60,12 +66,6 @@ const layLeaders = [
     role: 'Sexton',
     description: 'Ensures that the building is in clean and workable order.',
     image: randalImg,
-  },
-  {
-    name: 'Kathy Hanebutt',
-    role: 'Organist and Pianist',
-    description: 'Plans and Performs music for weekly worship.',
-    image: kathyImg,
   },
   {
     name: 'C.J. Santiago',
