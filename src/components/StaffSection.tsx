@@ -30,8 +30,8 @@ const staffMembers = [
   },
   {
     name: 'Dr. Paul Hanebutt',
-    role: 'Building Maintenance \nand Management',
-    bio: 'Manages all aspect of building restoration and maintenance.',
+    role: "Director of the People's Choir",
+    bio: 'Rehearses and directs the congregational choir, and chooses the weekly anthem. ',
     image: paulImg,
   },
   {
