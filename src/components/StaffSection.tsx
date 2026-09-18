@@ -15,11 +15,11 @@ import contactOfficeImg from '@/assets/staff/contact-office.jpg';
 // so the Church Staff grid here lists the supporting staff only.
 const staffMembers = [
   {
-    name: 'Contact Office',
-    role: 'Church Office',
+    name: 'Jerusha Bowden',
+    role: 'Church Administrator',
     email: 'office@pcd-dover.org',
     phone: '(302) 674-4177',
-    bio: 'For general inquiries, please contact our church office during regular hours.',
+    bio: 'Organizes the office, orders supplies, prepares weekly worship materials, and keeps the Pastor in l',
     image: contactOfficeImg,
   },
 ];
