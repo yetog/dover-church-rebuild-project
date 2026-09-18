@@ -61,8 +61,7 @@ const Partners = () => (
       <section className="section-padding pt-6 md:pt-10 bg-church-50 dark:bg-[#0f0a10]">
         <div className="container-max">
           <p className="max-w-3xl mx-auto text-center text-lg text-church-700 dark:text-white/70 leading-relaxed mb-12">
-            People&rsquo;s Church of Dover works alongside civic, denominational, and community
-            organizations to serve our neighbors. We are grateful for these partners.
+            People&rsquo;s Church of Dover Community Center&nbsp; would not be very helpful without our engagement with many other non-profit organizations. We work alongside civic, denominational, and community organizations to serve our neighbors. We are grateful for these partners.
           </p>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {partners.map((partner) => (
