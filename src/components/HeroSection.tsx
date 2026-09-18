@@ -33,7 +33,7 @@ const HeroSection = () => {
                 10:00 AM
               </p>
               <p className="text-white/60 text-sm">
-                46 South Bradford Street · Dover, DE
+                46 South Bradford Street · Dover
               </p>
             </div>
 
