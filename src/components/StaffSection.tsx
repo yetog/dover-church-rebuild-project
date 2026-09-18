@@ -43,7 +43,7 @@ const layLeaders = [
   {
     name: 'Robin Hinderer',
     role: 'Treasurer',
-    description: 'Oversees worship and pastoral care ministries',
+    description: 'Manages and overseas congregational finances. Provides oversight of staff financial operations.',
     image: robinImg,
   },
   {
