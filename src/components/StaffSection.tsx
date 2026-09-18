@@ -69,7 +69,7 @@ const layLeaders = [
   },
   {
     name: 'Dr. Paul Hanebutt',
-    role: 'Building Maintenance \nand Management',
+    role: 'Trustee for Stewardship of the Building',
     description: 'Manages all aspect of building restoration and maintenance.',
     image: paulImg,
   },
