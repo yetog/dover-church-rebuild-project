@@ -62,7 +62,7 @@ const AboutSection = () => {
               src={stainedGlassImg}
               alt="Good Shepherd stained glass window at People's Church of Dover"
               loading="lazy"
-              className="w-full rounded-lg shadow-lg object-cover aspect-[4/3]"
+              className="mx-auto w-full max-w-sm rounded-lg shadow-lg object-cover aspect-[4/3]"
             />
             {values.map(({ icon: Icon, title, description }) => (
               <div key={title} className="flex items-start gap-5">
