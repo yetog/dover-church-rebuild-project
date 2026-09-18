@@ -8,11 +8,12 @@ interface PageHeaderProps {
   breadcrumb?: { label: string; href: string }[];
   image?: string;
   imageAlt?: string;
+  className?: string;
 }
 
-const PageHeader = ({ title, subtitle, breadcrumb, image, imageAlt }: PageHeaderProps) => {
+const PageHeader = ({ title, subtitle, breadcrumb, image, imageAlt, className }: PageHeaderProps) => {
   return (
-    <section className="relative bg-church-800 dark:bg-[#0a0608] py-16 md:py-24 px-4 overflow-hidden">
+    <section className={`relative bg-church-800 dark:bg-[#0a0608] py-16 md:py-24 px-4 overflow-hidden${className ? ` ${className}` : ''}`}>
       {image && (
         <div className="absolute inset-0">
           <img
