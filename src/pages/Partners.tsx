@@ -53,7 +53,7 @@ const Partners = () => (
     <main className="flex-1">
       <section className="section-padding bg-church-50 dark:bg-[#0f0a10]">
         <div className="container-max">
-          <p className="max-w-3xl text-lg text-church-700 dark:text-white/70 leading-relaxed mb-12">
+          <p className="max-w-3xl mx-auto text-center text-lg text-church-700 dark:text-white/70 leading-relaxed mb-12">
             People&rsquo;s Church of Dover works alongside civic, denominational, and community
             organizations to serve our neighbors. We are grateful for these partners.
           </p>
