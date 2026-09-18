@@ -14,13 +14,6 @@ import cjImg from '@/assets/staff/cj.jpg';
 // so the Church Staff grid here lists the supporting staff only.
 const staffMembers = [
   {
-    name: 'Sue Harris',
-    role: 'Community Outreach Coordinator',
-    email: 'office@pcd-dover.org',
-    bio: 'Working alongside Pastor Hodge to serve the homeless and those in need in downtown Dover.',
-    image: sueHarrisImg,
-  },
-  {
     name: 'Contact Office',
     role: 'Church Office',
     email: 'office@pcd-dover.org',
