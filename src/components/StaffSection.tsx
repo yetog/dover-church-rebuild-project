@@ -75,8 +75,8 @@ const layLeaders = [
   },
   {
     name: 'C.J. Santiago',
-    role: 'Lay Leader',
-    description: 'Serving the congregation through volunteer leadership',
+    role: 'Chair of the Pastoral Relations Committee',
+    description: 'Leads the group of laity who facilitate communication between the Pastor and congregation, and helps identify areas of concern.',
     image: cjImg,
   },
 ];
