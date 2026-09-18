@@ -72,6 +72,12 @@ const layLeaders = [
     description: 'Leads the group of laity who facilitate communication between the Pastor and congregation, and helps identify areas of concern.',
     image: cjImg,
   },
+  {
+    name: 'Sue Harris',
+    role: 'Community Outreach Coordinator',
+    description: 'Working alongside Pastor Hodge to serve the homeless and those in need in downtown Dover.',
+    image: sueHarrisImg,
+  },
 ];
 
 const StaffSection = () => {
