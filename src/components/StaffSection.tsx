@@ -19,7 +19,7 @@ const staffMembers = [
     role: 'Church Administrator',
     email: 'office@pcd-dover.org',
     phone: '(302) 674-4177',
-    bio: 'Organizes the office, orders supplies, prepares weekly worship materials, and keeps the Pastor in l',
+    bio: 'Organizes the office, orders supplies, prepares weekly worship materials, and keeps the Pastor in line with an iron fist.',
     image: contactOfficeImg,
   },
 ];
