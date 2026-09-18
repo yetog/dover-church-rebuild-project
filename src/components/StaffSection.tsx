@@ -74,7 +74,7 @@ const layLeaders = [
     image: kathyImg,
   },
   {
-    name: 'CJ',
+    name: 'C.J. Santiago',
     role: 'Lay Leader',
     description: 'Serving the congregation through volunteer leadership',
     image: cjImg,
