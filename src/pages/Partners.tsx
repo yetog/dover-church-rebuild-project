@@ -8,7 +8,7 @@ import cityOfDover from '@/assets/partners/city-of-dover.png.asset.json';
 import imaDover from '@/assets/partners/ima-dover.png.asset.json';
 import boysGirlsClubs from '@/assets/partners/boys-girls-clubs.avif.asset.json';
 import neighborGood from '@/assets/partners/neighborgood-partners.avif.asset.json';
-import capitalSchoolDistrict from '@/assets/partners/capital-school-district.svg';
+import capitalSchoolDistrict from '@/assets/partners/capital-school-district.png.asset.json';
 
 const partners = [
   {
