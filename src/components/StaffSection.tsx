@@ -9,6 +9,7 @@ import paulImg from '@/assets/staff/paul.jpg';
 import randalImg from '@/assets/staff/Randal.jpg';
 import kathyImg from '@/assets/staff/kathy-h.jpg';
 import cjImg from '@/assets/staff/cj.jpg';
+import contactOfficeImg from '@/assets/staff/contact-office.jpg';
 
 // Rev. Dr. Hodge has his own dedicated PastorSection above this component,
 // so the Church Staff grid here lists the supporting staff only.
@@ -19,7 +20,7 @@ const staffMembers = [
     email: 'office@pcd-dover.org',
     phone: '(302) 674-4177',
     bio: 'For general inquiries, please contact our church office during regular hours.',
-    image: null,
+    image: contactOfficeImg,
   },
 ];
 
