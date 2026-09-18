@@ -57,7 +57,7 @@ const layLeaders = [
   },
   {
     name: 'Dr. Paul Hanebutt',
-    role: 'Building Maintenane and Management',
+    role: 'Building Maintenance \nand Management',
     description: 'Manages all aspect of building restoration and maintenance.',
     image: paulImg,
   },
@@ -75,7 +75,7 @@ const layLeaders = [
   },
   {
     name: 'C.J. Santiago',
-    role: 'Chair of the Pastoral Relations Committee',
+    role: 'Chair of the \nPastoral Relations Committee',
     description: 'Leads the group of laity who facilitate communication between the Pastor and congregation, and helps identify areas of concern.',
     image: cjImg,
   },
