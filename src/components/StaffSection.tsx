@@ -8,10 +8,6 @@ import jamesImg from '@/assets/staff/james.jpg';
 import paulImg from '@/assets/staff/paul.jpg';
 import randalImg from '@/assets/staff/Randal.jpg';
 import kathyImg from '@/assets/staff/kathy-h.jpg';
-import cjImg from '@/assets/staff/cj.jpg';
-import clarenceImg from '@/assets/staff/clarence.jpg';
-import edImg from '@/assets/staff/ed.jpg';
-import ileanaImg from '@/assets/staff/ileana.jpg';
 
 // Rev. Dr. Hodge has his own dedicated PastorSection above this component,
 // so the Church Staff grid here lists the supporting staff only.
@@ -75,30 +71,6 @@ const layLeaders = [
     role: 'Organist and Pianist',
     description: 'Plans and Performs music for weekly worship.',
     image: kathyImg,
-  },
-  {
-    name: 'CJ',
-    role: 'Lay Leader',
-    description: 'Serving the congregation through volunteer leadership',
-    image: cjImg,
-  },
-  {
-    name: 'Clarence',
-    role: 'Lay Leader',
-    description: 'Serving the congregation through volunteer leadership',
-    image: clarenceImg,
-  },
-  {
-    name: 'Ed',
-    role: 'Lay Leader',
-    description: 'Serving the congregation through volunteer leadership',
-    image: edImg,
-  },
-  {
-    name: 'Ileana',
-    role: 'Lay Leader',
-    description: 'Serving the congregation through volunteer leadership',
-    image: ileanaImg,
   },
 ];
 
