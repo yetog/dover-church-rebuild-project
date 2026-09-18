@@ -57,7 +57,7 @@ const Partners = () => (
       imageAlt="Serving our neighbors in downtown Dover"
     />
     <main className="flex-1">
-      <section className="section-padding bg-church-50 dark:bg-[#0f0a10]">
+      <section className="section-padding pt-6 md:pt-10 bg-church-50 dark:bg-[#0f0a10]">
         <div className="container-max">
           <p className="max-w-3xl mx-auto text-center text-lg text-church-700 dark:text-white/70 leading-relaxed mb-12">
             People&rsquo;s Church of Dover works alongside civic, denominational, and community
