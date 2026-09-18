@@ -55,6 +55,7 @@ const Partners = () => (
       ]}
       image={partnersBanner}
       imageAlt="Serving our neighbors in downtown Dover"
+      className="pb-4 md:pb-6"
     />
     <main className="flex-1">
       <section className="section-padding pt-6 md:pt-10 bg-church-50 dark:bg-[#0f0a10]">
