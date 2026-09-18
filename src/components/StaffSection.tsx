@@ -28,6 +28,12 @@ const staffMembers = [
     bio: 'Plans and Performs music for weekly worship.',
     image: kathyImg,
   },
+  {
+    name: 'Dr. Paul Hanebutt',
+    role: 'Building Maintenance \nand Management',
+    bio: 'Manages all aspect of building restoration and maintenance.',
+    image: paulImg,
+  },
 ];
 
 const layLeaders = [
