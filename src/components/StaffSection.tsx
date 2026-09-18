@@ -37,7 +37,7 @@ const layLeaders = [
   {
     name: 'John Aliison',
     role: 'Moderator',
-    description: 'Leads church council and congregational meetings',
+    description: 'Chairs meetings of the congregation meetings and the Trustees. Provides overall coordination of our many ministries',
     image: johnImg,
   },
   {
