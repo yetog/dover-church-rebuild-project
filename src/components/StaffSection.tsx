@@ -75,13 +75,7 @@ const layLeaders = [
     image: paulImg,
   },
   {
-    name: 'Dr. Randal Revay',
-    role: 'Sexton',
-    description: 'Ensures that the building is in clean and workable order.',
-    image: randalImg,
-  },
-  {
-    name: 'C.J. Santiago',
+
     role: 'Chair of the \nPastoral Relations Committee',
     description: 'Leads the group of laity who facilitate communication between the Pastor and congregation, and helps identify areas of concern.',
     image: cjImg,
