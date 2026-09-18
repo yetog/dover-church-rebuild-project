@@ -38,7 +38,7 @@ const partners = [
   },
   {
     name: 'Capital School District',
-    image: capitalSchoolDistrict,
+    image: capitalSchoolDistrict.url,
     description: 'Supporting students and families in Dover through our neighborhood schools.',
   },
 ];
