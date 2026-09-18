@@ -74,16 +74,16 @@ const layLeaders = [
     image: paulImg,
   },
   {
-    name: 'C.J. Santiago',
-    role: 'Chair of the \nPastoral Relations Committee',
-    description: 'Leads the group of laity who facilitate communication between the Pastor and congregation, and helps identify areas of concern.',
-    image: cjImg,
-  },
-  {
     name: 'Sue Harris',
     role: 'Trustee for Ministries in the Community',
     description: 'Manages the work of the Center for Neighbors in Need, and any way that the congregation ser',
     image: sueHarrisImg,
+  },
+  {
+    name: 'C.J. Santiago',
+    role: 'Chair of the \nPastoral Relations Committee',
+    description: 'Leads the group of laity who facilitate communication between the Pastor and congregation, and helps identify areas of concern.',
+    image: cjImg,
   },
 ];
 
