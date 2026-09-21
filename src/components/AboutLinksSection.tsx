@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import ourChurchImg from '@/assets/photos/Our_Church.jpg';
 import stainedGlassImg from '@/assets/photos/Who_we_are.jpg';
-import servingImg from '@/assets/photos/Serving_our_Neighbors.jpg';
 import sanctuaryImg from '@/assets/photos/Visit.jpg';
 
 const sections = [
@@ -24,12 +23,6 @@ const sections = [
     description: 'Meet our pastor, staff, and the lay leaders who guide our congregation.',
     href: '/about#staff',
     image: sanctuaryImg,
-  },
-  {
-    title: 'Partners',
-    description: 'The organizations and ministries we serve alongside in our community.',
-    href: '/partners',
-    image: servingImg,
   },
 ];
 
