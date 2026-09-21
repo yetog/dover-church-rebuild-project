@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] min-h-[70vh]">
           {/* Left: Service Announcement */}
           <div className="flex flex-col justify-center py-16 lg:py-24 px-4 lg:pr-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/50 mb-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white mb-6">
               Sunday Morning Worship
             </p>
 
@@ -20,7 +20,7 @@ const HeroSection = () => {
               of Dover
             </h1>
 
-            <p className="text-lg text-white/70 mb-8 max-w-md">
+            <p className="text-lg text-white mb-8 max-w-md">
               A welcoming, Open and Affirming congregation of the United Church of Christ, located downtown.
 
 
@@ -33,13 +33,13 @@ const HeroSection = () => {
 
             {/* Service Time Card */}
             <div className="bg-white/10 backdrop-blur rounded-lg p-6 mb-8 max-w-sm">
-              <p className="text-xs font-semibold uppercase tracking-widest text-cta mb-2">
+              <p className="text-xs font-semibold uppercase tracking-widest text-white mb-2">
                 Join Us This Sunday
               </p>
               <p className="text-2xl font-bold text-white mb-1">
                 10:00 AM
               </p>
-              <p className="text-white/60 text-sm">
+              <p className="text-white text-sm">
                 46 South Bradford Street · Dover
               </p>
             </div>
@@ -56,7 +56,7 @@ const HeroSection = () => {
                 href="https://www.youtube.com/@PeoplesChurchDover"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
+                className="flex items-center gap-2 text-white hover:text-white transition-colors"
               >
                 <Play className="w-4 h-4" />
                 Watch Live
