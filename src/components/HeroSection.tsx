@@ -58,7 +58,7 @@ const HeroSection = () => {
                 to="/about"
                 className="text-white font-semibold hover:text-cta transition-colors border-b-2 border-white hover:border-cta pb-1"
               >
-                Plan Your Visit
+                About Us
               </Link>
               <a
                 href="https://www.youtube.com/@PeoplesChurchDover"
