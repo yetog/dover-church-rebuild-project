@@ -11,6 +11,13 @@ const events = [
     time: '10:00 AM',
   },
   {
+    id: 4,
+    category: 'SPIRITUALITY',
+    title: 'Meditation',
+    datetime: 'Third Wednesdays',
+    time: '10:30 AM',
+  },
+  {
     id: 2,
     category: 'BIBLICAL LITERACY',
     title: 'Bible Study',
@@ -23,13 +30,6 @@ const events = [
     title: 'Bible Study',
     datetime: 'Thursdays',
     time: '6:00 PM',
-  },
-  {
-    id: 4,
-    category: 'SPIRITUALITY',
-    title: 'Meditation',
-    datetime: 'Third Wednesdays',
-    time: '10:30 AM',
   },
 ];
 
