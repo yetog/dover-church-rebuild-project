@@ -16,7 +16,7 @@ const ContactSection = () => {
             <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-6">
               Contact Us
             </h2>
-            <p className="text-lg text-church-600 dark:text-white/70 mb-10">
+            <p className="text-lg text-church-600 dark:text-white mb-10">
               We'd love to hear from you. Reach out with questions, prayer requests, or just to say hello.
             </p>
 
@@ -27,7 +27,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-church-800 dark:text-white mb-1">Address</h3>
-                  <p className="text-church-600 dark:text-white/60">
+                  <p className="text-church-600 dark:text-white">
                     46 South Bradford<br />
                     Dover, Delaware 19904
                   </p>
@@ -40,7 +40,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-church-800 dark:text-white mb-1">Phone</h3>
-                  <p className="text-church-600 dark:text-white/60">
+                  <p className="text-church-600 dark:text-white">
                     <a href="tel:3026744177" className="hover:text-cta transition-colors">(302) 674-4177</a>
                   </p>
                 </div>
@@ -52,7 +52,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-church-800 dark:text-white mb-1">Email</h3>
-                  <p className="text-church-600 dark:text-white/60">
+                  <p className="text-church-600 dark:text-white">
                     <a href="mailto:office@pcd-dover.org" className="hover:text-cta transition-colors">office@pcd-dover.org</a>
                   </p>
                 </div>
@@ -64,7 +64,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-church-800 dark:text-white mb-1">Office Hours</h3>
-                  <p className="text-church-600 dark:text-white/60">
+                  <p className="text-church-600 dark:text-white">
                     Monday - Friday: 9:00 AM - 3:00 PM
                   </p>
                 </div>
@@ -103,7 +103,7 @@ const ContactSection = () => {
             <form className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-church-700 dark:text-white/70 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-church-700 dark:text-white mb-2">
                     Name
                   </label>
                   <Input
@@ -113,7 +113,7 @@ const ContactSection = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-church-700 dark:text-white/70 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-church-700 dark:text-white mb-2">
                     Email
                   </label>
                   <Input
@@ -126,7 +126,7 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-church-700 dark:text-white/70 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-church-700 dark:text-white mb-2">
                   Subject
                 </label>
                 <Input
@@ -137,7 +137,7 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-church-700 dark:text-white/70 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-church-700 dark:text-white mb-2">
                   Message
                 </label>
                 <Textarea

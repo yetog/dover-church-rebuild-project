@@ -136,7 +136,7 @@ const StaffSection = () => {
                   <p className="text-sm text-cta font-medium mb-4">
                     {member.role}
                   </p>
-                  <p className="text-sm text-church-600 dark:text-white/60 mb-4">
+                  <p className="text-sm text-church-600 dark:text-white mb-4">
                     {member.bio}
                   </p>
                   <div className="space-y-2">
@@ -196,7 +196,7 @@ const StaffSection = () => {
                   <p className="text-sm text-cta font-medium mb-2">
                     {leader.role}
                   </p>
-                  <p className="text-sm text-church-600 dark:text-white/60">
+                  <p className="text-sm text-church-600 dark:text-white">
                     {leader.description}
                   </p>
                 </div>

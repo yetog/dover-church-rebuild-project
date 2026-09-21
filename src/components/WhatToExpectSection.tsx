@@ -45,7 +45,7 @@ const WhatToExpectSection = () => {
           <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-4">
             What to Expect
           </h2>
-          <p className="text-lg text-church-600 dark:text-white/70">
+          <p className="text-lg text-church-600 dark:text-white">
             Whether you're exploring faith for the first time or looking for a new church home, we're glad you're here.
           </p>
         </div>
@@ -60,7 +60,7 @@ const WhatToExpectSection = () => {
                 <h3 className="text-lg font-bold text-church-800 dark:text-white mb-2">
                   {title}
                 </h3>
-                <p className="text-church-600 dark:text-white/60 text-sm leading-relaxed">
+                <p className="text-church-600 dark:text-white text-sm leading-relaxed">
                   {description}
                 </p>
               </div>

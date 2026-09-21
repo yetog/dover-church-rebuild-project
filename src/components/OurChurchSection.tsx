@@ -24,7 +24,7 @@ const OurChurchSection = () => {
               Our Church
             </h2>
 
-            <div className="space-y-6 text-church-700 dark:text-white/70 leading-relaxed">
+            <div className="space-y-6 text-church-700 dark:text-white leading-relaxed">
               <p>
                 The People&rsquo;s Church of Dover is a non-denominational, open and affirming, Christian Church located in downtown Dover, Delaware. We are in covenant with the United Church of Christ, as part of the Chesapeake Association under the Central Atlantic Conference.
               </p>
@@ -62,7 +62,7 @@ const OurChurchSection = () => {
               Statement of Faith
             </h2>
 
-            <div className="space-y-6 text-church-700 dark:text-white/70 leading-relaxed">
+            <div className="space-y-6 text-church-700 dark:text-white leading-relaxed">
               <p>
                 In the United Church of Christ, we have no test of faith. There is no list of faith statements that people have to agree upon in order to become a part of our religious community. Most folks are not sure about everything that they have heard taught in church &ndash; and that is just fine with us! We welcome people form a diversity of faith perspectives. We all have different lived experiences, and that gives us different ways of thinking about the ultimate questions of life and death. So there may be people sitting next to each other in a UCC service that have different interpretations of the ancient stories, and we have no interest in forcing a single belief on anyone!
               </p>
@@ -78,7 +78,7 @@ const OurChurchSection = () => {
               {faithStatements.map((statement, index) => (
                 <li key={index} className="flex gap-4">
                   <span className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-church-600 dark:bg-church-300" />
-                  <p className="text-church-700 dark:text-white/80 leading-relaxed">
+                  <p className="text-church-700 dark:text-white leading-relaxed">
                     {statement}
                   </p>
                 </li>
@@ -86,7 +86,7 @@ const OurChurchSection = () => {
             </ul>
 
             <div className="mt-10 border-l-4 border-church-600 pl-6">
-              <p className="text-xl italic text-church-700 dark:text-white/90">
+              <p className="text-xl italic text-church-700 dark:text-white">
                 Blessing and honor, glory and power be unto God.
               </p>
               <p className="mt-2 text-sm font-semibold text-church-500 dark:text-church-400">

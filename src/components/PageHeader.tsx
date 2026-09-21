@@ -27,13 +27,13 @@ const PageHeader = ({ title, subtitle, breadcrumb, image, imageAlt, className }:
       )}
       <div className="relative container-max">
         {breadcrumb && breadcrumb.length > 0 && (
-          <nav className="flex items-center gap-2 text-sm text-white/50 mb-6">
+          <nav className="flex items-center gap-2 text-sm text-white mb-6">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             {breadcrumb.map((item, index) => (
               <React.Fragment key={item.href}>
                 <ChevronRight className="w-4 h-4" />
                 {index === breadcrumb.length - 1 ? (
-                  <span className="text-white/80">{item.label}</span>
+                  <span className="text-white">{item.label}</span>
                 ) : (
                   <Link to={item.href} className="hover:text-white transition-colors">
                     {item.label}
@@ -47,7 +47,7 @@ const PageHeader = ({ title, subtitle, breadcrumb, image, imageAlt, className }:
           {title}
         </h1>
         {subtitle && (
-          <p className="text-lg text-white/70 max-w-2xl whitespace-pre-line">
+          <p className="text-lg text-white max-w-2xl whitespace-pre-line">
             {subtitle}
           </p>
         )}

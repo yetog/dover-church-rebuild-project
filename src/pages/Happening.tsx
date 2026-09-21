@@ -109,7 +109,7 @@ const Happening = () => {
             </div>
 
             {events.length === 0 && (
-              <p className="text-church-500 dark:text-white/60 italic">
+              <p className="text-church-500 dark:text-white italic">
                 No special events are scheduled right now — please check back soon, or join us for any of our weekly gatherings below.
               </p>
             )}
@@ -147,7 +147,7 @@ const Happening = () => {
                     </h3>
 
                     {event.description && (
-                      <p className="text-church-600 dark:text-white/60 text-sm mb-4">
+                      <p className="text-church-600 dark:text-white text-sm mb-4">
                         {event.description}
                       </p>
                     )}
@@ -215,7 +215,7 @@ const Happening = () => {
                     <h3 className="text-lg font-bold text-church-800 dark:text-white group-hover:text-church-600 dark:group-hover:text-church-300 transition-colors">
                       {event.title}
                     </h3>
-                    <p className="text-sm text-church-600 dark:text-white/60 mt-1">
+                    <p className="text-sm text-church-600 dark:text-white mt-1">
                       {event.description}
                     </p>
                   </div>
@@ -239,7 +239,7 @@ const Happening = () => {
             <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
               Want to Get Involved?
             </h2>
-            <p className="text-white/70 mb-8 max-w-xl mx-auto">
+            <p className="text-white mb-8 max-w-xl mx-auto">
               There are many ways to participate in the life of our church. Contact us to learn about volunteer opportunities, committees, and ministry teams.
             </p>
             <a

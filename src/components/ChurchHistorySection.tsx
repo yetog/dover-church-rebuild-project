@@ -37,17 +37,17 @@ const ChurchHistorySection = () => {
               115+ Years of Faith & Service
             </h2>
             <div className="prose prose-church dark:prose-invert max-w-none space-y-4">
-              <p className="text-lg text-church-600 dark:text-white/70 leading-relaxed">
+              <p className="text-lg text-church-600 dark:text-white leading-relaxed">
                 People's Church of Dover has a history of bold actions and expansive building programs.
                 Founded in 1909, our congregation has been a cornerstone of the downtown Dover community
                 for over 115 years.
               </p>
-              <p className="text-church-600 dark:text-white/70 leading-relaxed">
+              <p className="text-church-600 dark:text-white leading-relaxed">
                 Today, People's Church is a congregationalist church committed to the wellbeing of
                 struggling people in Dover. We work with homeless persons, children and youth,
                 and formerly incarcerated people who need help reintegrating into society.
               </p>
-              <p className="text-church-600 dark:text-white/70 leading-relaxed">
+              <p className="text-church-600 dark:text-white leading-relaxed">
                 As an Open and Affirming congregation of the United Church of Christ, we celebrate
                 all who seek the experience of God's unconditional love and invite all to participate
                 fully in the life of the church.
@@ -68,7 +68,7 @@ const ChurchHistorySection = () => {
                     <h3 className="text-lg font-bold text-church-800 dark:text-white mt-1 mb-2">
                       {milestone.title}
                     </h3>
-                    <p className="text-sm text-church-600 dark:text-white/60">
+                    <p className="text-sm text-church-600 dark:text-white">
                       {milestone.description}
                     </p>
                   </div>

@@ -13,7 +13,7 @@ const PrayerInvitationSection = () => {
           <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-4">
             Seeking Prayer or Counsel?
           </h2>
-          <p className="text-lg text-church-600 dark:text-white/70 mb-8 leading-relaxed">
+          <p className="text-lg text-church-600 dark:text-white mb-8 leading-relaxed">
             We welcome all who seek prayer, guidance, or simply someone to talk to.
             Our community is here for you.
           </p>

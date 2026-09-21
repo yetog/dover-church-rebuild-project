@@ -60,7 +60,7 @@ const Partners = () => (
     <main className="flex-1">
       <section className="section-padding pt-6 md:pt-10 bg-church-50 dark:bg-[#0f0a10]">
         <div className="container-max">
-          <p className="max-w-3xl mx-auto text-center text-lg text-church-700 dark:text-white/70 leading-relaxed mb-12">
+          <p className="max-w-3xl mx-auto text-center text-lg text-church-700 dark:text-white leading-relaxed mb-12">
             People&rsquo;s Church of Dover Community Center&nbsp; would not be very helpful without our engagement with many other non-profit organizations. We work alongside civic, denominational, and community organizations to serve our neighbors. We are grateful for these partners.
           </p>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -79,7 +79,7 @@ const Partners = () => (
                 <h2 className="text-lg font-black text-church-800 dark:text-white mb-2">
                   {partner.name}
                 </h2>
-                <p className="text-sm text-church-600 dark:text-white/70 leading-relaxed">
+                <p className="text-sm text-church-600 dark:text-white leading-relaxed">
                   {partner.description}
                 </p>
               </div>

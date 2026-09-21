@@ -9,12 +9,12 @@ const ServiceInfoBar = () => {
           <Clock className="h-4 w-4 text-cta" />
           <span>
             <span className="font-semibold">Sunday Worship</span>
-            <span className="text-white/60 ml-2">10:00 AM</span>
+            <span className="text-white ml-2">10:00 AM</span>
           </span>
         </div>
         <div className="hidden md:block w-px h-5 bg-white/20" />
-        <div className="flex items-center gap-3 text-white/70">
-          <MapPin className="h-4 w-4 text-white/50" />
+        <div className="flex items-center gap-3 text-white">
+          <MapPin className="h-4 w-4 text-white" />
           <span>46 South Bradford, Dover, DE 19904</span>
         </div>
         <div className="hidden md:block w-px h-5 bg-white/20" />

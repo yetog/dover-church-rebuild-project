@@ -32,13 +32,13 @@ const PastorSection = () => {
             </p>
 
             <div className="prose prose-church dark:prose-invert max-w-none mb-8 space-y-4">
-              <p className="text-church-600 dark:text-white/70 leading-relaxed">
+              <p className="text-church-600 dark:text-white leading-relaxed">
                 Rev. Dr. G. Derrick Hodge is a cultural anthropologist who has dedicated his career
                 to building relationships across diverse communities. He holds a Ph.D. and has authored
                 books and academic articles on economic and medical anthropology, as well as works
                 addressing multiculturalism and cross-racial ministry.
               </p>
-              <p className="text-church-600 dark:text-white/70 leading-relaxed">
+              <p className="text-church-600 dark:text-white leading-relaxed">
                 Over the past eight years, Pastor Hodge has focused on helping congregations revitalize
                 through community engagement. He currently serves as both Pastor of People's Church of Dover
                 and Executive Director of the People's Community Center, leading efforts to serve those

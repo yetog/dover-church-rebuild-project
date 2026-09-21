@@ -85,7 +85,7 @@ const DailyDevotionalSection = () => {
                 </div>
               </div>
 
-              <p className="text-church-600 dark:text-white/70 mb-6 leading-relaxed">
+              <p className="text-church-600 dark:text-white mb-6 leading-relaxed">
                 {devotional.excerpt}
               </p>
 
@@ -102,7 +102,7 @@ const DailyDevotionalSection = () => {
           ) : (
             <div className="bg-church-50 dark:bg-church-900/50 rounded-lg p-8">
               <BookOpen className="w-12 h-12 text-church-400 dark:text-church-600 mx-auto mb-4" />
-              <p className="text-church-600 dark:text-white/70 mb-6">
+              <p className="text-church-600 dark:text-white mb-6">
                 Start your day with reflection and inspiration from the United Church of Christ.
               </p>
               <a
