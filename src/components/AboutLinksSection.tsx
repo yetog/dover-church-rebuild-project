@@ -30,11 +30,6 @@ const AboutLinksSection = () => {
   return (
     <section className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
       <div className="container-max">
-        <div className="max-w-3xl mb-12">
-          <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white">
-            Get to Know Us
-          </h2>
-        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {sections.map(({ title, description, href, image }) => (
