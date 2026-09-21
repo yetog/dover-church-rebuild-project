@@ -67,6 +67,10 @@ export default {
 					'900': '#2d1429',
 					'950': '#1a0a17',
 				},
+				header: {
+					'foreground': 'hsl(var(--header-foreground))',
+					'menu-foreground': 'hsl(var(--header-menu-foreground))'
+				},
 				/* CTA green */
 				cta: {
 					'DEFAULT': '#4CAF50',

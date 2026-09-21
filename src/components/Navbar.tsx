@@ -79,7 +79,7 @@ const Navbar = () => {
             {navItems.map(item => (
               item.children ? (
                 <div key={item.label} className="relative group">
-                  <button className="flex items-center gap-1 px-3 py-2 text-church-800/80 hover:text-church-800 text-sm font-medium rounded-md hover:bg-church-100 transition-colors">
+                  <button className="flex items-center gap-1 px-3 py-2 text-header-foreground hover:text-header-foreground text-sm font-medium rounded-md hover:bg-church-100 transition-colors">
                     {item.label}
                     <ChevronDown className="h-3 w-3" />
                   </button>
@@ -88,7 +88,7 @@ const Navbar = () => {
                       <DropdownLink
                         key={child.label}
                         child={child}
-                        className="block px-4 py-2 text-sm text-church-800 hover:bg-church-50 hover:text-church-600 transition-colors"
+                        className="block px-4 py-2 text-sm text-header-menu-foreground hover:bg-church-50 hover:text-church-600 transition-colors"
                       />
                     ))}
                   </div>
@@ -99,7 +99,7 @@ const Navbar = () => {
                   href={item.href!}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-2 text-church-800/80 hover:text-church-800 text-sm font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
+                  className="px-3 py-2 text-header-foreground hover:text-header-foreground text-sm font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
                 >
                   {item.label}
                 </a>
@@ -107,7 +107,7 @@ const Navbar = () => {
                 <Link
                   key={item.label}
                   to={item.href!}
-                  className="px-3 py-2 text-church-800/80 hover:text-church-800 text-sm font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
+                  className="px-3 py-2 text-header-foreground hover:text-header-foreground text-sm font-medium rounded-md hover:bg-church-100 transition-colors flex items-center"
                 >
                   {item.label}
                 </Link>
@@ -115,7 +115,7 @@ const Navbar = () => {
             ))}
             <button
               onClick={toggleTheme}
-              className="ml-4 p-2 rounded-md text-church-800/80 hover:text-church-800 hover:bg-church-100 transition-colors"
+              className="ml-4 p-2 rounded-md text-header-foreground hover:text-header-foreground hover:bg-church-100 transition-colors"
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
             >
               {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
@@ -124,7 +124,7 @@ const Navbar = () => {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden p-2 rounded-md text-church-800/80 hover:text-church-800 hover:bg-church-100"
+            className="lg:hidden p-2 rounded-md text-header-foreground hover:text-header-foreground hover:bg-church-100"
             onClick={() => setMobileOpen(prev => !prev)}
             aria-label="Toggle navigation menu"
           >
@@ -141,7 +141,7 @@ const Navbar = () => {
               <div key={item.label}>
                 <button
                   onClick={() => toggleMobileDropdown(item.label)}
-                  className="w-full flex items-center justify-between px-3 py-2 text-church-800/80 hover:text-church-800 hover:bg-church-100 rounded-md text-base font-medium"
+                  className="w-full flex items-center justify-between px-3 py-2 text-header-foreground hover:text-header-foreground hover:bg-church-100 rounded-md text-base font-medium"
                 >
                   {item.label}
                   <ChevronDown className={cn('h-4 w-4 transition-transform', mobileExpanded === item.label ? 'rotate-180' : '')} />
@@ -152,7 +152,7 @@ const Navbar = () => {
                       key={child.label}
                       child={child}
                       onClick={() => setMobileOpen(false)}
-                      className="block px-3 py-2 text-church-700 hover:text-church-900 hover:bg-church-100 rounded-md text-sm"
+                      className="block px-3 py-2 text-header-foreground hover:text-header-foreground hover:bg-church-100 rounded-md text-sm"
                     />
                   ))}
                 </div>
@@ -164,7 +164,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="block px-3 py-2 text-church-800/80 hover:text-church-800 hover:bg-church-100 rounded-md text-base font-medium"
+                className="block px-3 py-2 text-header-foreground hover:text-header-foreground hover:bg-church-100 rounded-md text-base font-medium"
               >
                 {item.label}
               </a>
@@ -173,7 +173,7 @@ const Navbar = () => {
                 key={item.label}
                 to={item.href!}
                 onClick={() => setMobileOpen(false)}
-                className="block px-3 py-2 text-church-800/80 hover:text-church-800 hover:bg-church-100 rounded-md text-base font-medium"
+                className="block px-3 py-2 text-header-foreground hover:text-header-foreground hover:bg-church-100 rounded-md text-base font-medium"
               >
                 {item.label}
               </Link>
