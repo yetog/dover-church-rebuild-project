@@ -70,7 +70,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
-            <img src={churchLogo} alt="People's Church of Dover" className="h-14 w-auto" />
+            <img src={churchLogo} alt="People's Church of Dover" className="h-16 w-auto" />
           </Link>
 
           {/* Desktop nav */}
