@@ -240,7 +240,9 @@ const Happening = () => {
               Want to Get Involved?
             </h2>
             <p className="text-white mb-8 max-w-xl mx-auto">
-              There are many ways to participate in the life of our church. Contact us to learn about volunteer opportunities, committees, and ministry teams.
+              There are many ways to participate in the life of our church.&nbsp;
+              <br />
+              Contact us to learn about volunteer opportunities, committees, and ministry teams.
             </p>
             <a
               href="/contact"
