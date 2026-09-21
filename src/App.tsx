@@ -12,7 +12,6 @@ import Newsletter from "./pages/Newsletter";
 import Contact from "./pages/Contact";
 import UCC from "./pages/UCC";
 
-import Partners from "./pages/Partners";
 import Happening from "./pages/Happening";
 import Community from "./pages/Community";
 import ChildrenYouth from "./pages/ChildrenYouth";
@@ -40,7 +39,6 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/ucc" element={<UCC />} />
             
-            <Route path="/partners" element={<Partners />} />
             <Route path="/happening" element={<Happening />} />
             <Route path="/community" element={<Community />} />
             <Route path="/community/children-youth" element={<ChildrenYouth />} />

@@ -58,7 +58,6 @@ const Footer = () => {
               <Link to="/about" className="block hover:text-cta transition">Our Church</Link>
               <Link to="/about#staff" className="block hover:text-cta transition">Staff & Leaders</Link>
               <Link to="/ucc" className="block hover:text-cta transition">United Church of Christ</Link>
-              <Link to="/partners" className="block hover:text-cta transition">Partners</Link>
               <Link to="/contact" className="block hover:text-cta transition">Contact</Link>
             </nav>
           </div>

@@ -25,12 +25,6 @@ const sections = [
     href: '/about#staff',
     image: sanctuaryImg,
   },
-  {
-    title: 'Partners',
-    description: 'The organizations and ministries we serve alongside in our community.',
-    href: '/partners',
-    image: servingImg,
-  },
 ];
 
 const AboutLinksSection = () => {
