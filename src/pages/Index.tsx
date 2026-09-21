@@ -26,7 +26,7 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-black text-church-800 dark:text-white mb-4">
               Questions? We'd love to hear from you.
             </h2>
-            <p className="text-church-600 dark:text-white/60 mb-6 max-w-md mx-auto">
+            <p className="text-church-600 dark:text-white mb-6 max-w-md mx-auto">
               Whether you're planning a visit or just want to learn more, reach out anytime.
             </p>
             <Link

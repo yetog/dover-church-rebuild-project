@@ -72,7 +72,7 @@ const AboutLinksSection = () => {
                 <h3 className="text-lg font-bold text-church-800 dark:text-white mb-2 group-hover:text-church-600 dark:group-hover:text-church-300 transition-colors">
                   {title}
                 </h3>
-                <p className="text-sm text-church-600 dark:text-white/60 leading-relaxed mb-3">
+                <p className="text-sm text-church-600 dark:text-white leading-relaxed mb-3">
                   {description}
                 </p>
                 <span className="inline-flex items-center text-sm font-semibold text-church-600 dark:text-church-300 group-hover:text-cta transition-colors">

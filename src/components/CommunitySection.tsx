@@ -38,7 +38,7 @@ const CommunitySection = () => {
             <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-4">
               Serving Our Neighbors
             </h2>
-            <p className="text-lg text-church-600 dark:text-white/70">
+            <p className="text-lg text-church-600 dark:text-white">
               Through the People's Community Center, we extend God's love beyond our walls with
               three ministry centers dedicated to those in need in downtown Dover.
             </p>
@@ -69,7 +69,7 @@ const CommunitySection = () => {
                     {title}
                     <ExternalLink className="w-3 h-3 opacity-50" />
                   </h3>
-                  <p className="text-church-600 dark:text-white/60 text-sm leading-relaxed mb-3 whitespace-pre-wrap">
+                  <p className="text-church-600 dark:text-white text-sm leading-relaxed mb-3 whitespace-pre-wrap">
                     {description}
                   </p>
                   <span className="inline-flex items-center text-sm font-semibold text-church-600 dark:text-church-300 group-hover:text-cta transition-colors">
@@ -82,7 +82,7 @@ const CommunitySection = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-church-100 dark:border-church-800 text-center">
-          <p className="text-church-600 dark:text-white/60 mb-6 max-w-2xl mx-auto">
+          <p className="text-church-600 dark:text-white mb-6 max-w-2xl mx-auto">
             The People's Community Center is transforming our 115-year-old building into a hub
             for those less fortunate in the downtown Dover area.
           </p>

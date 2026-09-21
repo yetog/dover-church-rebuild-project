@@ -99,7 +99,7 @@ const Sermons = () => {
                 </div>
                 <div>
                   <h2 className="text-xl font-bold text-white">Live Every Sunday</h2>
-                  <p className="text-white/60">Join us at 10:00 AM EST</p>
+                  <p className="text-white">Join us at 10:00 AM EST</p>
                 </div>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-3">
@@ -165,7 +165,7 @@ const Sermons = () => {
                   <h3 className="text-2xl font-bold text-church-800 dark:text-white mt-2 mb-4">
                     [Sermon Title]
                   </h3>
-                  <div className="space-y-3 text-sm text-church-600 dark:text-white/60 mb-6">
+                  <div className="space-y-3 text-sm text-church-600 dark:text-white mb-6">
                     <p className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
                       [Date]

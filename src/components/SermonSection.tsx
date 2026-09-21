@@ -42,7 +42,7 @@ const SermonSection = () => {
             <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-4">
               Worship With Us
             </h2>
-            <p className="text-church-600 dark:text-white/70 mb-8">
+            <p className="text-church-600 dark:text-white mb-8">
               Join us for worship online through our live stream or watch past sermons.
             </p>
 

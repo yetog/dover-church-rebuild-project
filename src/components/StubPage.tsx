@@ -24,7 +24,7 @@ const StubPage = ({ title, subtitle, breadcrumb }: StubPageProps) => {
       <main className="flex-1 bg-gray-300 dark:bg-[#1a0a17]">
         <div className="container-max py-16 md:py-24 px-4">
           <div className="max-w-2xl">
-            <p className="text-lg text-church-600 dark:text-white/70 mb-8">
+            <p className="text-lg text-church-600 dark:text-white mb-8">
               We're working on this page. In the meantime, feel free to explore other areas of our site or contact us directly.
             </p>
             <div className="flex flex-wrap gap-4">

@@ -17,7 +17,7 @@ const QuickLinksSection = () => {
             <Link
               key={href}
               to={href}
-              className="text-white/80 hover:text-white text-sm uppercase tracking-widest font-medium transition-colors"
+              className="text-white hover:text-white text-sm uppercase tracking-widest font-medium transition-colors"
             >
               {label}
             </Link>

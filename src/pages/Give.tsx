@@ -77,7 +77,7 @@ const Give = () => {
               <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-4">
                 Ways to Give
               </h2>
-              <p className="text-lg text-church-600 dark:text-white/70">
+              <p className="text-lg text-church-600 dark:text-white">
                 Thank you for considering a gift to People's Church. Your generosity enables us to worship together, serve our community, and share God's love.
               </p>
             </div>
@@ -105,7 +105,7 @@ const Give = () => {
                     {title}
                   </h3>
                   <p className={`text-sm mb-6 ${
-                    primary ? 'text-white/80' : 'text-church-600 dark:text-white/60'
+                    primary ? 'text-white' : 'text-church-600 dark:text-white'
                   }`}>
                     {description}
                   </p>
@@ -125,7 +125,7 @@ const Give = () => {
             </div>
 
             <div className="mt-8 p-6 bg-cta/10 dark:bg-cta/20 rounded-lg text-center">
-              <p className="text-sm text-church-700 dark:text-white/80">
+              <p className="text-sm text-church-700 dark:text-white">
                 <strong>Note:</strong> Replace the "Give Online" link with your actual giving platform (Tithe.ly, PayPal, Vanco, etc.)
               </p>
             </div>
@@ -143,7 +143,7 @@ const Give = () => {
                 <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-6">
                   Where Your Gift Goes
                 </h2>
-                <p className="text-lg text-church-600 dark:text-white/70 mb-8">
+                <p className="text-lg text-church-600 dark:text-white mb-8">
                   Every dollar you give supports our mission to worship God, grow in faith, and serve our neighbors. Here's how your generosity makes a difference.
                 </p>
 
@@ -175,7 +175,7 @@ const Give = () => {
               {/* Testimonial/Quote */}
               <div className="bg-white dark:bg-church-800/30 rounded-lg p-8 lg:p-12">
                 <HandHeart className="w-12 h-12 text-cta mb-6" />
-                <blockquote className="text-xl md:text-2xl italic text-church-700 dark:text-white/90 mb-6 leading-relaxed">
+                <blockquote className="text-xl md:text-2xl italic text-church-700 dark:text-white mb-6 leading-relaxed">
                   "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."
                 </blockquote>
                 <cite className="text-sm text-church-500 dark:text-church-400 not-italic font-semibold">
@@ -193,7 +193,7 @@ const Give = () => {
             <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
               Questions About Giving?
             </h2>
-            <p className="text-white/70 mb-8 max-w-xl mx-auto">
+            <p className="text-white mb-8 max-w-xl mx-auto">
               We're happy to answer any questions about donations, planned giving, or how your gifts are used. Contact our church office.
             </p>
             <a

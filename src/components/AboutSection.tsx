@@ -36,7 +36,7 @@ const AboutSection = () => {
             </h2>
 
             <blockquote className="border-l-4 border-church-600 pl-6 my-8 text-center">
-              <p className="text-xl md:text-2xl italic text-church-700 dark:text-white/90 mb-3 whitespace-pre-line">
+              <p className="text-xl md:text-2xl italic text-church-700 dark:text-white mb-3 whitespace-pre-line">
                 "Don't place a period{"\n"}where God has placed a comma."
               </p>
               <cite className="text-sm text-church-500 dark:text-church-400 not-italic">
@@ -44,7 +44,7 @@ const AboutSection = () => {
               </cite>
             </blockquote>
 
-            <p className="text-lg text-church-600 dark:text-white/70 mb-6 leading-relaxed">
+            <p className="text-lg text-church-600 dark:text-white mb-6 leading-relaxed">
               The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ.&nbsp;
               We believe in extravagant welcome and that God calls us to love one another, with no exceptions. Divine love requires actions that facilitate life abundant for all of God's creation.
             </p>
@@ -74,7 +74,7 @@ const AboutSection = () => {
                   <h3 className="text-lg font-bold text-church-800 dark:text-white mb-1">
                     {title}
                   </h3>
-                  <p className="text-church-600 dark:text-white/60 text-sm leading-relaxed">
+                  <p className="text-church-600 dark:text-white text-sm leading-relaxed">
                     {description}
                   </p>
                 </div>

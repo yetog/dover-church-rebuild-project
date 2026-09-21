@@ -28,7 +28,7 @@ const PhotoGallerySection = () => {
           <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-4">
             Life at People's Church
           </h2>
-          <p className="text-lg text-church-600 dark:text-white/70 max-w-2xl mx-auto">
+          <p className="text-lg text-church-600 dark:text-white max-w-2xl mx-auto">
             See what worship, fellowship, and community look like at our church.
           </p>
         </div>
