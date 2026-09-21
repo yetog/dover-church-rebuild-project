@@ -31,9 +31,6 @@ const AboutLinksSection = () => {
     <section className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
       <div className="container-max">
         <div className="max-w-3xl mb-12">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
-            Explore
-          </p>
           <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white">
             Get to Know Us
           </h2>
