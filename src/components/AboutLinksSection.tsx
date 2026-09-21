@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import ourChurchImg from '@/assets/photos/Our_Church.jpg';
 import stainedGlassImg from '@/assets/photos/Who_we_are.jpg';
-import servingImg from '@/assets/photos/Serving_our_Neighbors.jpg';
 import sanctuaryImg from '@/assets/photos/Visit.jpg';
 
 const sections = [
