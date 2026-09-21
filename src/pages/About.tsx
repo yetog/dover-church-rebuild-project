@@ -9,7 +9,6 @@ import WhatToExpectSection from '@/components/WhatToExpectSection';
 import PastorSection from '@/components/PastorSection';
 import StaffSection from '@/components/StaffSection';
 import ChurchHistorySection from '@/components/ChurchHistorySection';
-import AboutLinksSection from '@/components/AboutLinksSection';
 import aboutBanner from '@/assets/photos/Visit.jpg';
 
 const About = () => {
@@ -34,7 +33,6 @@ const About = () => {
         imageAlt="The sanctuary of People's Church of Dover"
       />
       <main className="flex-1">
-        <AboutLinksSection />
         <AboutSection />
         <OurChurchSection />
         <WhatToExpectSection />
