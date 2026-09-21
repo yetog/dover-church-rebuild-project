@@ -25,21 +25,10 @@ const HeroSection = () => {
 
 
 
-
               No matter who you are,
-
-              what you have done,
-
-              what you believe,
-
-              or where you are on life’s journey,
-
+              what you have done, what you believe, 
+              or where you are on life’s journey, 
               you are welcome here!
-
-
-
-
-
             </p>
 
             {/* Service Time Card */}
