@@ -33,10 +33,10 @@ const events = [
   },
   {
     id: 5,
-    category: 'BIBLICAL LITRACY',
-    title: 'Bible Study',
-    datetime: 'Thursdays',
-    time: '6:00 PM',
+    category: "PEOIPLE'S COMMUNITY CENTER",
+    title: "Free Store, Hungry Neighborhood Meals, Children's After-School Club\ngo to pcc-dover.org for more information",
+    datetime: 'Every Weekday',
+    time: '\n',
   },
 ];
 
