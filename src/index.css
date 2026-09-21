@@ -34,6 +34,10 @@
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
+
+    /* Site header (top navigation) */
+    --header-foreground: 0 0% 0%;
+    --header-menu-foreground: 0 0% 0%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
@@ -50,6 +54,7 @@
     --border: 308 35% 22%;             /* #422F3C */
     --primary: 308 41% 25%;            /* #5A2653 — unchanged */
     --secondary: 122 39% 49%;          /* #4CAF50 — unchanged */
+    --header-foreground: 0 0% 100%;    /* header sits on near-black plum in dark mode */
   }
 }
 
