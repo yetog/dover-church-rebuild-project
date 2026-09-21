@@ -18,6 +18,13 @@ const events: {
     time: '10:00 AM',
   },
   {
+    id: 6,
+    category: 'Worship',
+    title: 'Sunday Worship Celebration!',
+    datetime: 'Sundays',
+    time: '10:00 AM',
+  },
+  {
     id: 4,
     category: 'SPIRITUALITY',
     title: 'Meditation',
