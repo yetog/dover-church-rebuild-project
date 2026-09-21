@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Play } from 'lucide-react';
 import heroImage from '@/assets/hero-sanctuary.jpg';
-import uccEmblem from '@/assets/ucc-emblem.jpg.asset.json';
+import uccEmblem from '@/assets/ucc-emblem-white.png';
 
 const HeroSection = () => {
   return (
@@ -41,9 +41,9 @@ const HeroSection = () => {
                   46 South Bradford Street · Dover
                 </p>
               </div>
-              <div className="bg-white rounded-lg p-3 w-24 shrink-0">
+              <div className="w-24 shrink-0">
                 <img
-                  src={uccEmblem.url}
+                  src={uccEmblem}
                   alt="United Church of Christ emblem"
                   className="w-full h-auto"
                 />
