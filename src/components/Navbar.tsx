@@ -57,7 +57,7 @@ const DropdownLink = ({ child, onClick, className }: { child: NavChild; onClick?
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
-  const { theme, toggleTheme } = useTheme();
+
 
   const toggleMobileDropdown = (label: string) => {
     setMobileExpanded(prev => (prev === label ? null : label));
