@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Play } from 'lucide-react';
 import heroImage from '@/assets/hero-sanctuary.jpg';
+import uccEmblem from '@/assets/ucc-emblem.jpg.asset.json';
 
 const HeroSection = () => {
   return (
@@ -10,6 +11,14 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] min-h-[70vh]">
           {/* Left: Service Announcement */}
           <div className="flex flex-col justify-center py-16 lg:py-24 px-4 lg:pr-8">
+            <div className="bg-white rounded-lg p-3 w-24 mb-6">
+              <img
+                src={uccEmblem.url}
+                alt="United Church of Christ emblem"
+                className="w-full h-auto"
+              />
+            </div>
+
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white mb-6">
               Sunday Morning Worship
             </p>
