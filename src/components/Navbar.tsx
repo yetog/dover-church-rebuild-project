@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Menu, X, Sun, Moon } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { useTheme } from '@/context/ThemeContext';
 import churchLogo from '@/assets/logo/church-logo.png';
 
 type NavChild = { label: string; href: string; external?: boolean };
@@ -113,13 +112,6 @@ const Navbar = () => {
                 </Link>
               )
             ))}
-            <button
-              onClick={toggleTheme}
-              className="ml-4 p-2 rounded-md text-header-foreground hover:text-header-foreground hover:bg-church-100 transition-colors"
-              aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-            >
-              {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
-            </button>
           </div>
 
           {/* Mobile hamburger */}
