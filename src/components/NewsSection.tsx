@@ -31,6 +31,13 @@ const events = [
     datetime: 'Thursdays',
     time: '6:00 PM',
   },
+  {
+    id: 5,
+    category: 'BIBLICAL LITRACY',
+    title: 'Bible Study',
+    datetime: 'Thursdays',
+    time: '6:00 PM',
+  },
 ];
 
 const NewsSection = () => {
