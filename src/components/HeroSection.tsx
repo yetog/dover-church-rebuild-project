@@ -22,9 +22,12 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg text-white mb-8 max-w-md">
-              A welcoming, Open and Affirming congregation of the United Church of Christ, located downtown.  
-              <span className="block border-t-2 border-black my-4" />
-              No matter who you are,  what you have done,  what you believe,   or where you are on life’s journey,   you are welcome here!
+              A welcoming, Open and Affirming congregation of the United Church of Christ, located downtown.  <br />
+              No matter who you are,  <br />
+              what you have done,  <br />
+              what you believe,   <br />
+              or where you are on life’s journey,   <br />
+              you are welcome here!
             </p>
 
             {/* Service Time Card */}
