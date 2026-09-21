@@ -37,16 +37,25 @@ const HeroSection = () => {
             </p>
 
             {/* Service Time Card */}
-            <div className="bg-white/10 backdrop-blur rounded-lg p-6 mb-8 max-w-sm">
-              <p className="text-xs font-semibold uppercase tracking-widest text-white mb-2">
-                Join Us This Sunday
-              </p>
-              <p className="text-2xl font-bold text-white mb-1">
-                10:00 AM
-              </p>
-              <p className="text-white text-sm">
-                46 South Bradford Street · Dover
-              </p>
+            <div className="flex items-center gap-5 mb-8">
+              <div className="bg-white/10 backdrop-blur rounded-lg p-6 max-w-sm">
+                <p className="text-xs font-semibold uppercase tracking-widest text-white mb-2">
+                  Join Us This Sunday
+                </p>
+                <p className="text-2xl font-bold text-white mb-1">
+                  10:00 AM
+                </p>
+                <p className="text-white text-sm">
+                  46 South Bradford Street · Dover
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-3 w-24 shrink-0">
+                <img
+                  src={uccEmblem.url}
+                  alt="United Church of Christ emblem"
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
 
             {/* CTAs - More subtle, TRC-style */}
