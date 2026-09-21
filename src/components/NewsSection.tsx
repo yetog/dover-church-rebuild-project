@@ -19,10 +19,10 @@ const events: {
   },
   {
     id: 6,
-    category: 'Worship',
-    title: 'Sunday Worship Celebration!',
+    category: 'FELLOWSHIP',
+    title: 'Happy Hour in our Fellowship Hall',
     datetime: 'Sundays',
-    time: '10:00 AM',
+    time: '11:00 AM',
   },
   {
     id: 4,
