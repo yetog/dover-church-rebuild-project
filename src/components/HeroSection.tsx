@@ -21,13 +21,13 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg text-white mb-8 max-w-md">
-              A welcoming, Open and Affirming congregation of the United Church of Christ, located downtown.
+              A welcoming, Open and Affirming congregation of the United Church of Christ, located downtown. 
 
 
-
-              No matter who you are,
-              what you have done, what you believe, 
-              or where you are on life’s journey, 
+              No matter who you are, 
+              what you have done, 
+              what you believe,  
+              or where you are on life’s journey,  
               you are welcome here!
             </p>
 
