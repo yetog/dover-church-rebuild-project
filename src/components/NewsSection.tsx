@@ -2,7 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight } from 'lucide-react';
 
-const events = [
+const events: {
+  id: number;
+  category: string;
+  title: string;
+  datetime: string;
+  time: string;
+  url?: string;
+}[] = [
   {
     id: 1,
     category: 'Worship',
@@ -35,6 +42,7 @@ const events = [
     id: 5,
     category: "PEOIPLE'S COMMUNITY CENTER",
     title: "Free Store, Hungry Neighborhood Meals, Children's After-School Club  Go to pcc-dover.org for more information.",
+    url: 'https://pcc-dover.org',
     datetime: 'Every Weekday',
     time: '\n',
   },
@@ -79,7 +87,19 @@ const NewsSection = () => {
                   {event.category}
                 </span>
                 <h3 className="text-lg font-bold text-church-800 dark:text-white group-hover:text-church-600 dark:group-hover:text-church-300 transition-colors">
-                  {event.title}
+                  {event.url ? (
+                    <a
+                      href={event.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="underline decoration-church-300 underline-offset-4 hover:decoration-church-500"
+                    >
+                      {event.title}
+                    </a>
+                  ) : (
+                    event.title
+                  )}
                 </h3>
               </div>
               <ArrowRight className="w-5 h-5 text-church-300 dark:text-church-600 group-hover:text-church-600 dark:group-hover:text-white group-hover:translate-x-1 transition-all hidden md:block" />
