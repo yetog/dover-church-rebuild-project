@@ -26,7 +26,7 @@ const OurChurchSection = () => {
 
             <div className="space-y-6 text-church-700 dark:text-white leading-relaxed">
               <p>
-                The People&rsquo;s Church of Dover is a non-denominational, open and affirming, Christian Church located in downtown Dover, Delaware. We are in covenant with the United Church of Christ, as part of the Chesapeake Association under the Central Atlantic Conference.
+                The People&rsquo;s Church of Dover is an, open and affirming, Christian Church located in downtown Dover, Delaware. We are in covenant with the United Church of Christ, as part of the Chesapeake Association under the Central Atlantic Conference.
               </p>
               <p>
                 Our faith is that God speaks through the lives, experiences, and passions of every part of creation. This means that there is no &ldquo;church&rdquo; apart from the hearts and lives of all of God&rsquo;s people. No institution defines what the &ldquo;church&rdquo; is. Instead, we define our church as the dreams, fears, sufferings, triumphs, and hopes of all the people of our community.
