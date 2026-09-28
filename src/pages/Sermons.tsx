@@ -26,6 +26,8 @@ const Sermons = () => {
         imageAlt="Sunday worship at People's Church of Dover"
       />
       <main className="flex-1">
+        <WhatToExpectSection />
+
         {/* Live Stream Banner */}
         <section className="bg-church-900 dark:bg-[#0a0608] py-8 px-4">
           <div className="container-max">
