@@ -18,7 +18,7 @@ type FeedItem = {
 
 const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://www.ucc.org/feed/?post_type=daily_devotion';
 let cachedDate = '';
-let cachedRequest: Promise<UccDevotional | null> | null = null;
+let cachedRequest: Promise<UccDevotional[]> | null = null;
 
 function churchDate() {
   return new Intl.DateTimeFormat('en-CA', {
@@ -26,50 +26,55 @@ function churchDate() {
   }).format(new Date());
 }
 
-function getDevotional(today: string): Promise<UccDevotional | null> {
+function getDevotionals(today: string): Promise<UccDevotional[]> {
   if (cachedRequest && cachedDate === today) return cachedRequest;
   cachedDate = today;
   cachedRequest = fetch(feedUrl)
     .then(async response => {
       if (!response.ok) throw new Error('UCC feed unavailable');
       const data = await response.json();
-      if (data.status !== 'ok' || !Array.isArray(data.items)) return null;
-      const item: FeedItem | undefined = data.items.find((entry: FeedItem) => entry.pubDate?.slice(0, 10) === today);
-      if (!item?.title || !item.link) return null;
-      const excerpt = (item.description || '')
-        .replace(/<[^>]*>/g, ' ')
-        .replace(/&nbsp;|&#160;/g, ' ')
-        .replace(/&amp;/g, '&')
-        .replace(/\s+/g, ' ')
-        .trim();
-      return {
-        title: item.title,
-        author: item.author || 'UCC',
-        date: new Intl.DateTimeFormat('en-US', {
-          timeZone: 'America/New_York', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
-        }).format(new Date(`${today}T12:00:00Z`)),
-        excerpt: excerpt.length > 260 ? `${excerpt.slice(0, 260).trimEnd()}…` : excerpt,
-        link: item.link,
-      };
+      if (data.status !== 'ok' || !Array.isArray(data.items)) return [];
+      return (data.items as FeedItem[])
+        .filter(item => item.title && item.link && item.pubDate && item.pubDate.slice(0, 10) <= today)
+        .sort((a, b) => (b.pubDate || '').localeCompare(a.pubDate || ''))
+        .slice(0, 3)
+        .map(item => {
+          const publishedDate = item.pubDate?.slice(0, 10) || today;
+          const excerpt = (item.description || '')
+            .replace(/<[^>]*>/g, ' ')
+            .replace(/&nbsp;|&#160;/g, ' ')
+            .replace(/&amp;/g, '&')
+            .replace(/\s+/g, ' ')
+            .trim();
+          return {
+            title: item.title || '',
+            author: item.author || 'UCC',
+            date: new Intl.DateTimeFormat('en-US', {
+              timeZone: 'America/New_York', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+            }).format(new Date(`${publishedDate}T12:00:00Z`)),
+            excerpt: excerpt.length > 260 ? `${excerpt.slice(0, 260).trimEnd()}…` : excerpt,
+            link: item.link || '',
+          };
+        });
     })
-    .catch(() => null);
+    .catch(() => []);
   return cachedRequest;
 }
 
 export function useUccDevotional() {
-  const [devotional, setDevotional] = useState<UccDevotional | null>(null);
+  const [devotionals, setDevotionals] = useState<UccDevotional[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let active = true;
-    getDevotional(churchDate()).then(entry => {
+    getDevotionals(churchDate()).then(entries => {
       if (active) {
-        setDevotional(entry);
+        setDevotionals(entries);
         setLoading(false);
       }
     });
     return () => { active = false; };
   }, []);
 
-  return { devotional, loading };
+  return { devotionals, loading };
 }
