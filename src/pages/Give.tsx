@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
@@ -9,9 +10,9 @@ const givingOptions = [
   {
     icon: CreditCard,
     title: "Online Giving",
-    description: "Make a secure one-time or recurring donation through our online giving platform.",
-    cta: "Give Online",
-    href: "#", // Replace with actual giving platform URL (Tithe.ly, PayPal, etc.)
+    description: "Contact the church office for current ways to give online.",
+    cta: "Ask About Online Giving",
+    href: "/contact",
     primary: true,
   },
   {
@@ -109,8 +110,8 @@ const Give = () => {
                   }`}>
                     {description}
                   </p>
-                  <a
-                    href={href}
+                  <Link
+                    to={href}
                     className={`inline-flex items-center gap-2 text-sm font-semibold transition-colors ${
                       primary
                         ? 'text-cta hover:text-white'
@@ -119,16 +120,11 @@ const Give = () => {
                   >
                     {cta}
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 p-6 bg-cta/10 dark:bg-cta/20 rounded-lg text-center">
-              <p className="text-sm text-church-700 dark:text-white">
-                <strong>Note:</strong> Replace the "Give Online" link with your actual giving platform (Tithe.ly, PayPal, Vanco, etc.)
-              </p>
-            </div>
           </div>
         </section>
 
@@ -196,12 +192,12 @@ const Give = () => {
             <p className="text-white mb-8 max-w-xl mx-auto">
               We're happy to answer any questions about donations, planned giving, or how your gifts are used. Contact our church office.
             </p>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-cta text-white font-semibold rounded hover:bg-cta/90 transition-colors"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </section>
       </main>

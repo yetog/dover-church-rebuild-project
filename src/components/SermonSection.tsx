@@ -1,33 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Play, Radio, ArrowRight } from 'lucide-react';
-
-const recentSermons = [
-  {
-    id: 1,
-    title: "Finding Peace in Uncertain Times",
-    speaker: "Rev. Dr. G. Derrick Hodge",
-    date: "Recent",
-    duration: "30 min",
-    videoUrl: "https://www.youtube.com/@PeoplesChurchDover"
-  },
-  {
-    id: 2,
-    title: "The Power of Community",
-    speaker: "Rev. Dr. G. Derrick Hodge",
-    date: "Recent",
-    duration: "28 min",
-    videoUrl: "https://www.youtube.com/@PeoplesChurchDover"
-  },
-  {
-    id: 3,
-    title: "Walking in Faith",
-    speaker: "Rev. Dr. G. Derrick Hodge",
-    date: "Recent",
-    duration: "35 min",
-    videoUrl: "https://www.youtube.com/@PeoplesChurchDover"
-  },
-];
+import { Radio, ArrowRight } from 'lucide-react';
 
 const SermonSection = () => {
   return (
@@ -57,44 +29,10 @@ const SermonSection = () => {
             </a>
           </div>
 
-          {/* Right: Recent Sermons List */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-sm font-semibold uppercase tracking-widest text-church-500 dark:text-church-400">
-                Recent Sermons
-              </h3>
-              <Link
-                to="/sermons"
-                className="text-sm font-semibold text-church-600 dark:text-church-300 hover:text-cta transition-colors flex items-center gap-1"
-              >
-                View all <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-
-            <div className="space-y-0 divide-y divide-church-100 dark:divide-church-800">
-              {recentSermons.map(sermon => (
-                <a
-                  key={sermon.id}
-                  href={sermon.videoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-5 flex items-center gap-4 group hover:bg-church-50 dark:hover:bg-church-800/30 -mx-4 px-4 transition-colors"
-                >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-church-100 dark:bg-church-800 flex items-center justify-center group-hover:bg-cta group-hover:text-white transition-colors">
-                    <Play className="w-5 h-5 text-church-600 dark:text-white group-hover:text-white" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-bold text-church-800 dark:text-white group-hover:text-church-600 dark:group-hover:text-church-300 transition-colors truncate">
-                      {sermon.title}
-                    </h4>
-                    <p className="text-sm text-church-500 dark:text-church-400">
-                      {sermon.date} · {sermon.duration}
-                    </p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-church-300 dark:text-church-600 group-hover:text-church-600 dark:group-hover:text-white group-hover:translate-x-1 transition-all flex-shrink-0" />
-                </a>
-              ))}
-            </div>
+          <div className="lg:col-span-2 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-church-200 dark:border-church-800 pt-8 lg:pt-0 lg:pl-12">
+            <h3 className="text-2xl font-bold text-church-800 dark:text-white mb-4">Recent Services</h3>
+            <p className="text-church-600 dark:text-white mb-6">Find the latest worship services and messages on our YouTube channel.</p>
+            <a href="https://www.youtube.com/@PeoplesChurchDover/videos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-church-800 dark:text-white font-semibold hover:text-cta transition-colors">Browse Videos <ArrowRight className="w-4 h-4" /></a>
           </div>
         </div>
       </div>

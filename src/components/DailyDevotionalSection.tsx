@@ -1,56 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BookOpen, ExternalLink } from 'lucide-react';
-
-interface Devotional {
-  title: string;
-  author: string;
-  date: string;
-  excerpt: string;
-  link: string;
-}
+import { useUccDevotional } from '@/hooks/useUccDevotional';
 
 const DailyDevotionalSection = () => {
-  const [devotional, setDevotional] = useState<Devotional | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchDevotional = async () => {
-      try {
-        // Use rss2json API to convert RSS to JSON (avoids CORS issues)
-        const response = await fetch(
-          'https://api.rss2json.com/v1/api.json?rss_url=https://www.ucc.org/feed/?post_type=daily_devotion'
-        );
-        const data = await response.json();
-
-        if (data.status === 'ok' && data.items?.length > 0) {
-          const item = data.items[0];
-          // Clean up the excerpt - remove HTML tags and limit length
-          const cleanExcerpt = item.description
-            ?.replace(/<[^>]*>/g, '')
-            ?.substring(0, 200) + '...';
-
-          setDevotional({
-            title: item.title,
-            author: item.author || 'UCC',
-            date: new Date(item.pubDate).toLocaleDateString('en-US', {
-              weekday: 'long',
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            }),
-            excerpt: cleanExcerpt,
-            link: item.link
-          });
-        }
-      } catch (error) {
-        console.error('Failed to fetch devotional:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchDevotional();
-  }, []);
+  const { devotional, loading } = useUccDevotional();
 
   return (
     <section className="py-16 px-4 bg-church-50 dark:bg-[#1a0a17]">
@@ -103,7 +56,7 @@ const DailyDevotionalSection = () => {
             <div className="bg-church-50 dark:bg-church-900/50 rounded-lg p-8">
               <BookOpen className="w-12 h-12 text-church-400 dark:text-church-600 mx-auto mb-4" />
               <p className="text-church-600 dark:text-white mb-6">
-                Start your day with reflection and inspiration from the United Church of Christ.
+                Today's UCC devotional is not available here yet. Visit UCC for the latest reflection.
               </p>
               <a
                 href="https://www.ucc.org/daily-devotional/"

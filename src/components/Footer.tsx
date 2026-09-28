@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Youtube, MapPin, Phone, Mail } from 'lucide-react';
+import { Youtube, MapPin, Phone, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
               </p>
               <p className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-white" />
-                <a href="tel:(302) 674-4177" className="hover:text-cta transition">(302) 674-4177</a>
+                <a href="tel:+13026744177" className="hover:text-cta transition">(302) 674-4177</a>
               </p>
               <p className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-white" />
@@ -45,9 +45,6 @@ const Footer = () => {
             <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-6">Community</h3>
             <nav className="space-y-3 text-sm">
               <a href="https://pcc-dover.org" target="_blank" rel="noopener noreferrer" className="block hover:text-cta transition">People's Community Center</a>
-              <a href="https://pcc-dover.org/programs" target="_blank" rel="noopener noreferrer" className="block hover:text-cta transition">Programs & Services</a>
-              <a href="https://pcc-dover.org/get-involved" target="_blank" rel="noopener noreferrer" className="block hover:text-cta transition">Get Involved</a>
-              <a href="https://pcc-dover.org/contact" target="_blank" rel="noopener noreferrer" className="block hover:text-cta transition">Contact PCC</a>
             </nav>
           </div>
 
@@ -74,16 +71,7 @@ const Footer = () => {
             <span className="text-xs text-white">Open and Affirming Congregation</span>
             <div className="flex items-center gap-4">
               <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-white transition"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="https://www.youtube.com/@PeoplesChurchOfDover"
+                href="https://www.youtube.com/@PeoplesChurchDover"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-white transition"

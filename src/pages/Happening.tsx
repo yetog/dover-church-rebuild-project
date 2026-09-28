@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
@@ -244,12 +245,12 @@ const Happening = () => {
               <br />
               Contact us to learn about volunteer opportunities and ministry teams.
             </p>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-cta text-white font-semibold rounded hover:bg-cta/90 transition-colors"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </section>
       </main>
