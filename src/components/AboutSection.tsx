@@ -28,26 +28,9 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Content */}
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
-              About Us
-            </p>
             <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-6">
-              Who We Are
+              Our Community
             </h2>
-
-            <blockquote className="border-l-4 border-church-600 pl-6 my-8 text-center">
-              <p className="text-xl md:text-2xl italic text-church-700 dark:text-white mb-3 whitespace-pre-line">
-                "Don't place a period{"\n"}where God has placed a comma."
-              </p>
-              <cite className="text-sm text-church-500 dark:text-church-400 not-italic">
-                — Gracie Allen
-              </cite>
-            </blockquote>
-
-            <p className="text-lg text-church-600 dark:text-white mb-6 leading-relaxed">
-              The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ.&nbsp;
-              We believe in extravagant welcome and that God calls us to love one another, with no exceptions. Divine love requires actions that facilitate life abundant for all of God's creation.
-            </p>
 
             <Link
               to="/about"
