@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import { Play, Radio, Youtube } from 'lucide-react';
 import watchBanner from '@/assets/photos/Watch.jpg';
+import WhatToExpectSection from '@/components/WhatToExpectSection';
 
 const YOUTUBE_CHANNEL = 'https://www.youtube.com/@PeoplesChurchDover';
 
@@ -25,6 +26,8 @@ const Sermons = () => {
         imageAlt="Sunday worship at People's Church of Dover"
       />
       <main className="flex-1">
+        <WhatToExpectSection />
+
         {/* Live Stream Banner */}
         <section className="bg-church-900 dark:bg-[#0a0608] py-8 px-4">
           <div className="container-max">
