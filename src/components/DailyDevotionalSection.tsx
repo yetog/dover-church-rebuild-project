@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BookOpen, ExternalLink } from 'lucide-react';
-
-interface Devotional {
-  title: string;
-  author: string;
-  date: string;
-  excerpt: string;
-  link: string;
-}
+import { useUccDevotional } from '@/hooks/useUccDevotional';
 
 const DailyDevotionalSection = () => {
-  const [devotional, setDevotional] = useState<Devotional | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { devotional, loading } = useUccDevotional();
 
   useEffect(() => {
     const fetchDevotional = async () => {
