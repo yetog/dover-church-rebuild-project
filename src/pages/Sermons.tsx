@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import { Play, Radio, Youtube } from 'lucide-react';
 import watchBanner from '@/assets/photos/Watch.jpg';
+import WhatToExpectSection from '@/components/WhatToExpectSection';
 
 const YOUTUBE_CHANNEL = 'https://www.youtube.com/@PeoplesChurchDover';
 
