@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
+import AboutSection from '@/components/AboutSection';
 import OurChurchSection from '@/components/OurChurchSection';
 import PastorSection from '@/components/PastorSection';
 import StaffSection from '@/components/StaffSection';
@@ -33,6 +34,7 @@ const About = () => {
       />
       <main className="flex-1">
         <AboutLinksSection />
+        <AboutSection />
         <OurChurchSection />
         <PastorSection />
         <StaffSection />
