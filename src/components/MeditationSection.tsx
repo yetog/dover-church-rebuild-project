@@ -40,8 +40,8 @@ const MeditationSection = () => {
               <div className="mt-6 pt-4 border-t border-church-100">
                 <p className="text-sm text-church-600">
                   To submit a prayer request, please contact the church office at (302) 674-4177 or email 
-                  <a href="mailto:prayer@pcd-dover.org" className="text-church-700 hover:text-church-900 underline ml-1">
-                    prayer@pcd-dover.org
+                  <a href="mailto:office@pcd-dover.org?subject=Prayer%20Request" className="text-church-700 hover:text-church-900 underline ml-1">
+                    office@pcd-dover.org
                   </a>
                 </p>
               </div>

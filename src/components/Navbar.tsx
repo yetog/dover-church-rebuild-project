@@ -15,16 +15,16 @@ const navItems: NavItem[] = [
     label: 'Who We Are',
     children: [
       { label: 'About Us', href: '/about' },
-      { label: 'Visit', href: '/about' },
+      { label: 'Visit', href: '/contact' },
     ],
   },
   {
     label: 'Worship',
     children: [
       { label: 'Videos of Service', href: '/sermons' },
-      { label: 'Daily Scripture Meditation and Prayer Requests', href: '/meditation' },
     ],
   },
+  { label: 'Daily Scripture & Meditation', href: '/meditation' },
   {
     label: 'Happenings',
     children: [

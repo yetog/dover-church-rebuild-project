@@ -1,7 +1,6 @@
 import React from 'react';
 import { Mail, Phone } from 'lucide-react';
 import sueHarrisImg from '@/assets/staff/sue-harris.jpg';
-import johnImg from '@/assets/staff/John.jpg';
 import robinImg from '@/assets/staff/robin.jpg';
 import cherylImg from '@/assets/staff/Cheryl.jpg';
 import jamesImg from '@/assets/staff/james.jpg';
@@ -44,10 +43,10 @@ const staffMembers = [
 
 const layLeaders = [
   {
-    name: 'John Aliison',
-    role: 'Moderator',
-    description: 'Chairs meetings of the congregation meetings and the Trustees. Provides overall coordination of our many ministries',
-    image: johnImg,
+    name: 'Moderator (Vacant)',
+    role: 'Board of Trustees',
+    description: 'This position is currently vacant.',
+    image: null,
   },
   {
     name: 'Robin Hinderer',
@@ -181,14 +180,20 @@ const StaffSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {layLeaders.map((leader, index) => (
               <div key={index} className="bg-white dark:bg-church-800/30 rounded-lg overflow-hidden">
-                <div className="aspect-square overflow-hidden border-2 border-church-500">
-                  <img
-                    src={leader.image}
-                    alt={leader.name}
-                    loading="lazy"
-                    className="w-full h-full object-cover object-[50%_18%]"
-                  />
-                </div>
+                {leader.image ? (
+                  <div className="aspect-square overflow-hidden border-2 border-church-500">
+                    <img
+                      src={leader.image}
+                      alt={leader.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover object-[50%_18%]"
+                    />
+                  </div>
+                ) : (
+                  <div className="aspect-square border-2 border-church-500 bg-church-100 dark:bg-church-800 flex items-center justify-center text-church-600 dark:text-church-300 text-lg font-semibold text-center p-6" aria-label="Moderator position vacant">
+                    Position Vacant
+                  </div>
+                )}
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-church-800 dark:text-white mb-1">
                     {leader.name}
