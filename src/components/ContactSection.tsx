@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock, Facebook, Youtube } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Youtube } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -75,17 +75,10 @@ const ContactSection = () => {
               <h3 className="font-semibold text-church-800 dark:text-white mb-4">Follow Us</h3>
               <div className="flex gap-4">
                 <a
-                  href="https://www.facebook.com"
+                   href="https://www.youtube.com/@PeoplesChurchDover"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-church-100 dark:bg-church-800 flex items-center justify-center hover:bg-church-600 hover:text-white transition-colors"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://www.youtube.com/@PeoplesChurchOfDover"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                   aria-label="YouTube"
                   className="w-10 h-10 rounded-full bg-church-100 dark:bg-church-800 flex items-center justify-center hover:bg-church-600 hover:text-white transition-colors"
                 >
                   <Youtube className="w-5 h-5" />
@@ -162,7 +155,7 @@ const ContactSection = () => {
         <div className="h-80 md:h-96">
           <iframe
             title="Church Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.123456789!2d-75.52345678901234!3d39.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDA3JzI0LjQiTiA3NcKwMzEnMjQuNSJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+            src="https://www.google.com/maps?q=46+South+Bradford+Street,+Dover,+DE+19904&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}

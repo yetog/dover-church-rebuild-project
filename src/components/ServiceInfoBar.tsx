@@ -19,7 +19,7 @@ const ServiceInfoBar = () => {
         </div>
         <div className="hidden md:block w-px h-5 bg-white/20" />
         <a
-          href="https://www.youtube.com/@PeoplesChurchOfDover"
+          href="https://www.youtube.com/@PeoplesChurchDover/streams"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-cta hover:text-white transition-colors font-medium"
