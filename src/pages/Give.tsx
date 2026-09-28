@@ -110,8 +110,8 @@ const Give = () => {
                   }`}>
                     {description}
                   </p>
-                  <a
-                    href={href}
+                  <Link
+                    to={href}
                     className={`inline-flex items-center gap-2 text-sm font-semibold transition-colors ${
                       primary
                         ? 'text-cta hover:text-white'
@@ -120,7 +120,7 @@ const Give = () => {
                   >
                     {cta}
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>

@@ -2,8 +2,19 @@ import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Youtube } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const ContactSection = () => {
+  const sendMessage = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const name = String(data.get('name') || '').trim();
+    const email = String(data.get('email') || '').trim();
+    const subject = String(data.get('subject') || '').trim();
+    const message = String(data.get('message') || '').trim();
+    const body = `${message}\n\nFrom: ${name} (${email})`;
+    window.location.href = `mailto:office@pcd-dover.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
   return (
     <section id="contact" className="bg-white dark:bg-[#1a0a17]">
       <div className="container-max">
@@ -93,7 +104,7 @@ const ContactSection = () => {
               Send a Message
             </h3>
 
-            <form className="space-y-5">
+            <form className="space-y-5" onSubmit={sendMessage}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-church-700 dark:text-white mb-2">
@@ -101,6 +112,8 @@ const ContactSection = () => {
                   </label>
                   <Input
                     id="name"
+                    name="name"
+                    required
                     placeholder="Your name"
                     className="bg-white dark:bg-church-800 border-church-200 dark:border-church-700"
                   />
@@ -111,6 +124,8 @@ const ContactSection = () => {
                   </label>
                   <Input
                     id="email"
+                    name="email"
+                    required
                     type="email"
                     placeholder="Your email"
                     className="bg-white dark:bg-church-800 border-church-200 dark:border-church-700"
@@ -124,6 +139,8 @@ const ContactSection = () => {
                 </label>
                 <Input
                   id="subject"
+                  name="subject"
+                  required
                   placeholder="Message subject"
                   className="bg-white dark:bg-church-800 border-church-200 dark:border-church-700"
                 />
@@ -135,18 +152,21 @@ const ContactSection = () => {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
+                  required
                   placeholder="Your message"
                   rows={5}
                   className="bg-white dark:bg-church-800 border-church-200 dark:border-church-700"
                 />
               </div>
 
-              <button
+              <Button
                 type="submit"
                 className="w-full px-6 py-3 bg-church-800 dark:bg-church-600 text-white font-semibold rounded hover:bg-church-700 dark:hover:bg-church-500 transition-colors"
               >
-                Send Message
-              </button>
+                Open Email to Send
+              </Button>
+              <p className="text-sm text-church-600 dark:text-white">Your email app will open with your message ready to send.</p>
             </form>
           </div>
         </div>
