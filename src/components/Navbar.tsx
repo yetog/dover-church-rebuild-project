@@ -67,10 +67,15 @@ const Navbar = () => {
     };
     const closeEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
+        const focused = document.activeElement;
+        const menu = focused instanceof Element ? focused.closest('[id^="desktop-"]') : null;
+        if (menu) {
+          const trigger = Array.from(navRef.current?.querySelectorAll<HTMLButtonElement>('[aria-controls]') || [])
+            .find(button => button.getAttribute('aria-controls') === menu.id);
+          trigger?.focus();
+        }
         setDesktopExpanded(null);
         setMobileExpanded(null);
-        const focused = document.activeElement;
-        if (focused instanceof HTMLElement) focused.blur();
       }
     };
     document.addEventListener('pointerdown', closeOutside);
