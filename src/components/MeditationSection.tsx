@@ -1,15 +1,9 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Book } from 'lucide-react';
+import DailyDevotionalSection from '@/components/DailyDevotionalSection';
 
 const MeditationSection = () => {
-  const dailyScripture = {
-    verse: "Philippians 4:6-7",
-    text: "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.",
-    reflection: "In times of worry and anxiety, this verse reminds us to bring our concerns to God with thankful hearts. The promise is clear: God's peace will protect our hearts and minds."
-  };
-
   const prayerRequests = [
     "For those suffering from illness and their caregivers",
     "For peace in regions affected by conflict",
@@ -19,33 +13,10 @@ const MeditationSection = () => {
   ];
 
   return (
-    <section id="meditation" className="section-padding bg-church-50">
-      <div className="container mx-auto">
-        <h2 className="section-title">Daily Scripture Meditation</h2>
-        <p className="section-subtitle">
-          Take a moment each day for reflection and prayer.
-        </p>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
-          <Card className="shadow-md">
-            <CardContent className="p-6">
-              <div className="flex items-center mb-4">
-                <Book className="h-6 w-6 text-church-600 mr-2" />
-                <h3 className="text-2xl font-bold text-church-800">Today's Scripture</h3>
-              </div>
-              
-              <div className="bg-warmGray-50 p-4 rounded-md mb-6">
-                <p className="font-semibold text-church-800 mb-2">{dailyScripture.verse}</p>
-                <p className="scripture-quote text-lg text-church-700 mb-4">"{dailyScripture.text}"</p>
-              </div>
-              
-              <div>
-                <h4 className="text-xl font-semibold mb-3 text-church-800">Reflection</h4>
-                <p className="text-church-600">{dailyScripture.reflection}</p>
-              </div>
-            </CardContent>
-          </Card>
-
+    <div id="meditation">
+      <DailyDevotionalSection />
+      <section className="section-padding bg-church-50">
+        <div className="container mx-auto max-w-3xl">
           <Card className="shadow-md">
             <CardContent className="p-6">
               <h3 className="text-2xl font-bold text-church-800 mb-4">Prayer Requests</h3>
@@ -77,8 +48,8 @@ const MeditationSection = () => {
             </CardContent>
           </Card>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
