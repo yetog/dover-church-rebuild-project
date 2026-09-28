@@ -12,22 +12,25 @@ const HeroSection = () => {
           {/* Left: Service Announcement */}
           <div className="flex flex-col justify-center py-16 lg:py-24 px-4 lg:pr-8">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white mb-6">
-              Sunday Morning Worship
+              About Us
             </p>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
-              Welcome to<br />
-              People's Church 
-              of Dover
+              Who We Are
             </h1>
 
-            <p className="text-lg text-white mb-8 max-w-md">
-              A welcoming, Open and Affirming congregation of the United Church of Christ, located downtown.  <br />
-              No matter who you are,  <br />
-              what you have done,  <br />
-              what you believe,   <br />
-              or where you are on life’s journey,   <br />
-              you are welcome here!
+            <blockquote className="border-l-4 border-white/60 pl-6 my-8 max-w-xl">
+              <p className="text-xl md:text-2xl italic text-white mb-3 whitespace-pre-line">
+                "Don't place a period{"\n"}where God has placed a comma."
+              </p>
+              <cite className="text-sm text-white/90 not-italic">
+                — Gracie Allen
+              </cite>
+            </blockquote>
+
+            <p className="text-lg text-white mb-8 max-w-xl leading-relaxed">
+              The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ.&nbsp;
+              We believe in extravagant welcome and that God calls us to love one another, with no exceptions. Divine love requires actions that facilitate life abundant for all of God's creation.
             </p>
 
             {/* Service Time Card */}
