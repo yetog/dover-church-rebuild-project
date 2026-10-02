@@ -3,7 +3,7 @@ import StubPage from '@/components/StubPage';
 
 const HelpingOthers = () => (
   <StubPage
-    title="Outreach"
+    title="Helping Others and Getting Help"
     subtitle={'Reaching out to our neighbors with love and compassion,\nthrough service and support.'}
     breadcrumb={[{ label: 'Outreach', href: '/helping-others' }]}
   />
