@@ -1,5 +1,4 @@
-import React from 'react';
-import { Users, Heart, Activity, ArrowRight, ExternalLink } from 'lucide-react';
+import { Users, Heart, Briefcase, ArrowRight, ExternalLink } from 'lucide-react';
 import servingImg from '@/assets/photos/Serving_our_Neighbors.jpg';
 
 const ministryCenters = [
@@ -22,7 +21,7 @@ const ministryCenters = [
     title: "Center for Workforce Development",
     description: "Job readiness training, skills workshops, and employment support for neighbors seeking meaningful work.",
     href: "https://pcc-dover.org",
-    icon: Activity,
+    icon: Briefcase,
   },
 ];
 
