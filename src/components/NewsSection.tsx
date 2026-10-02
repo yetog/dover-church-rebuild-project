@@ -48,7 +48,7 @@ const events: {
   {
     id: 5,
     category: "PEOIPLE'S COMMUNITY CENTER",
-    title: "Free Store, Hungry Neighborhood Meals, Children's After-School Club  Go to pcc-dover.org for more information.",
+    title: "Free Store, Hungry Neighborhood Meals, Children's After-School Club:   go to pcc-dover.org for more information.",
     url: 'https://pcc-dover.org',
     datetime: 'Every Weekday',
     time: '\n',
