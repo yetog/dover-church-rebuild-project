@@ -25,7 +25,7 @@ const StubPage = ({ title, subtitle, breadcrumb }: StubPageProps) => {
         <div className="container-max py-16 md:py-24 px-4">
           <div className="max-w-2xl">
             <p className="text-lg text-church-600 dark:text-white mb-8">
-              {'Members of the church may make an appointment with the pastor, call 674-4177, or write to: pastor@pcd-dover.org. \n\n\nFolks from the community who need help can call the church office to utilities assistance, or go to People\'s Community Center website for more help.'}
+              {'Members of the church may make an appointment with the pastor, call 674-4177, or write to: pastor@pcd-dover.org.  \n\n\n Folks from the community who need help can call the church office to utilities assistance (674-4177, option 2) or, for more help, go to People\'s Community Center website by clicking here.'}
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
