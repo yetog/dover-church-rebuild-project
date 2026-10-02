@@ -46,7 +46,7 @@ const HeroSection = () => {
                   46 South Bradford Street · Dover
                 </p>
               </div>
-              <div className="w-36 shrink-0 ml-auto mr-4 lg:mr-8">
+              <div className="w-36 shrink-0 ml-auto mr-4 lg:mr-[104px]">
                 <img
                   src={uccEmblem}
                   alt="United Church of Christ emblem"
