@@ -30,7 +30,7 @@ const HeroSection = () => {
 
             <p className="text-lg text-white mb-8 max-w-xl leading-relaxed">
               The People's Church of Dover is an Open and Affirming Congregation of the United Church of Christ.&nbsp;
-              We believe in extravagant welcome and that God calls us to love one another, with no exceptions. Divine love requires actions that facilitate life abundant for all of God's creation.
+              We believe in extravagant welcome, and that God calls us to love one another, with no exceptions. Divine love requires actions that facilitate life abundant for all of God's creation.
             </p>
 
             {/* Service Time Card */}
