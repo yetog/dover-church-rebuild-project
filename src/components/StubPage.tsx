@@ -24,9 +24,21 @@ const StubPage = ({ title, subtitle, breadcrumb }: StubPageProps) => {
       <main className="flex-1 bg-gray-300 dark:bg-[#1a0a17]">
         <div className="container-max py-16 md:py-24 px-4">
           <div className="max-w-2xl">
-            <p className="text-lg text-church-600 dark:text-white mb-8">
-              {'To volunteer to help our neighbors through the community center, click here.\n\n\nMembers of the church may make an appointment with the pastor, call 674-4177, or write to: pastor@pcd-dover.org.    \n\n\nFolks from the community who need help can call the church office to utilities assistance (674-4177, option 2) or, for more help, go to People\'s Community Center website by clicking here.'}
-            </p>
+            <div className="space-y-6 text-lg text-church-600 dark:text-white mb-8">
+              <p>
+                To volunteer to help our neighbors through the community center,{' '}
+                <a href="https://pcc-dover.org" target="_blank" rel="noopener noreferrer" className="font-semibold text-cta underline hover:text-cta/80">click here</a>.
+              </p>
+              <p>
+                Members of the church may make an appointment with the pastor, call{' '}
+                <a href="tel:3026744177" className="font-semibold text-cta underline hover:text-cta/80">674-4177</a>, or write to:{' '}
+                <a href="mailto:pastor@pcd-dover.org" className="font-semibold text-cta underline hover:text-cta/80">pastor@pcd-dover.org</a>.
+              </p>
+              <p>
+                Folks from the community who need help can call the church office to utilities assistance (674-4177, option 2) or, for more help, go to People's Community Center website by{' '}
+                <a href="https://pcc-dover.org" target="_blank" rel="noopener noreferrer" className="font-semibold text-cta underline hover:text-cta/80">clicking here</a>.
+              </p>
+            </div>
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/"
