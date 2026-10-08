@@ -51,7 +51,7 @@ const layLeaders = [
   {
     name: 'Robin Hinderer',
     role: 'Treasurer',
-    description: 'Manages and overseas congregational finances. Provides oversight of staff financial operations.',
+    description: 'Manages and oversees congregational finances. Provides oversight of staff financial operations.',
     image: robinImg,
   },
   {
@@ -63,19 +63,19 @@ const layLeaders = [
   {
     name: 'Reverend James Caldwell',
     role: 'Ministries to our Church Family',
-    description: 'With the Pastor, overseas worship, faith formation, and pastoral care.',
+    description: 'With the Pastor, oversees worship, faith formation, and pastoral care.',
     image: jamesImg,
   },
   {
     name: 'Dr. Paul Hanebutt',
     role: 'Trustee for Stewardship of the Building',
-    description: 'Manages all aspect of building restoration and maintenance.',
+    description: 'Manages all aspects of building restoration and maintenance.',
     image: paulImg,
   },
   {
     name: 'Sue Harris',
     role: 'Trustee for Ministries in the Community',
-    description: 'Manages the work of the Center for Neighbors in Need, and any way that the congregation ser',
+    description: 'Manages the work of the Center for Neighbors in Need, and any way that the congregation serves the wider community.',
     image: sueHarrisImg,
   },
   {
