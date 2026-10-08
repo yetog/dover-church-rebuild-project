@@ -6,7 +6,7 @@ import HeroSection from '@/components/HeroSection';
 import CommunitySection from '@/components/CommunitySection';
 import NewsSection from '@/components/NewsSection';
 import SermonSection from '@/components/SermonSection';
-import DailyDevotionalSection from '@/components/DailyDevotionalSection';
+import HomeDevotionalCard from '@/components/HomeDevotionalCard';
 import { Mail } from 'lucide-react';
 
 const Index = () => {
