@@ -86,7 +86,7 @@ const ContactSection = () => {
               <h3 className="font-semibold text-church-800 dark:text-white mb-4">Follow Us</h3>
               <div className="flex gap-4">
                 <a
-                   href="https://www.youtube.com/@PeoplesChurchDover"
+                   href="https://www.youtube.com/@PeoplesChurchDover/videos"
                   target="_blank"
                   rel="noopener noreferrer"
                    aria-label="YouTube"

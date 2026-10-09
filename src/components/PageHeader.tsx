@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 
@@ -30,7 +29,7 @@ const PageHeader = ({ title, subtitle, breadcrumb, image, imageAlt, className }:
           <nav className="flex items-center gap-2 text-sm text-white mb-6">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             {breadcrumb.map((item, index) => (
-              <React.Fragment key={item.href}>
+              <span key={item.href} className="contents">
                 <ChevronRight className="w-4 h-4" />
                 {index === breadcrumb.length - 1 ? (
                   <span className="text-white">{item.label}</span>
@@ -39,7 +38,7 @@ const PageHeader = ({ title, subtitle, breadcrumb, image, imageAlt, className }:
                     {item.label}
                   </Link>
                 )}
-              </React.Fragment>
+              </span>
             ))}
           </nav>
         )}
