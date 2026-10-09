@@ -64,7 +64,7 @@ const HeroSection = () => {
                 About Us
               </Link>
               <a
-                href="https://www.youtube.com/@PeoplesChurchDover"
+                href="https://www.youtube.com/@PeoplesChurchDover/streams"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-white hover:text-white transition-colors"

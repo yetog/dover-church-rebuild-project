@@ -3,11 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
-import { Calendar, Clock, MapPin, Users, ChevronRight } from 'lucide-react';
-
-// Import event images
-import worshipImg from '@/assets/stock/event-worship.jpg';
-import fellowshipImg from '@/assets/stock/fellowship.jpg';
+import { Calendar, MapPin, Users, ChevronRight } from 'lucide-react';
 
 type ChurchEvent = {
   id: string;
@@ -71,11 +67,6 @@ const categoryColors: Record<string, string> = {
   Special: "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300",
 };
 
-const categoryImages: Record<string, string | undefined> = {
-  Worship: worshipImg,
-  Fellowship: fellowshipImg,
-};
-
 const formatDate = (dateStr: string) => {
   const date = new Date(dateStr + 'T00:00:00');
   return date.toLocaleDateString('en-US', { weekday: 'short', month: 'long', day: 'numeric', year: 'numeric' });
@@ -115,63 +106,48 @@ const Happening = () => {
               </p>
             )}
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="space-y-0 divide-y divide-church-200 dark:divide-church-700 bg-white dark:bg-church-800/20 rounded-lg overflow-hidden">
               {events.map((event) => (
                 <article
                   key={event.id}
-                  className="bg-white dark:bg-church-800/30 rounded-lg overflow-hidden group hover:shadow-lg transition-shadow"
+                  className="p-6 flex flex-col md:flex-row md:items-center gap-4 hover:bg-church-50 dark:hover:bg-church-800/40 transition-colors group"
                 >
-                  {/* Event Image */}
-                  <div className="aspect-[2/1] bg-church-200 dark:bg-church-800 overflow-hidden">
-                    {categoryImages[event.category] ? (
-                      <img
-                        src={categoryImages[event.category]}
-                        alt={event.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center">
-                        <Calendar className="w-12 h-12 text-church-400 dark:text-church-600" />
-                      </div>
-                    )}
+                  <div className="flex items-center gap-4 md:w-56">
+                    <div className="w-12 h-12 rounded-lg bg-church-100 dark:bg-church-700 flex items-center justify-center">
+                      <Calendar className="w-5 h-5 text-church-500 dark:text-church-400" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-church-800 dark:text-white">{formatDate(event.event_date)}</p>
+                      {event.event_time && (
+                        <p className="text-sm text-church-500 dark:text-church-400">{event.event_time}</p>
+                      )}
+                    </div>
                   </div>
 
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className={`text-[10px] font-semibold uppercase tracking-widest px-2 py-1 rounded ${categoryColors[event.category] || categoryColors.Special}`}>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className={`text-[10px] font-semibold uppercase tracking-widest px-2 py-0.5 rounded ${categoryColors[event.category] || categoryColors.Special}`}>
                         {event.category}
                       </span>
                     </div>
-
-                    <h3 className="text-xl font-bold text-church-800 dark:text-white mb-3 group-hover:text-church-600 dark:group-hover:text-church-300 transition-colors">
+                    <h3 className="text-lg font-bold text-church-800 dark:text-white group-hover:text-church-600 dark:group-hover:text-church-300 transition-colors">
                       {event.title}
                     </h3>
-
                     {event.description && (
-                      <p className="text-church-600 dark:text-white text-sm mb-4">
+                      <p className="text-sm text-church-600 dark:text-white mt-1">
                         {event.description}
                       </p>
                     )}
-
-                    <div className="flex flex-wrap gap-4 text-sm text-church-500 dark:text-church-400">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {formatDate(event.event_date)}
-                      </span>
-                      {event.event_time && (
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {event.event_time}
-                        </span>
-                      )}
-                      {event.location && (
-                        <span className="flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
-                          {event.location}
-                        </span>
-                      )}
-                    </div>
                   </div>
+
+                  {event.location && (
+                    <div className="flex items-center gap-2 text-sm text-church-500 dark:text-church-400">
+                      <MapPin className="w-4 h-4" />
+                      {event.location}
+                    </div>
+                  )}
+
+                  <ChevronRight className="w-5 h-5 text-church-300 dark:text-church-600 group-hover:text-church-600 dark:group-hover:text-white group-hover:translate-x-1 transition-all hidden md:block" />
                 </article>
               ))}
             </div>

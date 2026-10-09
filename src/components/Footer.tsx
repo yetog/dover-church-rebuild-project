@@ -71,7 +71,7 @@ const Footer = () => {
             <span className="text-xs text-white">Open and Affirming Congregation</span>
             <div className="flex items-center gap-4">
               <a
-                href="https://www.youtube.com/@PeoplesChurchDover"
+                href="https://www.youtube.com/@PeoplesChurchDover/videos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-white transition"

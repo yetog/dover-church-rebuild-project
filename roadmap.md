@@ -11,3 +11,7 @@
 - [x] Homepage shows one wide devotional card (Read Full Devotion + Meditation & Prayer buttons); Meditation page keeps three cards.
 - [x] Newsletter page has a built-in subscribe form storing sign-ups in the backend (newsletter_subscriptions table).
 - [ ] Optional: owner email notifications for new newsletter sign-ups once a sending domain is verified.
+- [x] Match Upcoming Events to the Regular Activities row format while retaining manually edited event data.
+- [x] Open internal pages at the top while preserving intentional section-anchor links.
+- [x] Redesign Helping Others around volunteer, pastoral support, and community assistance paths; connect the PCC volunteer page.
+- [x] Point general YouTube links to recorded videos while preserving live-stream destinations.
