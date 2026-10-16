@@ -4,7 +4,7 @@ import pastorImg from '@/assets/staff/rev-hodge.jpg';
 
 const PastorSection = () => {
   return (
-    <section className="section-padding bg-church-50 dark:bg-[#0f0a10]">
+    <section id="pastor" className="section-padding scroll-mt-32 bg-gray-300 dark:bg-[#0f0a10]">
       <div className="container-max">
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] gap-12 lg:gap-16 items-center">
           {/* Photo */}

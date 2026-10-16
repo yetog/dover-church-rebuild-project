@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
+import eventsBanner from '@/assets/stock/event-worship.jpg';
 import { Users } from 'lucide-react';
 import NewsSection, { weeklyActivities, type WeeklyActivity } from '@/components/NewsSection';
 
@@ -18,6 +19,8 @@ const Happening = () => {
         title="Events"
         subtitle="Upcoming events, services, and activities at People's Church."
         breadcrumb={[{ label: 'Events', href: '/happening' }]}
+        image={eventsBanner}
+        imageAlt="Worship gathering at People's Church"
       />
       <main className="flex-1">
         <NewsSection

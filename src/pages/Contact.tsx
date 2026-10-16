@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
+import contactBanner from '@/assets/photos/Our_Church.jpg';
 import ContactSection from '@/components/ContactSection';
 
 const Contact = () => {
@@ -12,6 +13,8 @@ const Contact = () => {
         title="Contact Us"
         subtitle="We'd love to hear from you. Reach out with questions, prayer requests, or just to say hello."
         breadcrumb={[{ label: 'Contact', href: '/contact' }]}
+        image={contactBanner}
+        imageAlt="People's Church of Dover building"
       />
       <main className="flex-1">
         <ContactSection />
