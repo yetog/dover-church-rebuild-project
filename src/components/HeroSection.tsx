@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Play } from 'lucide-react';
 import heroImage from '@/assets/hero-sanctuary.jpg';
 import uccEmblem from '@/assets/ucc-emblem-white.png';
+import { VIDEO_SEARCH_URL } from '@/lib/videoLinks';
 
 const HeroSection = () => {
   return (
@@ -64,7 +65,7 @@ const HeroSection = () => {
                 About Us
               </Link>
               <a
-                href="https://www.youtube.com/@PeoplesChurchDover/streams"
+                href={VIDEO_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-white hover:text-white transition-colors"
