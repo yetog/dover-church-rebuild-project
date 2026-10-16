@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { VIDEO_SEARCH_URL } from '@/lib/videoLinks';
+import { VIDEO_CHANNEL_URL } from '@/lib/videoLinks';
 
 const ContactSection = () => {
   const sendMessage = (event: React.FormEvent<HTMLFormElement>) => {
@@ -87,7 +87,7 @@ const ContactSection = () => {
               <h3 className="font-semibold text-church-800 dark:text-white mb-4">Follow Us</h3>
               <div className="flex gap-4">
                 <a
-                   href={VIDEO_SEARCH_URL}
+                   href={VIDEO_CHANNEL_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                    aria-label="YouTube"
