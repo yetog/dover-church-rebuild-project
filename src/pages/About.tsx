@@ -41,7 +41,7 @@ const About = () => {
         image={aboutBanner}
         imageAlt="The sanctuary of People's Church of Dover"
       />
-      <nav aria-label="On this page" className="sticky top-16 z-30 bg-church-900/95 dark:bg-[#0a0608]/95 backdrop-blur border-b border-church-700">
+      <nav aria-label="On this page" className="sticky top-20 z-30 bg-church-900/95 dark:bg-[#0a0608]/95 backdrop-blur border-b border-church-700">
         <div className="container-max px-4 flex gap-1 overflow-x-auto">
           {jumpLinks.map((l) => (
             <Link
