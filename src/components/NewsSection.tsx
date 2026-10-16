@@ -63,6 +63,7 @@ type Props = {
   items?: WeeklyActivity[];
   showViewAll?: boolean;
   emptyMessage?: string;
+  tone?: 'default' | 'tinted';
 };
 
 const NewsSection = ({
@@ -71,9 +72,10 @@ const NewsSection = ({
   items = weeklyActivities,
   showViewAll = true,
   emptyMessage,
+  tone = 'default',
 }: Props) => {
   return (
-    <section className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
+    <section className={`section-padding ${tone === 'tinted' ? 'bg-church-100 dark:bg-[#1a0a17]' : 'bg-gray-300 dark:bg-[#0f0a10]'}`}>
       <div className="container-max">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <div>

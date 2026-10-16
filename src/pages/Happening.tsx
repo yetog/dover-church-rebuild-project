@@ -28,6 +28,14 @@ const Happening = () => {
           emptyMessage="No special events are scheduled right now — please check back soon, or join us for any of our weekly gatherings below."
         />
 
+        <NewsSection
+          eyebrow="Regular Activities"
+          heading="Every Week at People's Church"
+          items={weeklyActivities}
+          showViewAll={false}
+          tone="tinted"
+        />
+
         {/* Calendar CTA */}
         <section className="py-16 px-4 bg-church-900 dark:bg-[#0a0608]">
           <div className="container-max text-center">

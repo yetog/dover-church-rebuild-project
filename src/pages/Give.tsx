@@ -5,14 +5,16 @@ import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import giveBanner from '@/assets/photos/Give.jpg';
 import { Heart, CreditCard, Building2, HandHeart, Mail, ExternalLink } from 'lucide-react';
+import { PAYPAL_GIVING_URL } from '@/lib/videoLinks';
+import paypalQr from '@/assets/give/paypal-qr.png.asset.json';
 
 const givingOptions = [
   {
     icon: CreditCard,
     title: "Online Giving",
-    description: "Contact the church office for current ways to give online.",
-    cta: "Ask About Online Giving",
-    href: "/contact",
+    description: "Give securely online through PayPal using a card or PayPal account.",
+    cta: "Give Online with PayPal",
+    href: PAYPAL_GIVING_URL,
     primary: true,
   },
   {
@@ -110,21 +112,50 @@ const Give = () => {
                   }`}>
                     {description}
                   </p>
-                  <Link
-                    to={href}
-                    className={`inline-flex items-center gap-2 text-sm font-semibold transition-colors ${
-                      primary
-                        ? 'text-cta hover:text-white'
-                        : 'text-church-600 dark:text-church-300 hover:text-cta'
-                    }`}
-                  >
-                    {cta}
-                    <ExternalLink className="w-4 h-4" />
-                  </Link>
+                  {href.startsWith('http') ? (
+                    <div className="flex flex-col items-start gap-2">
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-cta text-white font-semibold rounded hover:bg-cta/90 transition-colors"
+                      >
+                        {cta}
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                      <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="Accepted cards" className="h-6 bg-white rounded px-1" />
+                      <span className="text-xs text-white">
+                        Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" className="inline h-3.5 align-middle bg-white rounded px-1" />
+                      </span>
+                    </div>
+                  ) : (
+                    <Link
+                      to={href}
+                      className={`inline-flex items-center gap-2 text-sm font-semibold transition-colors ${
+                        primary
+                          ? 'text-cta hover:text-white'
+                          : 'text-church-600 dark:text-church-300 hover:text-cta'
+                      }`}
+                    >
+                      {cta}
+                      <ExternalLink className="w-4 h-4" />
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>
 
+            <div className="mt-12 flex flex-col sm:flex-row items-center gap-8 bg-white dark:bg-church-800/30 rounded-lg p-8">
+              <a href={PAYPAL_GIVING_URL} target="_blank" rel="noopener noreferrer" className="shrink-0">
+                <img src={paypalQr.url} alt="QR code to give to People's Church of Dover through PayPal" className="w-48 h-auto rounded" />
+              </a>
+              <div>
+                <h3 className="text-2xl font-bold text-church-800 dark:text-white mb-2">Scan to Give</h3>
+                <p className="text-church-600 dark:text-white">
+                  Point your phone's camera at the code to steward the work of People's Church of Dover through PayPal.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
