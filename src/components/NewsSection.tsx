@@ -2,14 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight } from 'lucide-react';
 
-const events: {
+export type WeeklyActivity = {
   id: number;
   category: string;
   title: string;
   datetime: string;
   time: string;
   url?: string;
-}[] = [
+};
+
+export const weeklyActivities: WeeklyActivity[] = [
   {
     id: 1,
     category: 'Worship',
@@ -40,14 +42,14 @@ const events: {
   },
   {
     id: 3,
-    category: 'BIBLICAL LITRACY',
+    category: 'BIBLICAL LITERACY',
     title: 'Bible Study',
     datetime: 'Thursdays',
     time: '6:00 PM',
   },
   {
     id: 5,
-    category: "PEOIPLE'S COMMUNITY CENTER",
+    category: "PEOPLE'S COMMUNITY CENTER",
     title: "Free Store, Hungry Neighborhood Meals, Children's After-School Club:   go to pcc-dover.org for more information.",
     url: 'https://pcc-dover.org',
     datetime: 'Every Weekday',
@@ -55,29 +57,47 @@ const events: {
   },
 ];
 
-const NewsSection = () => {
+type Props = {
+  eyebrow?: string;
+  heading?: string;
+  items?: WeeklyActivity[];
+  showViewAll?: boolean;
+  emptyMessage?: string;
+};
+
+const NewsSection = ({
+  eyebrow = "What's Happening",
+  heading = "Every Week at People's Church",
+  items = weeklyActivities,
+  showViewAll = true,
+  emptyMessage,
+}: Props) => {
   return (
     <section className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
       <div className="container-max">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
-              What's Happening
+              {eyebrow}
             </p>
             <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white">
-              Every Week at People's Church
+              {heading}
             </h2>
           </div>
-          <Link
+          {showViewAll && <Link
             to="/happening"
             className="mt-4 md:mt-0 inline-flex items-center text-sm font-semibold text-church-600 dark:text-church-300 hover:text-cta transition-colors"
           >
             View all events <ArrowRight className="w-4 h-4 ml-1" />
-          </Link>
+          </Link>}
         </div>
 
+        {items.length === 0 && emptyMessage && (
+          <p className="text-church-500 dark:text-white italic">{emptyMessage}</p>
+        )}
+
         <div className="space-y-0 divide-y divide-church-200 dark:divide-church-700">
-          {events.map(event => (
+          {items.map(event => (
             <article
               key={event.id}
               className="py-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 group cursor-pointer hover:bg-church-100 dark:hover:bg-church-800/30 -mx-4 px-4 transition-colors"

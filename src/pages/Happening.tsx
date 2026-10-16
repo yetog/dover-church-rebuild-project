@@ -3,82 +3,14 @@ import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
-import { Calendar, MapPin, Users, ChevronRight } from 'lucide-react';
-
-type ChurchEvent = {
-  id: string;
-  title: string;
-  event_date: string;
-  event_time?: string;
-  location?: string;
-  category: string;
-  description?: string;
-};
+import { Users } from 'lucide-react';
+import NewsSection, { type WeeklyActivity } from '@/components/NewsSection';
 
 // Upcoming special events — edit this list to add or remove events.
-// Dates use YYYY-MM-DD format.
-const upcomingEvents: ChurchEvent[] = [];
-
-
-const recurringEvents = [
-  {
-    id: 'r1',
-    title: "Sunday Worship Service",
-    category: "Worship",
-    date: "Every Sunday",
-    time: "10:00 AM",
-    location: "Main Sanctuary",
-    description: "Join us for our weekly worship service with music, prayer, and message.",
-  },
-  {
-    id: 'r2',
-    title: "Youth Group Meeting",
-    category: "Youth",
-    date: "Every Wednesday",
-    time: "6:00 PM",
-    location: "Fellowship Hall",
-    description: "Games, discussions, and faith exploration for middle and high school students.",
-  },
-  {
-    id: 'r3',
-    title: "Evening Bible Study",
-    category: "Education",
-    date: "Every Thursday",
-    time: "7:30 PM",
-    location: "Church Library",
-    description: "Dive deeper into scripture with our midweek Bible study group.",
-  },
-  {
-    id: 'r4',
-    title: "Prayer Breakfast",
-    category: "Fellowship",
-    date: "Second Saturday",
-    time: "9:00 AM",
-    location: "Fellowship Hall",
-    description: "Monthly gathering for prayer, breakfast, and community connection.",
-  },
-];
-
-const categoryColors: Record<string, string> = {
-  Worship: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300",
-  Fellowship: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
-  Youth: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300",
-  Education: "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300",
-  Special: "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300",
-};
-
-const formatDate = (dateStr: string) => {
-  const date = new Date(dateStr + 'T00:00:00');
-  return date.toLocaleDateString('en-US', { weekday: 'short', month: 'long', day: 'numeric', year: 'numeric' });
-};
+// Same format as the weekly list on the homepage (datetime = day/date, time = time).
+const upcomingEvents: WeeklyActivity[] = [];
 
 const Happening = () => {
-  const today = new Date().toISOString().split('T')[0];
-  const events = upcomingEvents
-    .filter((e) => e.event_date >= today)
-    .sort((a, b) => a.event_date.localeCompare(b.event_date));
-
-
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -88,126 +20,14 @@ const Happening = () => {
         breadcrumb={[{ label: 'Events', href: '/happening' }]}
       />
       <main className="flex-1">
-        {/* Upcoming Events from the church office */}
-        <section className="section-padding bg-church-50 dark:bg-[#1a0a17]">
-          <div className="container-max">
-            <div className="mb-12">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
-                Upcoming
-              </p>
-              <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white">
-                Upcoming Events
-              </h2>
-            </div>
-
-            {events.length === 0 && (
-              <p className="text-church-500 dark:text-white italic">
-                No special events are scheduled right now — please check back soon, or join us for any of our weekly gatherings below.
-              </p>
-            )}
-
-            <div className="space-y-0 divide-y divide-church-200 dark:divide-church-700 bg-white dark:bg-church-800/20 rounded-lg overflow-hidden">
-              {events.map((event) => (
-                <article
-                  key={event.id}
-                  className="p-6 flex flex-col md:flex-row md:items-center gap-4 hover:bg-church-50 dark:hover:bg-church-800/40 transition-colors group"
-                >
-                  <div className="flex items-center gap-4 md:w-56">
-                    <div className="w-12 h-12 rounded-lg bg-church-100 dark:bg-church-700 flex items-center justify-center">
-                      <Calendar className="w-5 h-5 text-church-500 dark:text-church-400" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-church-800 dark:text-white">{formatDate(event.event_date)}</p>
-                      {event.event_time && (
-                        <p className="text-sm text-church-500 dark:text-church-400">{event.event_time}</p>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className={`text-[10px] font-semibold uppercase tracking-widest px-2 py-0.5 rounded ${categoryColors[event.category] || categoryColors.Special}`}>
-                        {event.category}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold text-church-800 dark:text-white group-hover:text-church-600 dark:group-hover:text-church-300 transition-colors">
-                      {event.title}
-                    </h3>
-                    {event.description && (
-                      <p className="text-sm text-church-600 dark:text-white mt-1">
-                        {event.description}
-                      </p>
-                    )}
-                  </div>
-
-                  {event.location && (
-                    <div className="flex items-center gap-2 text-sm text-church-500 dark:text-church-400">
-                      <MapPin className="w-4 h-4" />
-                      {event.location}
-                    </div>
-                  )}
-
-                  <ChevronRight className="w-5 h-5 text-church-300 dark:text-church-600 group-hover:text-church-600 dark:group-hover:text-white group-hover:translate-x-1 transition-all hidden md:block" />
-                </article>
-              ))}
-            </div>
-
-          </div>
-        </section>
-
-        {/* Recurring Weekly Schedule */}
-        <section className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
-          <div className="container-max">
-            <div className="mb-12">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
-                Weekly Schedule
-              </p>
-              <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white">
-                Regular Activities
-              </h2>
-            </div>
-
-            <div className="space-y-0 divide-y divide-church-200 dark:divide-church-700 bg-white dark:bg-church-800/20 rounded-lg overflow-hidden">
-              {recurringEvents.map((event) => (
-                <article
-                  key={event.id}
-                  className="p-6 flex flex-col md:flex-row md:items-center gap-4 hover:bg-church-50 dark:hover:bg-church-800/40 transition-colors group"
-                >
-                  <div className="flex items-center gap-4 md:w-56">
-                    <div className="w-12 h-12 rounded-lg bg-church-100 dark:bg-church-700 flex items-center justify-center">
-                      <Calendar className="w-5 h-5 text-church-500 dark:text-church-400" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-church-800 dark:text-white">{event.date}</p>
-                      <p className="text-sm text-church-500 dark:text-church-400">{event.time}</p>
-                    </div>
-                  </div>
-
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className={`text-[10px] font-semibold uppercase tracking-widest px-2 py-0.5 rounded ${categoryColors[event.category] || categoryColors.Special}`}>
-                        {event.category}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold text-church-800 dark:text-white group-hover:text-church-600 dark:group-hover:text-church-300 transition-colors">
-                      {event.title}
-                    </h3>
-                    <p className="text-sm text-church-600 dark:text-white mt-1">
-                      {event.description}
-                    </p>
-                  </div>
-
-                  <div className="flex items-center gap-2 text-sm text-church-500 dark:text-church-400">
-                    <MapPin className="w-4 h-4" />
-                    {event.location}
-                  </div>
-
-                  <ChevronRight className="w-5 h-5 text-church-300 dark:text-church-600 group-hover:text-church-600 dark:group-hover:text-white group-hover:translate-x-1 transition-all hidden md:block" />
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <NewsSection
+          eyebrow="Upcoming"
+          heading="Upcoming Events"
+          items={upcomingEvents}
+          showViewAll={false}
+          emptyMessage="No special events are scheduled right now — please check back soon, or join us for any of our weekly gatherings below."
+        />
+        <NewsSection eyebrow="Weekly Schedule" heading="Every Week at People's Church" showViewAll={false} />
 
         {/* Calendar CTA */}
         <section className="py-16 px-4 bg-church-900 dark:bg-[#0a0608]">
