@@ -4,11 +4,11 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import { Users } from 'lucide-react';
-import NewsSection, { type WeeklyActivity } from '@/components/NewsSection';
+import NewsSection, { weeklyActivities, type WeeklyActivity } from '@/components/NewsSection';
 
 // Upcoming special events — edit this list to add or remove events.
 // Same format as the weekly list on the homepage (datetime = day/date, time = time).
-const upcomingEvents: WeeklyActivity[] = [];
+const upcomingEvents: WeeklyActivity[] = weeklyActivities;
 
 const Happening = () => {
   return (
@@ -27,7 +27,6 @@ const Happening = () => {
           showViewAll={false}
           emptyMessage="No special events are scheduled right now — please check back soon, or join us for any of our weekly gatherings below."
         />
-        <NewsSection eyebrow="Weekly Schedule" heading="Every Week at People's Church" showViewAll={false} />
 
         {/* Calendar CTA */}
         <section className="py-16 px-4 bg-church-900 dark:bg-[#0a0608]">
