@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Youtube, MapPin, Phone, Mail } from 'lucide-react';
-import { VIDEO_SEARCH_URL } from '@/lib/videoLinks';
+import { VIDEO_CHANNEL_URL } from '@/lib/videoLinks';
 
 const Footer = () => {
   return (
@@ -72,7 +72,7 @@ const Footer = () => {
             <span className="text-xs text-white">Open and Affirming Congregation</span>
             <div className="flex items-center gap-4">
               <a
-                href={VIDEO_SEARCH_URL}
+                href={VIDEO_CHANNEL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-white transition"

@@ -5,13 +5,13 @@ import PageHeader from '@/components/PageHeader';
 import { Play, Radio, Youtube } from 'lucide-react';
 import watchBanner from '@/assets/photos/Watch.jpg';
 import WhatToExpectSection from '@/components/WhatToExpectSection';
-import { VIDEO_SEARCH_URL } from '@/lib/videoLinks';
+import { VIDEO_CHANNEL_URL } from '@/lib/videoLinks';
 
 
 const watchLinks = [
-  { label: 'Watch Live', href: VIDEO_SEARCH_URL, icon: Radio, primary: true },
-  { label: 'Previous Sermons', href: VIDEO_SEARCH_URL, icon: Play, primary: false },
-  { label: 'Full Worship Services', href: VIDEO_SEARCH_URL, icon: Youtube, primary: false },
+  { label: 'Watch Live', href: VIDEO_CHANNEL_URL, icon: Radio, primary: true },
+  { label: 'Previous Sermons', href: VIDEO_CHANNEL_URL, icon: Play, primary: false },
+  { label: 'Full Worship Services', href: VIDEO_CHANNEL_URL, icon: Youtube, primary: false },
 ];
 
 const Sermons = () => {
@@ -67,7 +67,7 @@ const Sermons = () => {
           <div className="container-max">
             <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-4">Watch Past Services</h2>
             <p className="text-lg text-church-600 dark:text-white mb-8">Browse recent services and sermons on our YouTube channel.</p>
-            <a href={VIDEO_SEARCH_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-church-800 dark:text-white font-semibold border-b-2 border-church-800 hover:text-cta hover:border-cta pb-1"><Play className="w-5 h-5" /> Browse Videos on YouTube</a>
+            <a href={VIDEO_CHANNEL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-church-800 dark:text-white font-semibold border-b-2 border-church-800 hover:text-cta hover:border-cta pb-1"><Play className="w-5 h-5" /> Browse Videos on YouTube</a>
           </div>
         </section>
       </main>

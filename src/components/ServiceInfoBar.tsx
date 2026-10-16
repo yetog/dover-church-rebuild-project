@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapPin, Clock, Radio } from 'lucide-react';
-import { VIDEO_SEARCH_URL } from '@/lib/videoLinks';
+import { VIDEO_CHANNEL_URL } from '@/lib/videoLinks';
 
 const ServiceInfoBar = () => {
   return (
@@ -20,7 +20,7 @@ const ServiceInfoBar = () => {
         </div>
         <div className="hidden md:block w-px h-5 bg-white/20" />
         <a
-          href={VIDEO_SEARCH_URL}
+          href={VIDEO_CHANNEL_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-cta hover:text-white transition-colors font-medium"
