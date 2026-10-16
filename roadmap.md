@@ -16,3 +16,4 @@
 - [x] Redesign Helping Others around volunteer, pastoral support, and community assistance paths; connect the PCC volunteer page.
 - [x] Point every video link (channel, live-stream, and playlist buttons included) to https://www.youtube.com/@PeoplesChurchDover/playlists, held in src/lib/videoLinks.ts.
 - [x] Embed Full Services and Scriptures & Sermons playlists on the Watch page.
+- [x] Give page links to PayPal with QR code; Events page shows Upcoming and weekly lists.
