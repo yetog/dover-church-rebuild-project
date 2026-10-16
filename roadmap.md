@@ -17,3 +17,4 @@
 - [x] Point every video link (channel, live-stream, and playlist buttons included) to https://www.youtube.com/@PeoplesChurchDover/playlists, held in src/lib/videoLinks.ts.
 - [x] Embed Full Services and Scriptures & Sermons playlists on the Watch page.
 - [x] Give page links to PayPal with QR code; Events page shows Upcoming and weekly lists.
+- [x] Church tab icon and share image; photo banners on every subpage; About jump bar, faith cards, visit call to action; removed placeholder budget chart from Give.
