@@ -35,29 +35,6 @@ const givingOptions = [
   },
 ];
 
-const impactAreas = [
-  {
-    title: "Worship & Ministry",
-    description: "Supporting Sunday services, music ministry, and pastoral care.",
-    percentage: 40,
-  },
-  {
-    title: "Community Outreach",
-    description: "Food pantry, PCC programs, and neighbor assistance.",
-    percentage: 30,
-  },
-  {
-    title: "Building & Operations",
-    description: "Maintaining our historic building and daily operations.",
-    percentage: 20,
-  },
-  {
-    title: "Education & Youth",
-    description: "Sunday School, youth programs, and faith formation.",
-    percentage: 10,
-  },
-];
-
 const Give = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -171,32 +148,10 @@ const Give = () => {
                   Where Your Gift Goes
                 </h2>
                 <p className="text-lg text-church-600 dark:text-white mb-8">
-                  Every dollar you give supports our mission to worship God, grow in faith, and serve our neighbors. Here's how your generosity makes a difference.
+                  Every dollar you give supports our mission to worship God, grow in faith, and serve our neighbors. Thank you for helping us worship, grow, and serve together.
                 </p>
 
-                <div className="space-y-6">
-                  {impactAreas.map(({ title, description, percentage }) => (
-                    <div key={title}>
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="font-bold text-church-800 dark:text-white">{title}</h3>
-                        <span className="text-sm font-semibold text-cta">{percentage}%</span>
-                      </div>
-                      <div className="h-2 bg-church-200 dark:bg-church-800 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-cta rounded-full"
-                          style={{ width: `${percentage}%` }}
-                        />
-                      </div>
-                      <p className="text-sm text-church-500 dark:text-church-400 mt-1">
-                        {description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
 
-                <p className="text-xs text-church-400 dark:text-church-500 mt-6 italic">
-                  Percentages are illustrative - replace with actual budget allocation
-                </p>
               </div>
 
               {/* Testimonial/Quote */}

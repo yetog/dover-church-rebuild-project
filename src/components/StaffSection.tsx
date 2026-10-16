@@ -90,7 +90,7 @@ const StaffSection = () => {
   return (
     <>
       {/* Church Staff */}
-      <section id="staff" className="section-padding bg-church-50 dark:bg-[#1a0a17]">
+      <section id="staff" className="section-padding scroll-mt-32 bg-church-50 dark:bg-[#1a0a17]">
         <div className="container-max">
           <div className="mb-12">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">

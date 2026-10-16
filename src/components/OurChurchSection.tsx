@@ -14,7 +14,7 @@ const OurChurchSection = () => {
   return (
     <>
       {/* Our Church */}
-      <section id="our-church" className="section-padding bg-gray-300 dark:bg-[#0f0a10]">
+      <section id="our-church" className="section-padding scroll-mt-32 bg-gray-300 dark:bg-[#0f0a10]">
         <div className="container-max">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
@@ -52,9 +52,9 @@ const OurChurchSection = () => {
       </section>
 
       {/* Statement of Faith */}
-      <section className="section-padding bg-church-50 dark:bg-[#1a0a17]">
+      <section id="beliefs" className="section-padding scroll-mt-32 bg-church-50 dark:bg-[#1a0a17]">
         <div className="container-max">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-church-500 dark:text-church-300 mb-4">
               What We Believe
             </p>
@@ -74,16 +74,16 @@ const OurChurchSection = () => {
               </p>
             </div>
 
-            <ul className="mt-8 space-y-4">
+            <ol className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {faithStatements.map((statement, index) => (
-                <li key={index} className="flex gap-4">
-                  <span className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-church-600 dark:bg-church-300" />
+                <li key={index} className={`flex gap-4 rounded-lg bg-white dark:bg-church-800/30 p-5 shadow-sm border-t-4 border-church-600 ${index === faithStatements.length - 1 ? 'sm:col-span-2' : ''}`}>
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-church-800 text-white text-sm font-bold flex items-center justify-center">{index + 1}</span>
                   <p className="text-church-700 dark:text-white leading-relaxed">
                     {statement}
                   </p>
                 </li>
               ))}
-            </ul>
+            </ol>
 
             <div className="mt-10 border-l-4 border-church-600 pl-6">
               <p className="text-xl italic text-church-700 dark:text-white">
