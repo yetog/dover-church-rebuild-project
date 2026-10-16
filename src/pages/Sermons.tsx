@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import { Play, Radio, Youtube } from 'lucide-react';
 import watchBanner from '@/assets/photos/Watch.jpg';
 import WhatToExpectSection from '@/components/WhatToExpectSection';
-import { VIDEO_CHANNEL_URL } from '@/lib/videoLinks';
-
+import { VIDEO_CHANNEL_URL, EMBED_PLAYLISTS } from '@/lib/videoLinks';
 
 const watchLinks = [
   { label: 'Watch Live', href: VIDEO_CHANNEL_URL, icon: Radio, primary: true },
@@ -15,6 +14,7 @@ const watchLinks = [
 ];
 
 const Sermons = () => {
+  const [active, setActive] = useState(EMBED_PLAYLISTS[0].id);
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -66,8 +66,36 @@ const Sermons = () => {
         <section className="section-padding bg-church-50 dark:bg-[#1a0a17]">
           <div className="container-max">
             <h2 className="text-3xl md:text-4xl font-black text-church-800 dark:text-white mb-4">Watch Past Services</h2>
-            <p className="text-lg text-church-600 dark:text-white mb-8">Browse recent services and sermons on our YouTube channel.</p>
-            <a href={VIDEO_CHANNEL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-church-800 dark:text-white font-semibold border-b-2 border-church-800 hover:text-cta hover:border-cta pb-1"><Play className="w-5 h-5" /> Browse Videos on YouTube</a>
+            <p className="text-lg text-church-600 dark:text-white mb-6">Press play to watch here, or use the playlist menu in the player to pick a service.</p>
+            <div className="flex flex-wrap gap-2 mb-6" role="tablist">
+              {EMBED_PLAYLISTS.map((p) => (
+                <button
+                  key={p.id}
+                  role="tab"
+                  aria-selected={active === p.id}
+                  onClick={() => setActive(p.id)}
+                  className={`px-5 py-2 rounded font-semibold transition-colors ${
+                    active === p.id
+                      ? 'bg-church-800 text-white'
+                      : 'bg-white text-church-800 border border-church-200 hover:bg-church-100'
+                  }`}
+                >
+                  {p.label}
+                </button>
+              ))}
+            </div>
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg bg-black mb-8">
+              <iframe
+                key={active}
+                className="absolute inset-0 w-full h-full"
+                src={`https://www.youtube-nocookie.com/embed/videoseries?list=${active}`}
+                title="People's Church of Dover video playlist"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+            <a href={VIDEO_CHANNEL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-church-800 dark:text-white font-semibold border-b-2 border-church-800 hover:text-cta hover:border-cta pb-1"><Play className="w-5 h-5" /> See All Playlists on YouTube</a>
           </div>
         </section>
       </main>

@@ -14,4 +14,5 @@
 - [x] Match Upcoming Events to the Regular Activities row format while retaining manually edited event data.
 - [x] Open internal pages at the top while preserving intentional section-anchor links.
 - [x] Redesign Helping Others around volunteer, pastoral support, and community assistance paths; connect the PCC volunteer page.
-- [x] Point every video link (channel, live-stream, and playlist buttons included) to https://www.youtube.com/@PeoplesChurchDover/featured, held in src/lib/videoLinks.ts.
+- [x] Point every video link (channel, live-stream, and playlist buttons included) to https://www.youtube.com/@PeoplesChurchDover/playlists, held in src/lib/videoLinks.ts.
+- [x] Embed Full Services and Scriptures & Sermons playlists on the Watch page.
