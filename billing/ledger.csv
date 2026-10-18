@@ -1,0 +1,36 @@
+date,period,type,category,description,changelog_ref,hours,amount
+2026-08-12,2026-07-19..2026-08-18,work,Admin,Project set up from the existing church site,CL-001,,
+2026-08-18,2026-07-19..2026-08-18,work,Design,2026 redesign foundation: homepage replication and multi-page layout,CL-002,,
+2026-08-18,2026-07-19..2026-08-18,retainer,Retainer,Monthly retainer,,,400
+2026-08-18,2026-07-19..2026-08-18,platform_cost,Platform,Lovable platform cost (included in retainer),,,25
+2026-08-22,2026-08-19..2026-09-18,work,Feature,"Multi-page structure, navigation and core pages built",CL-003,,
+2026-08-27,2026-08-19..2026-09-18,work,Fix,Fixed blank screen after GitHub commits (publishing base path),CL-004,,
+2026-08-27,2026-08-19..2026-09-18,work,Admin,"Team Git workflow docs: CONTRIBUTING, PR template, onboarding guide",CL-005,,
+2026-08-29,2026-08-19..2026-09-18,work,Design,"Century Gothic font, plum/gray colors, six new church photos placed",CL-006,,
+2026-08-29,2026-08-19..2026-09-18,work,Feature,Watch page with Watch Live / Previous Sermons / Full Services links; large PCC button,CL-007,,
+2026-08-29,2026-08-19..2026-09-18,work,Fix,Corrected YouTube channel handle to @PeoplesChurchDover,CL-008,,
+2026-09-01,2026-08-19..2026-09-18,work,Fix,Restored original homepage photo; fixed Our Church link,CL-009,,
+2026-09-01,2026-08-19..2026-09-18,work,Content,"About page Our Church text, seven faith statements, UCC page content",CL-010,,
+2026-09-03,2026-08-19..2026-09-18,work,Content,Moved staff and leaders onto the About page,CL-011,,
+2026-09-04,2026-08-19..2026-09-18,work,Design,Improved portrait crops and added missing headshots,CL-012,,
+2026-09-04,2026-08-19..2026-09-18,work,Feature,Full menu restored with dropdown groups and matching pages,CL-013,,
+2026-09-18,2026-08-19..2026-09-18,work,Content,"Staff and trustee updates, plum portrait frames, hero text edits",CL-014,,
+2026-09-18,2026-08-19..2026-09-18,work,Admin,Partners page exported for reuse on the future PCC site,CL-015,,
+2026-09-18,2026-08-19..2026-09-18,retainer,Retainer,Monthly retainer,,,400
+2026-09-18,2026-08-19..2026-09-18,platform_cost,Platform,Lovable platform cost (included in retainer),,,25
+2026-09-21,2026-09-19..2026-10-18,work,Content,Removed Partners page from church site,CL-016,,
+2026-09-28,2026-09-19..2026-10-18,work,Fix,"Full website audit: broken links, click-open dropdowns, map/phone, contact form",CL-017,,
+2026-09-28,2026-09-19..2026-10-18,work,Feature,Shared UCC devotional preview on homepage and Meditation page,CL-018,,
+2026-10-02,2026-09-19..2026-10-18,work,Content,"Meeting items: moderator vacant, Daily Scripture menu link, Visit link, hero quote, What to Expect moved to Watch",CL-019,,
+2026-10-02,2026-09-19..2026-10-18,work,Content,"Helping Others wording, icons and emblem placement edits",CL-020,,
+2026-10-08,2026-09-19..2026-10-18,work,Fix,"Helping Others links, staff typos, removed unused About block",CL-021,,
+2026-10-08,2026-09-19..2026-10-18,work,Feature,Homepage single devotional card; newsletter sign-up form saving to the database,CL-022,,
+2026-10-09,2026-09-19..2026-10-18,work,Feature,Pages open at the top; Helping Others redesign; volunteer link to PCC,CL-023,,
+2026-10-16,2026-09-19..2026-10-18,work,Integration,All video links share one destination (YouTube Playlists),CL-024,,
+2026-10-16,2026-09-19..2026-10-18,work,Feature,Embedded Full Services and Scriptures & Sermons playlists on Watch page,CL-025,,
+2026-10-16,2026-09-19..2026-10-18,work,Feature,Events page reuses homepage weekly list; both sections restored,CL-026,,
+2026-10-16,2026-09-19..2026-10-18,work,Integration,PayPal giving button and Scan to Give QR code,CL-027,,
+2026-10-16,2026-09-19..2026-10-18,work,Design,"Church tab icon and share image; photo banners on every subpage; About jump bar, faith cards, visit call to action",CL-028,,
+2026-10-18,2026-09-19..2026-10-18,work,Admin,"Project audit trail, changelog, billing ledger and monthly invoice system",CL-029,,
+2026-10-18,2026-09-19..2026-10-18,retainer,Retainer,Monthly retainer,,,400
+2026-10-18,2026-09-19..2026-10-18,platform_cost,Platform,Lovable platform cost (included in retainer),,,25
