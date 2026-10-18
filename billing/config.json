@@ -1,0 +1,15 @@
+{
+  "client": "People's Church of Dover",
+  "retainer": 400,
+  "platform_name": "Lovable",
+  "platform_cost": 25,
+  "platform_cost_placeholder": true,
+  "billing_day": 18,
+  "open_items": [
+    "Official congregation Facebook URL",
+    "Real newsletter PDFs",
+    "Confirm prayer request email (currently church office)",
+    "Resolve Lauren Daigle YouTube copyright claim",
+    "Confirm launch timing and publish"
+  ]
+}
