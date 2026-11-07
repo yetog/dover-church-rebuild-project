@@ -2,6 +2,10 @@
 
 Dated record of work on the People's Church of Dover website. Each entry has a reference (CL-###) used in billing/ledger.csv and invoice summaries. Dates marked *(est.)* come from git activity, not an archived plan.
 
+## Billing period 2026-10-19 to 2026-11-18
+
+- **2026-11-07** · `CL-030` · Content — Nov 6 meeting edits: homepage reorder, "Prayer and Daily Devotional" rename, Visit removed, UCC as its own menu item, videos above What to Expect, Pastoral Needs box, ext. 3 and non-member wording on Helping Others. _Pages: Home, Menu, About, Watch, Devotional, Helping Others. Source: plan: november 6 meeting edits._
+
 ## Billing period 2026-09-19 to 2026-10-18
 
 - **2026-10-18** · `CL-029` · Admin — Project audit trail, changelog, billing ledger and monthly invoice system. _Pages: Repo. Source: plan: audit + billing._

@@ -16,9 +16,9 @@ const Index = () => {
       <main>
         <HeroSection />
         <NewsSection />
-        <CommunitySection />
         <SermonSection />
         <HomeDevotionalCard />
+        <CommunitySection />
 
         {/* Simple Contact CTA - TRC style */}
         <section className="py-16 px-4 bg-gray-300 dark:bg-[#0f0a10]">

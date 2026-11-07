@@ -13,12 +13,6 @@ const sections = [
     image: ourChurchImg,
   },
   {
-    title: 'United Church of Christ',
-    description: 'What it means to be an Open and Affirming congregation of the UCC.',
-    href: '/ucc',
-    image: stainedGlassImg,
-  },
-  {
     title: 'Staff & Leaders',
     description: 'Meet our pastor, staff, and the lay leaders who guide our congregation.',
     href: '/about#staff',

@@ -10,7 +10,7 @@ const Meditation = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <PageHeader
-        title="Daily Devotional"
+        title="Prayer and Daily Devotional"
         subtitle="Scripture, meditation, and prayer for your daily spiritual journey."
         breadcrumb={[{ label: 'Devotional', href: '/meditation' }]}
         image={meditationBanner}

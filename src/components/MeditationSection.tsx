@@ -16,7 +16,7 @@ const MeditationSection = () => {
     <div id="meditation">
       <DailyDevotionalSection />
       <section className="section-padding bg-church-50">
-        <div className="container mx-auto max-w-3xl">
+        <div className="container mx-auto max-w-5xl grid gap-6 md:grid-cols-2 items-start">
           <Card className="shadow-md">
             <CardContent className="p-6">
               <h3 className="text-2xl font-bold text-church-800 mb-4">Prayer Requests</h3>
@@ -44,6 +44,22 @@ const MeditationSection = () => {
                     office@pcd-dover.org
                   </a>
                 </p>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="shadow-md">
+            <CardContent className="p-6">
+              <h3 className="text-2xl font-bold text-church-800 mb-4">Pastoral Needs</h3>
+              <p className="text-church-600 mb-6">
+                For urgent pastoral matters, please contact Pastor Hodge directly.
+              </p>
+              <div className="space-y-3">
+                <a href="tel:+13026744177,3" className="block font-semibold text-church-700 hover:text-church-900 underline">
+                  (302) 674-4177 ext. 3
+                </a>
+                <a href="mailto:pastor@pcd-dover.org" className="block font-semibold text-church-700 hover:text-church-900 underline break-all">
+                  pastor@pcd-dover.org
+                </a>
               </div>
             </CardContent>
           </Card>

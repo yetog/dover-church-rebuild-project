@@ -34,3 +34,4 @@ date,period,type,category,description,changelog_ref,hours,amount
 2026-10-18,2026-09-19..2026-10-18,work,Admin,"Project audit trail, changelog, billing ledger and monthly invoice system",CL-029,,
 2026-10-18,2026-09-19..2026-10-18,retainer,Retainer,Monthly retainer,,,400
 2026-10-18,2026-09-19..2026-10-18,platform_cost,Platform,Lovable platform cost (included in retainer),,,25
+2026-11-07,2026-10-19..2026-11-18,work,Content,"Nov 6 meeting edits: homepage reorder, devotional rename, menu split, videos first, Pastoral Needs box, ext. 3 updates",CL-030,,
