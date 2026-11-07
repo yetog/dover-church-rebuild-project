@@ -14,8 +14,8 @@ const navItems: NavItem[] = [
   {
     label: 'Who We Are',
     children: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Visit', href: '/contact' },
+      { label: 'About Our Church', href: '/about' },
+      { label: 'United Church of Christ', href: '/ucc' },
     ],
   },
   {
@@ -24,7 +24,7 @@ const navItems: NavItem[] = [
       { label: 'Videos of Service', href: '/sermons' },
     ],
   },
-  { label: 'Daily Scripture & Meditation', href: '/meditation' },
+  { label: 'Prayer and Daily Devotional', href: '/meditation' },
   {
     label: 'Happenings',
     children: [

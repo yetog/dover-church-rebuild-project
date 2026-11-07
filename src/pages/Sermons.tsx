@@ -26,8 +26,6 @@ const Sermons = () => {
         imageAlt="Sunday worship at People's Church of Dover"
       />
       <main className="flex-1">
-        <WhatToExpectSection />
-
         {/* Live Stream Banner */}
         <section className="bg-church-900 dark:bg-[#0a0608] py-8 px-4">
           <div className="container-max">
@@ -98,6 +96,8 @@ const Sermons = () => {
             <a href={VIDEO_CHANNEL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-church-800 dark:text-white font-semibold border-b-2 border-church-800 hover:text-cta hover:border-cta pb-1"><Play className="w-5 h-5" /> See All Playlists on YouTube</a>
           </div>
         </section>
+
+        <WhatToExpectSection />
       </main>
       <Footer />
     </div>

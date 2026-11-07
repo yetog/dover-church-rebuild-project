@@ -57,11 +57,11 @@ const HelpingOthers = () => (
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-church-500 dark:text-church-300 mb-2">Church Members</p>
               <h3 className="text-2xl font-bold text-church-800 dark:text-white mb-3">Pastoral Support</h3>
               <p className="text-church-600 dark:text-white leading-relaxed mb-5">
-                Members of the church may make an appointment with the pastor.
+                If you are in need, you may make an appointment with the pastor. You don't need to be a member. We do not turn anyone away.
               </p>
               <div className="space-y-3 mt-auto">
-                <a href="tel:3026744177" className="flex items-center gap-3 font-semibold text-church-700 dark:text-white hover:text-cta transition-colors">
-                  <Phone className="w-5 h-5 text-cta" /> 674-4177
+                <a href="tel:+13026744177,3" className="flex items-center gap-3 font-semibold text-church-700 dark:text-white hover:text-cta transition-colors">
+                  <Phone className="w-5 h-5 text-cta" /> 674-4177 ext. 3
                 </a>
                 <a href="mailto:pastor@pcd-dover.org" className="flex items-center gap-3 font-semibold text-church-700 dark:text-white hover:text-cta transition-colors break-all">
                   <Mail className="w-5 h-5 text-cta shrink-0" /> pastor@pcd-dover.org
@@ -76,11 +76,11 @@ const HelpingOthers = () => (
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-church-500 dark:text-church-300 mb-2">Community Assistance</p>
               <h3 className="text-2xl font-bold text-church-800 dark:text-white mb-3">Find Practical Help</h3>
               <p className="text-church-600 dark:text-white leading-relaxed mb-7 flex-1">
-                Call the church office for utilities assistance at 674-4177, option 2, or visit People's Community Center for more help.
+                Call the church office for utilities assistance at 674-4177, ext. 3, or visit People's Community Center for more help.
               </p>
               <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
                 <Button asChild variant="secondary" size="lg">
-                  <a href="tel:3026744177">Call the Church Office</a>
+                  <a href="tel:+13026744177,3">Call the Church Office</a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <a href="https://pcc-dover.org" target="_blank" rel="noopener noreferrer">Visit the Community Center</a>

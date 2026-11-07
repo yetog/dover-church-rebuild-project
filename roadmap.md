@@ -20,3 +20,5 @@
 - [x] Church tab icon and share image; photo banners on every subpage; About jump bar, faith cards, visit call to action; removed placeholder budget chart from Give.
 - [x] Audit trail (CHANGELOG.md), billing ledger, 2026-10-18 invoice backup, billing spreadsheet, reusable project-audit-billing skill.
 - [ ] Confirm actual Lovable monthly cost (placeholder $25 in billing/config.json).
+- [x] Nov 6 meeting edits (homepage order, devotional rename, menu split, videos first, Pastoral Needs, ext. 3)
+- [ ] Newsletter via ChurchTrac — waiting on a sample share link or embed code from the church
